@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LarkBase Club - Hall of Fame</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-highest": "#e0e3e5",
+              "secondary-fixed-dim": "#b1c8ed",
+              "secondary-fixed": "#d4e3ff",
+              "surface-container-low": "#f2f4f6",
+              "on-tertiary-fixed-variant": "#633f00",
+              "primary-fixed": "#d4e3ff",
+              "on-error": "#ffffff",
+              "surface-container-lowest": "#ffffff",
+              "tertiary-fixed-dim": "#ffb953",
+              "surface-bright": "#f7f9fb",
+              "secondary": "#496080",
+              "on-secondary-fixed-variant": "#314867",
+              "tertiary-container": "#a06900",
+              "primary-fixed-dim": "#a4c9ff",
+              "surface": "#f7f9fb",
+              "on-primary-container": "#fdfcff",
+              "on-tertiary-container": "#fffbff",
+              "inverse-surface": "#2d3133",
+              "outline": "#717783",
+              "error-container": "#ffdad6",
+              "on-surface": "#191c1e",
+              "surface-container": "#eceef0",
+              "on-primary": "#ffffff",
+              "surface-tint": "#0060ac",
+              "surface-container-high": "#e6e8ea",
+              "on-primary-fixed-variant": "#004883",
+              "inverse-on-surface": "#eff1f3",
+              "on-secondary": "#ffffff",
+              "background": "#f7f9fb",
+              "tertiary-fixed": "#ffddb4",
+              "primary-container": "#2976c7",
+              "outline-variant": "#c1c7d3",
+              "primary": "#005da7",
+              "on-secondary-container": "#485e7e",
+              "surface-dim": "#d8dadc",
+              "on-surface-variant": "#414751",
+              "inverse-primary": "#a4c9ff",
+              "on-primary-fixed": "#001c39",
+              "tertiary": "#7f5300",
+              "surface-variant": "#e0e3e5",
+              "on-error-container": "#93000a",
+              "on-tertiary": "#ffffff",
+              "error": "#ba1a1a",
+              "on-tertiary-fixed": "#291800",
+              "on-secondary-fixed": "#001c39",
+              "on-background": "#191c1e",
+              "secondary-container": "#c1d9fe"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      .glass-effect {
+        backdrop-filter: blur(20px);
+        background-color: rgba(242, 244, 246, 0.8);
+      }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- TopNavBar -->
+<nav class="bg-surface dark:bg-slate-900 flex justify-between items-center px-10 py-4 max-w-[1280px] mx-auto font-inter tracking-tight">
+<div class="text-xl font-black text-[#005da7] dark:text-[#2976c7]">LarkBase Club</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant dark:text-slate-400 hover:text-[#005da7] dark:hover:text-[#2976c7] transition-colors" href="#">Dashboard</a>
+<a class="text-on-surface-variant dark:text-slate-400 hover:text-[#005da7] dark:hover:text-[#2976c7] transition-colors" href="#">Experts</a>
+<a class="text-on-surface-variant dark:text-slate-400 hover:text-[#005da7] dark:hover:text-[#2976c7] transition-colors" href="#">Stories</a>
+<a class="text-[#005da7] dark:text-[#2976c7] font-bold border-b-2 border-[#005da7] pb-1" href="#">Hall of Fame</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant scale-95 active:scale-98 transition-transform" data-icon="notifications">notifications</button>
+<button class="material-symbols-outlined text-on-surface-variant scale-95 active:scale-98 transition-transform" data-icon="military_tech">military_tech</button>
+<img alt="User profile" class="w-8 h-8 rounded-full object-cover border border-outline-variant/20" data-alt="close-up portrait of a professional man with glasses smiling softly in a brightly lit modern office setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjOeqrkS4yqXV_X84G9lBqcOdvdl2UNwltYRQGUnMi5dSMnUfx04axVO3JtRIPFuwqEpqQRrjn6RLCgbD1K6FtFD46aZtJole_Ysv0eok00Mwm1QYQgSgNAj3vmacMTQ-rMFzmNd_VZSJgCjz19YpuelJ75z0B02UBIPhudFxjV3EH2A2jV6X_7ep9DgdxFcOf4C8kWzYeJvJPodc4qPvHKfFUJ35D1_iHEgT70CmLozRSotZ3Im4wa4JTFnfp-2J85mCY9hP73w"/>
+</div>
+</nav>
+<main class="max-w-[1280px] mx-auto px-10">
+<!-- Hero Section -->
+<header class="py-20 flex flex-col items-center text-center">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-tertiary-container/10 border border-tertiary/20 mb-6">
+<span class="material-symbols-outlined text-tertiary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold uppercase tracking-widest text-tertiary">Premium Recognition</span>
+</div>
+<h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-on-surface mb-4">🏆 名人墙</h1>
+<p class="text-xl md:text-2xl text-on-surface-variant font-medium">优秀行家 · 成功故事</p>
+<div class="mt-12 w-full max-w-4xl h-[1px] bg-gradient-to-r from-transparent via-outline-variant/40 to-transparent"></div>
+</header>
+<!-- Featured Story Section: Zhang Ming -->
+<section class="mb-24">
+<div class="relative overflow-hidden rounded-xl bg-surface-container-low p-1">
+<div class="grid md:grid-cols-12 gap-0 bg-surface-container-lowest rounded-[11px] overflow-hidden">
+<div class="md:col-span-5 relative min-h-[400px]">
+<img alt="Zhang Ming" class="absolute inset-0 w-full h-full object-cover" data-alt="professional male developer in a navy suit sitting in a high-tech minimalist glass office with city skyline bokeh background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiAx6nI64mCaZVh-nfOIFzV-QYfJmeOCDKiWqTtStbqvMQ0hW7YUnJqCrtYq4lrMh2F1P78tpxh8eiJShLdMvkTVEASjvW06ixocpXGGYy446sTBtyPN0WTWjSKcPJHKj6ImQl_-d9Cv9Obws_DMkPW5k6oOz91N-ZD7D3sfrgTnwK-e4ogLc14UM9ty1nFIBUin_tx6UEcmPBFXnr3rNUeF5PbDV5m_yzeKxchkW2c6MhlOtCwxltvKdgehQfydCU_qz2qBwSSQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent"></div>
+<div class="absolute bottom-8 left-8">
+<h3 class="text-white text-3xl font-bold">张明 (Zhang Ming)</h3>
+<p class="text-primary-fixed font-medium">LarkBase 认证资深开发者</p>
+</div>
+</div>
+<div class="md:col-span-7 p-12 flex flex-col justify-center">
+<span class="material-symbols-outlined text-primary text-5xl mb-6 opacity-30" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<blockquote class="text-2xl md:text-3xl font-bold text-on-surface leading-tight mb-8">
+                            "通过LarkBase Club，我找到了第一个企业客户，完成了从独立开发者到认证行家的转变。"
+                        </blockquote>
+<div class="flex items-center gap-6">
+<button class="bg-primary text-on-primary px-8 py-3 rounded font-bold hover:bg-primary-container transition-all scale-100 active:scale-95">
+                                阅读完整专访
+                            </button>
+<div class="flex flex-col">
+<span class="text-xs uppercase tracking-widest text-on-surface-variant font-bold">加入时间</span>
+<span class="text-sm font-semibold text-primary">2023年3月</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- All-time Greats Section -->
+<section class="mb-24">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="text-3xl font-extrabold tracking-tight text-on-surface">往期行家 (All-time Greats)</h2>
+<p class="text-on-surface-variant mt-2">卓越贡献与行业领军人物</p>
+</div>
+<div class="h-[2px] flex-grow mx-8 bg-surface-container-high mb-2"></div>
+<span class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">2022 - 2024</span>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<!-- Li Jing -->
+<div class="group flex flex-col bg-surface-container-low rounded-xl p-8 hover:bg-surface-container-high transition-all duration-300">
+<div class="flex items-start justify-between mb-6">
+<img alt="Li Jing" class="w-20 h-20 rounded-lg object-cover grayscale group-hover:grayscale-0 transition-all" data-alt="confident professional woman in business attire with arms crossed, warm studio lighting, clean gray background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCivt6C9q1xg4j9fOwy6Pww6VyBBmQgiDfCD4vBNu0RqXnuEOBpgBFMsaxrsnZcdrMUafnPfHFL76WdrbpQGAAhucaIUehqRiXe9FC6YdVs1ggar1LsEHWazbmW1eluYNm4qgKHVu3u4hTzW4-OybFdmg8NrQtnpcNDqtajeO1z4qABsFJcEkoTuBPyP_6cir-Bwx8S4-d2SWxOQTLzhrkYVSF4CxZz-S93YwJVid_zddJBa6bbcTS6jUFJR1pQsIKqaob3Vlv-Zg"/>
+<span class="material-symbols-outlined text-tertiary-container" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+</div>
+<h4 class="text-xl font-bold text-on-surface mb-1">李静 (Li Jing)</h4>
+<p class="text-sm text-primary font-semibold mb-4">企业协同专家</p>
+<p class="text-on-surface-variant text-sm italic mb-6 leading-relaxed">
+                        "在这里，协作不仅是工具的使用，更是组织思维的重塑。LarkBase 赋予了我们这种能量。"
+                    </p>
+<a class="mt-auto inline-flex items-center gap-2 text-primary font-bold text-sm hover:gap-4 transition-all" href="#">
+                        查看详情 <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Wang Qiang -->
+<div class="group flex flex-col bg-surface-container-low rounded-xl p-8 hover:bg-surface-container-high transition-all duration-300">
+<div class="flex items-start justify-between mb-6">
+<img alt="Wang Qiang" class="w-20 h-20 rounded-lg object-cover grayscale group-hover:grayscale-0 transition-all" data-alt="middle-aged male tech executive in a creative studio environment, natural lighting, thoughtful expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJOtoIwJZl0I9n2-ALl2xcdGKI2ccN0FDy0vxpL4addEeAU-mslAFFDhlj-ueUNxqAY1_RB16XN_ywRM0-34RksuQ_OFhWL-OXICn7_qI2m_X4X7k-jHsp-3Rf2BaaTvuzF6H1sInic0VQ-VdPG5yCLvFNwId-Li3j6Nj37dvLQQskoRpt8bx8dpj1HAODcvj4LemvWWRjAsqTsX0M98c4t6xsKPNFENIAQDha_gbvpJBCyE2RXdknXhRqZn7rp_E816VwwnummQ"/>
+<span class="material-symbols-outlined text-tertiary-container" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+</div>
+<h4 class="text-xl font-bold text-on-surface mb-1">王强 (Wang Qiang)</h4>
+<p class="text-sm text-primary font-semibold mb-4">自动化工作流架构师</p>
+<p class="text-on-surface-variant text-sm italic mb-6 leading-relaxed">
+                        "解决复杂业务场景的快感无与伦比，LarkBase Club 是我们这些技术狂热者的家。"
+                    </p>
+<a class="mt-auto inline-flex items-center gap-2 text-primary font-bold text-sm hover:gap-4 transition-all" href="#">
+                        查看详情 <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Zhao Li -->
+<div class="group flex flex-col bg-surface-container-low rounded-xl p-8 hover:bg-surface-container-high transition-all duration-300">
+<div class="flex items-start justify-between mb-6">
+<img alt="Zhao Li" class="w-20 h-20 rounded-lg object-cover grayscale group-hover:grayscale-0 transition-all" data-alt="professional young woman smiling with laptop in a modern minimalist cafe, bright and airy lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgoswC2ygLElC39N09-H-GDf9UxsaYk7BrYg2aePwuuv6egXFqC3Cf6ytFiCofjuWsM1s_8eQKp_CxDsWjDFmUrRpIXF1gn-qsV5nA25jnHdmaA1RZzXM1QN7xwl_bMbtwSDGGzgBTO_D8H5E_JSG-awFsM9JdMPeeFO0EQVyHIdb7f8srgam7UAb-x-EZPXjYpoG9FhNpmusXtsYCqGy7TMgyPqNLO3j36xS8IrSsjaavG_co1rn1W1txWhV-J6nTsgBppLga9Q"/>
+<span class="material-symbols-outlined text-tertiary-container" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+</div>
+<h4 class="text-xl font-bold text-on-surface mb-1">赵丽 (Zhao Li)</h4>
+<p class="text-sm text-primary font-semibold mb-4">数据洞察行家</p>
+<p class="text-on-surface-variant text-sm italic mb-6 leading-relaxed">
+                        "将冷冰冰的数据转化为企业增长的决策动力，这是我在 Club 获得的最大成就感。"
+                    </p>
+<a class="mt-auto inline-flex items-center gap-2 text-primary font-bold text-sm hover:gap-4 transition-all" href="#">
+                        查看详情 <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Previous Honorees Section -->
+<section class="mb-32">
+<div class="flex items-center gap-4 mb-10">
+<div class="h-10 w-1 bg-primary"></div>
+<h2 class="text-2xl font-bold tracking-tight text-on-surface">早期荣誉 (Previous Honorees)</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Chen Wei -->
+<div class="flex items-center gap-5 p-6 bg-surface-container-lowest border border-outline-variant/10 rounded-lg">
+<img alt="Chen Wei" class="w-14 h-14 rounded-full object-cover ring-2 ring-surface-container-high" data-alt="headshot of a man with a friendly smile, outdoor natural light, soft green background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxJjPVh9iRX_SSF9TCnxZCcGydikeKaR22eRY5Nq9TP7Vgpm30kUT9CEjbNHiBdZS-4VhKIr9TlA6TUTegNq6O48tCK7PzRqnEsV0GUfgCphlxgBh9RKBCMhNeQ5J1yDdyiYTWQ07zFWxptyFk25hUMtA5RGajZB5c61lxe4GebtrqB3Qzf7ATfzIGF-TNUJj0aBCJzNyS-thZEedYYVUlT5Fs6eMR-09ZeOcOwdLJY2hHjlvc2HxLQvG-zfUWdm8iBSBCtU9bfg"/>
+<div>
+<h5 class="font-bold text-on-surface">陈伟 (Chen Wei)</h5>
+<p class="text-xs text-on-surface-variant">产品战略专家 · 2021</p>
+</div>
+</div>
+<!-- Liu Fang -->
+<div class="flex items-center gap-5 p-6 bg-surface-container-lowest border border-outline-variant/10 rounded-lg">
+<img alt="Liu Fang" class="w-14 h-14 rounded-full object-cover ring-2 ring-surface-container-high" data-alt="portrait of a focused professional woman, neutral studio lighting, artistic composition" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADZNkBGqaUjctrANGXFYrVsNH99VOPlpBo_ME7bGkBAB_sYsI4Zh2azAstF9pt3x5Am-bFlzj98wFVS0sgAu-BKSS_Lnj2S6SOQP3Gq-IIwBpFY0certfzLhqSk6B1NjDmX5MNv70ztVHx2IXWP2nOk2aQOVveaIp8Nr5yTOmSvduW_nsSSpGknYwxW-7ApUvP2izSRY9FQocOQVkChojC11YwFI_3xaRk3QSqFC-yBK5_gdFyYOenVqUiruM0irkYDo3XcgQHZQ"/>
+<div>
+<h5 class="font-bold text-on-surface">刘芳 (Liu Fang)</h5>
+<p class="text-xs text-on-surface-variant">行业解决方案行家 · 2021</p>
+</div>
+</div>
+<!-- Zhou Jie -->
+<div class="flex items-center gap-5 p-6 bg-surface-container-lowest border border-outline-variant/10 rounded-lg">
+<img alt="Zhou Jie" class="w-14 h-14 rounded-full object-cover ring-2 ring-surface-container-high" data-alt="smiling man in casual business wear, blurred modern architecture background, bright daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCobHo5y6ihsnUnQlf3-n0Sw2M6Ejvk7mHZ_a0uVM7aFeuGyePSE66nJTt6AyvxSCipQhyHiLlqq9PJrq9vM8zrBsXyScC94-zHJO7WrC6DKO3JZBfwCqrhguMpvGxkmonaMogRuF49hcaOLT9_VO1vZBZHFniSfynWF0SDbZcjd4AMR7Wf9OuORSvuipgUvYhqTqCOp6OOwvnL5jptU6jE23IP0t9l7amZpTP5-Jl_GjKrYS2bRHWDqHT13-xqD4owsCFvxue6-g"/>
+<div>
+<h5 class="font-bold text-on-surface">周杰 (Zhou Jie)</h5>
+<p class="text-xs text-on-surface-variant">社区贡献领袖 · 2020</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-10 flex flex-col items-center justify-center gap-4 bg-surface dark:bg-slate-950 border-t-0 font-inter text-xs uppercase tracking-widest">
+<div class="font-bold text-[#005da7] text-base mb-2">LarkBase Club</div>
+<div class="flex gap-8 mb-6">
+<a class="text-on-surface-variant dark:text-slate-500 hover:text-[#005da7] underline transition-all" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant dark:text-slate-500 hover:text-[#005da7] underline transition-all" href="#">Terms of Service</a>
+<a class="text-on-surface-variant dark:text-slate-500 hover:text-[#005da7] underline transition-all" href="#">Contact Expert Support</a>
+</div>
+<p class="text-on-surface-variant dark:text-slate-500 opacity-80">© 2024 LarkBase Club. All Rights Reserved.</p>
+</footer>
+</body></html>

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LarkBase Club Expert Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "tertiary-fixed-dim": "#ffb953",
+                        "on-surface": "#191c1e",
+                        "surface-dim": "#d8dadc",
+                        "on-secondary": "#ffffff",
+                        "surface-bright": "#f7f9fb",
+                        "background": "#f7f9fb",
+                        "primary": "#005da7",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed": "#ffddb4",
+                        "on-secondary-container": "#485e7e",
+                        "on-secondary-fixed": "#001c39",
+                        "primary-fixed-dim": "#a4c9ff",
+                        "secondary": "#496080",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-fixed-variant": "#633f00",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#f2f4f6",
+                        "on-background": "#191c1e",
+                        "on-primary-container": "#fdfcff",
+                        "on-primary-fixed-variant": "#004883",
+                        "on-primary-fixed": "#001c39",
+                        "outline": "#717783",
+                        "surface-tint": "#0060ac",
+                        "surface-variant": "#e0e3e5",
+                        "error-container": "#ffdad6",
+                        "inverse-surface": "#2d3133",
+                        "primary-fixed": "#d4e3ff",
+                        "outline-variant": "#c1c7d3",
+                        "surface-container-high": "#e6e8ea",
+                        "secondary-fixed-dim": "#b1c8ed",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed": "#d4e3ff",
+                        "on-primary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "tertiary": "#7f5300",
+                        "on-tertiary-container": "#fffbff",
+                        "on-tertiary-fixed": "#291800",
+                        "surface-container": "#eceef0",
+                        "on-secondary-fixed-variant": "#314867",
+                        "secondary-container": "#c1d9fe",
+                        "tertiary-container": "#a06900",
+                        "on-surface-variant": "#414751",
+                        "primary-container": "#2976c7",
+                        "inverse-on-surface": "#eff1f3",
+                        "surface": "#f7f9fb",
+                        "inverse-primary": "#a4c9ff"
+                    },
+                    fontFamily: {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .sidebar-active {
+            background-color: #ffffff;
+            color: #005da7;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased">
+<div class="flex min-h-screen">
+<!-- Side Navigation (Authority Source: SideNavBar JSON) -->
+<aside class="hidden lg:flex flex-col h-screen w-64 bg-[#f7f9fb] p-6 space-y-4 fixed left-0 top-0 overflow-y-auto">
+<div class="mb-10 px-2">
+<span class="text-lg font-bold text-[#005da7] tracking-tighter">LarkBase Club</span>
+</div>
+<div class="flex items-center space-x-3 mb-8 px-2">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container font-bold overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="professional male profile portrait in studio lighting with neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuWKqJdkBMZ48tZByjfs13JP6sIZRgQLjMF0yhuOBj38MwKCCecp9qzHQXAY3yUKCnPoxzU-W4bRbmJ0bp1DCPPwWcySB1y3OKMA1Zdi_YIcps7Hi01OylPFUp1ykrEFkUV1IKDc0_vZgqKisPCW5Ttt_1AbKMlfG6v6oALVhO0QqEyZQQFGr2P6-qN346vON2wXqCqf1OEZJ1-pAyPZ1KmFhqzuLr3DOgEltEUXmhVw3vWwgN32lDcHXSpCJjjfKmUWLma8yS2g"/>
+</div>
+<div>
+<div class="font-inter text-sm tracking-wide uppercase font-semibold text-on-surface">Expert Portal</div>
+<div class="text-[10px] text-tertiary font-bold tracking-widest uppercase">Elite Status</div>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<!-- Dashboard Active -->
+<a class="flex items-center space-x-3 px-4 py-3 sidebar-active rounded-lg transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-inter text-sm tracking-wide uppercase font-semibold">Dashboard</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 text-slate-500 hover:text-[#005da7] hover:bg-slate-100 rounded-lg transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-inter text-sm tracking-wide uppercase font-semibold">Profile</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 text-slate-500 hover:text-[#005da7] hover:bg-slate-100 rounded-lg transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="insights">insights</span>
+<span class="font-inter text-sm tracking-wide uppercase font-semibold">Expert Center</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 text-slate-500 hover:text-[#005da7] hover:bg-slate-100 rounded-lg transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="folder_open">folder_open</span>
+<span class="font-inter text-sm tracking-wide uppercase font-semibold">Case Management</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 text-slate-500 hover:text-[#005da7] hover:bg-slate-100 rounded-lg transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+<span class="font-inter text-sm tracking-wide uppercase font-semibold">Template Management</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 text-slate-500 hover:text-[#005da7] hover:bg-slate-100 rounded-lg transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span class="font-inter text-sm tracking-wide uppercase font-semibold">Income</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 text-slate-500 hover:text-[#005da7] hover:bg-slate-100 rounded-lg transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-inter text-sm tracking-wide uppercase font-semibold">Settings</span>
+</a>
+</nav>
+<div class="pt-4 border-t border-outline-variant/20 space-y-1">
+<a class="flex items-center space-x-3 px-4 py-3 text-slate-500 hover:text-[#005da7] hover:bg-slate-100 rounded-lg transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+<span class="font-inter text-xs tracking-wide uppercase font-semibold">Support</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 text-slate-500 hover:text-[#005da7] hover:bg-slate-100 rounded-lg transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span class="font-inter text-xs tracking-wide uppercase font-semibold">Logout</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 lg:ml-64 min-h-screen flex flex-col">
+<!-- Header (Authority Source: TopNavBar JSON/Requirements) -->
+<header class="bg-[#f7f9fb] flex justify-between items-center w-full px-10 py-4 max-w-[1280px] mx-auto z-10">
+<div class="flex items-center lg:hidden">
+<span class="text-xl font-black tracking-tighter text-[#005da7]">LarkBase Club</span>
+</div>
+<div class="hidden lg:block">
+<h1 class="text-xl font-bold tracking-tight text-on-surface">控制台 Dashboard</h1>
+</div>
+<div class="flex items-center space-x-6">
+<button class="relative p-2 text-slate-600 hover:bg-slate-200/50 rounded-full transition-colors duration-200">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full"></span>
+</button>
+<div class="flex items-center space-x-3">
+<span class="text-sm font-medium text-slate-700">张明</span>
+<div class="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="close up headshot of male professional with friendly expression on light background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbSFeabp8HVJ7fvYL1wX0zkzymTE_EJqN5T46iqIGBaaIzofUcFKjQsGx1OevWeQAxyVrXU-QV9zE8LP55qRrAYNPiFOiCpndDNkQAxZsE5Yw0aTdwW9S9mC_AvByp_H91TECVWCl0Ct-XquRpfiflrgpNnbiac1KkjNslCcFT7C0ASiQKeE_Cj_-IwMy6DogmCbu0o0XragXQY8znPgBmKMka7OIrP13ZrizOF3hrha3oeYeaQTt13jCIjrjbhMisMqDokPhJAA"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Dashboard Body -->
+<div class="flex-1 px-10 py-8 max-w-[1280px] mx-auto w-full space-y-10">
+<!-- Welcome Section -->
+<section class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div class="space-y-1">
+<h2 class="text-[2.75rem] font-bold tracking-tight leading-tight text-on-surface">欢迎回来，张明！</h2>
+<p class="text-on-surface-variant/70 body-md font-medium">这里是您今天的业务概览。我们为您匹配了新的需求。</p>
+</div>
+<div class="flex items-center gap-3">
+<div class="px-3 py-1 bg-tertiary-container/10 border border-tertiary/30 rounded-full flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-tertiary" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="text-[10px] label-md font-bold text-tertiary tracking-widest uppercase">Expert Club Member</span>
+</div>
+</div>
+</section>
+<!-- Stats Grid (High Density Bento Pattern) -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="bg-surface-container-lowest p-6 rounded-xl transition-transform active:scale-98">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-primary-fixed rounded-lg text-primary">
+<span class="material-symbols-outlined" data-icon="pending_actions">pending_actions</span>
+</div>
+<span class="text-[10px] font-bold text-primary tracking-widest uppercase">待处理</span>
+</div>
+<div class="text-4xl font-black text-on-surface mb-1">2</div>
+<div class="text-xs text-slate-500 font-medium">Pending Demands</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl transition-transform active:scale-98">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-secondary-container rounded-lg text-secondary">
+<span class="material-symbols-outlined" data-icon="handshake">handshake</span>
+</div>
+<span class="text-[10px] font-bold text-secondary tracking-widest uppercase">已匹配</span>
+</div>
+<div class="text-4xl font-black text-on-surface mb-1">5</div>
+<div class="text-xs text-slate-500 font-medium">Matched Opportunities</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl transition-transform active:scale-98 border-l-4 border-primary">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-primary-container/10 rounded-lg text-primary">
+<span class="material-symbols-outlined" data-icon="hourglass_empty">hourglass_empty</span>
+</div>
+<span class="text-[10px] font-bold text-primary tracking-widest uppercase">进行中</span>
+</div>
+<div class="text-4xl font-black text-on-surface mb-1">1</div>
+<div class="text-xs text-slate-500 font-medium">In-progress Projects</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl transition-transform active:scale-98">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-tertiary-fixed rounded-lg text-tertiary">
+<span class="material-symbols-outlined" data-icon="task_alt">task_alt</span>
+</div>
+<span class="text-[10px] font-bold text-tertiary tracking-widest uppercase">已完成</span>
+</div>
+<div class="text-4xl font-black text-on-surface mb-1">12</div>
+<div class="text-xs text-slate-500 font-medium">Completed Deliverables</div>
+</div>
+</section>
+<!-- Asymmetric Layout: Feed & Quick Actions -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Recent Activity (Power Column - 8 cols) -->
+<section class="lg:col-span-8 space-y-6">
+<div class="flex items-center justify-between px-2">
+<h3 class="text-lg font-bold tracking-tight text-on-surface">最近动态 Recent Activity</h3>
+<button class="text-xs font-semibold text-primary hover:underline">查看全部</button>
+</div>
+<div class="bg-surface-container-low rounded-xl overflow-hidden">
+<div class="divide-y divide-outline-variant/10">
+<!-- Activity Item -->
+<div class="p-5 flex items-center gap-4 hover:bg-surface-container-high transition-colors group">
+<div class="w-12 h-12 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined" data-icon="ads_click">ads_click</span>
+</div>
+<div class="flex-1">
+<div class="text-sm font-bold text-on-surface group-hover:text-primary transition-colors">新需求匹配 New demand match</div>
+<div class="text-xs text-on-surface-variant/70">电商数据分析平台搭建 - 预算 ￥50k+</div>
+</div>
+<div class="text-right">
+<div class="text-xs font-medium text-on-surface-variant">刚刚</div>
+<div class="text-[10px] font-bold text-primary tracking-widest uppercase mt-1">NEW</div>
+</div>
+</div>
+<!-- Activity Item -->
+<div class="p-5 flex items-center gap-4 hover:bg-surface-container-high transition-colors group">
+<div class="w-12 h-12 rounded-lg bg-surface-container-lowest flex items-center justify-center text-tertiary shadow-sm">
+<span class="material-symbols-outlined" data-icon="visibility">visibility</span>
+</div>
+<div class="flex-1">
+<div class="text-sm font-bold text-on-surface group-hover:text-primary transition-colors">个人资料浏览 Profile view</div>
+<div class="text-xs text-on-surface-variant/70">某知名快消品牌项目经理查看了您的履历</div>
+</div>
+<div class="text-right">
+<div class="text-xs font-medium text-on-surface-variant">2小时前</div>
+</div>
+</div>
+<!-- Activity Item -->
+<div class="p-5 flex items-center gap-4 hover:bg-surface-container-high transition-colors group">
+<div class="w-12 h-12 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined" data-icon="check_circle">check_circle</span>
+</div>
+<div class="flex-1">
+<div class="text-sm font-bold text-on-surface group-hover:text-primary transition-colors">项目已交付 Project completed</div>
+<div class="text-xs text-on-surface-variant/70">供应链协同模板（V2.1）已通过验收</div>
+</div>
+<div class="text-right">
+<div class="text-xs font-medium text-on-surface-variant">昨天 14:20</div>
+</div>
+</div>
+<!-- Activity Item -->
+<div class="p-5 flex items-center gap-4 hover:bg-surface-container-high transition-colors group">
+<div class="w-12 h-12 rounded-lg bg-surface-container-lowest flex items-center justify-center text-tertiary shadow-sm">
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<div class="flex-1">
+<div class="text-sm font-bold text-on-surface group-hover:text-primary transition-colors">收到新评价 New review</div>
+<div class="text-xs text-on-surface-variant/70">用户 "TechFlow" 为您打出 5.0 高分</div>
+</div>
+<div class="text-right">
+<div class="text-xs font-medium text-on-surface-variant">2天前</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Quick Actions (Metadata/Sidebar - 4 cols) -->
+<section class="lg:col-span-4 space-y-6">
+<div class="px-2">
+<h3 class="text-lg font-bold tracking-tight text-on-surface">快捷操作 Quick Actions</h3>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<button class="flex flex-col items-center justify-center p-6 bg-surface-container-lowest rounded-xl border border-outline-variant/10 hover:border-primary/30 transition-all duration-200 group">
+<div class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-on-surface-variant group-hover:bg-primary group-hover:text-white transition-colors mb-3">
+<span class="material-symbols-outlined" data-icon="edit_square">edit_square</span>
+</div>
+<span class="text-xs font-bold text-on-surface">编辑资料</span>
+<span class="text-[9px] text-slate-400 mt-1 uppercase tracking-tighter">Edit Profile</span>
+</button>
+<button class="flex flex-col items-center justify-center p-6 bg-surface-container-lowest rounded-xl border border-outline-variant/10 hover:border-primary/30 transition-all duration-200 group">
+<div class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-on-surface-variant group-hover:bg-primary group-hover:text-white transition-colors mb-3">
+<span class="material-symbols-outlined" data-icon="add_box">add_box</span>
+</div>
+<span class="text-xs font-bold text-on-surface">新增案例</span>
+<span class="text-[9px] text-slate-400 mt-1 uppercase tracking-tighter">Add Case</span>
+</button>
+<button class="flex flex-col items-center justify-center p-6 bg-surface-container-lowest rounded-xl border border-outline-variant/10 hover:border-primary/30 transition-all duration-200 group">
+<div class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-on-surface-variant group-hover:bg-primary group-hover:text-white transition-colors mb-3">
+<span class="material-symbols-outlined" data-icon="upload_file">upload_file</span>
+</div>
+<span class="text-xs font-bold text-on-surface">发布模板</span>
+<span class="text-[9px] text-slate-400 mt-1 uppercase tracking-tighter">Publish Template</span>
+</button>
+<button class="flex flex-col items-center justify-center p-6 bg-surface-container-lowest rounded-xl border border-outline-variant/10 hover:border-primary/30 transition-all duration-200 group">
+<div class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-on-surface-variant group-hover:bg-primary group-hover:text-white transition-colors mb-3">
+<span class="material-symbols-outlined" data-icon="bar_chart">bar_chart</span>
+</div>
+<span class="text-xs font-bold text-on-surface">查看数据</span>
+<span class="text-[9px] text-slate-400 mt-1 uppercase tracking-tighter">View Data</span>
+</button>
+</div>
+<!-- Expert Tip Card -->
+<div class="relative overflow-hidden rounded-xl bg-primary p-6 text-white group">
+<div class="absolute -right-4 -bottom-4 w-24 h-24 bg-white/10 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
+<div class="relative z-10 space-y-3">
+<div class="text-[10px] font-bold tracking-[0.2em] uppercase text-white/70">Expert Tip</div>
+<p class="text-sm font-medium leading-relaxed">
+                                    完善您的案例库可以提高需求匹配率约 <span class="text-tertiary-fixed-dim font-bold">45%</span>。建议每周更新一次。
+                                </p>
+<a class="inline-flex items-center text-xs font-bold group-hover:gap-2 transition-all" href="#">
+                                    立即更新
+                                    <span class="material-symbols-outlined text-[14px]" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+</div>
+</div>
+<!-- Footer (Authority Source: Footer JSON) -->
+<footer class="w-full py-12 px-10 max-w-[1280px] mx-auto flex flex-col md:flex-row justify-between items-center gap-8 mt-auto border-t border-outline-variant/10">
+<div>
+<span class="text-lg font-black text-[#005da7]">LarkBase Club</span>
+<p class="font-inter text-xs text-slate-500 mt-2">© 2024 LarkBase Club. All rights reserved.</p>
+</div>
+<div class="flex space-x-8">
+<a class="font-inter text-xs text-slate-500 hover:text-[#005da7] hover:underline transition-all" href="#">About</a>
+<a class="font-inter text-xs text-slate-500 hover:text-[#005da7] hover:underline transition-all" href="#">Experts Join</a>
+<a class="font-inter text-xs text-slate-500 hover:text-[#005da7] hover:underline transition-all" href="#">Publish Template</a>
+<a class="font-inter text-xs text-slate-500 hover:text-[#005da7] hover:underline transition-all" href="#">Support</a>
+</div>
+</footer>
+</main>
+</div>
+</body></html>

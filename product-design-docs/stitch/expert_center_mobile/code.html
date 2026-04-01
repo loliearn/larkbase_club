@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-bright": "#f7f9fb",
+              "surface-container-high": "#e6e8ea",
+              "on-tertiary": "#ffffff",
+              "tertiary": "#7f5300",
+              "tertiary-container": "#a06900",
+              "on-background": "#191c1e",
+              "on-error": "#ffffff",
+              "secondary-fixed-dim": "#b1c8ed",
+              "secondary-container": "#c1d9fe",
+              "on-surface-variant": "#414751",
+              "surface": "#f7f9fb",
+              "primary-container": "#2976c7",
+              "on-primary": "#ffffff",
+              "primary": "#005da7",
+              "on-error-container": "#93000a",
+              "surface-tint": "#0060ac",
+              "on-tertiary-fixed": "#291800",
+              "background": "#f7f9fb",
+              "on-primary-fixed": "#001c39",
+              "on-primary-container": "#fdfcff",
+              "on-primary-fixed-variant": "#004883",
+              "on-secondary-fixed": "#001c39",
+              "on-secondary-container": "#485e7e",
+              "tertiary-fixed": "#ffddb4",
+              "on-secondary": "#ffffff",
+              "inverse-primary": "#a4c9ff",
+              "surface-variant": "#e0e3e5",
+              "secondary": "#496080",
+              "inverse-on-surface": "#eff1f3",
+              "primary-fixed-dim": "#a4c9ff",
+              "primary-fixed": "#d4e3ff",
+              "on-surface": "#191c1e",
+              "on-tertiary-container": "#fffbff",
+              "tertiary-fixed-dim": "#ffb953",
+              "outline": "#717783",
+              "inverse-surface": "#2d3133",
+              "error": "#ba1a1a",
+              "surface-dim": "#d8dadc",
+              "error-container": "#ffdad6",
+              "surface-container-lowest": "#ffffff",
+              "surface-container-low": "#f2f4f6",
+              "surface-container": "#eceef0",
+              "on-secondary-fixed-variant": "#314867",
+              "outline-variant": "#c1c7d3",
+              "secondary-fixed": "#d4e3ff",
+              "on-tertiary-fixed-variant": "#633f00",
+              "surface-container-highest": "#e0e3e5"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        -webkit-tap-highlight-color: transparent;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-32">
+<!-- TopAppBar Shell -->
+<header class="w-full top-0 sticky z-50 bg-[#f7f9fb] dark:bg-slate-950">
+<div class="flex justify-between items-center px-[2.25rem] py-4 w-full max-w-[1280px] mx-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#005da7]" data-icon="menu">menu</span>
+<h1 class="text-xl font-bold tracking-tighter text-[#005da7] dark:text-[#2976c7]">LarkBase Club</h1>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#191c1e]/60" data-icon="notifications">notifications</span>
+<div class="w-8 h-8 rounded-full bg-surface-container-high overflow-hidden">
+<img alt="Profile" data-alt="close-up portrait of a professional man in a business suit with soft studio lighting and blurred background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVGwsGzBIaOfhV9IbQZ2s00Xu46MV51JBY_vIe6qIY8KCl5SSvFP_CP4E2HS1qg8bsWUqTDIQAuVXvSnBwwXWTehIDBaiKa87OIc9XYh6dJeY468pIvL2JcSH06mtt9xRcIRCRzqtQTcrLVT1YsnDnmdOUejfGRa_W_9NPSDQzRKW7bejtJxQ1yXEt72CiAZAu862X_pIOhL7q1-JH6e5qCKfmJgo7Fuv7JSLDBjld-6ZtucE_VXCRZXA7i6qbEh8ZkkMzW16a4w"/>
+</div>
+</div>
+</div>
+</header>
+<main class="px-6 py-6 max-w-md mx-auto space-y-8">
+<!-- Welcome Section -->
+<section class="space-y-2">
+<p class="text-sm font-medium tracking-wide uppercase text-tertiary-container opacity-80" style="letter-spacing: 0.05em;">Welcome Back</p>
+<h2 class="text-3xl font-bold tracking-tight text-on-surface">欢迎回来，张明！</h2>
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-tertiary-container/10 rounded-full border border-tertiary/20">
+<span class="material-symbols-outlined text-tertiary text-sm" data-icon="verified_user" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<span class="text-xs font-bold text-tertiary tracking-wide uppercase">Club Expert</span>
+</div>
+</section>
+<!-- Quick Actions Horizontal Scroll -->
+<section class="space-y-4">
+<h3 class="text-xs font-bold uppercase tracking-widest text-on-surface/40">Quick Actions</h3>
+<div class="flex gap-4 overflow-x-auto pb-4 -mx-6 px-6 scrollbar-hide">
+<button class="flex-none flex flex-col items-center gap-2 w-20 group active:scale-95 transition-transform">
+<div class="w-14 h-14 rounded-xl bg-surface-container-lowest flex items-center justify-center shadow-[0_4px_16px_rgba(0,0,0,0.04)] group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-on-primary transition-colors" data-icon="edit_square">edit_square</span>
+</div>
+<span class="text-xs font-medium text-on-surface/70">编辑档案</span>
+</button>
+<button class="flex-none flex flex-col items-center gap-2 w-20 group active:scale-95 transition-transform">
+<div class="w-14 h-14 rounded-xl bg-surface-container-lowest flex items-center justify-center shadow-[0_4px_16px_rgba(0,0,0,0.04)] group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-on-primary transition-colors" data-icon="add_box">add_box</span>
+</div>
+<span class="text-xs font-medium text-on-surface/70">添加案例</span>
+</button>
+<button class="flex-none flex flex-col items-center gap-2 w-20 group active:scale-95 transition-transform">
+<div class="w-14 h-14 rounded-xl bg-surface-container-lowest flex items-center justify-center shadow-[0_4px_16px_rgba(0,0,0,0.04)] group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-on-primary transition-colors" data-icon="auto_stories">auto_stories</span>
+</div>
+<span class="text-xs font-medium text-on-surface/70">发布模板</span>
+</button>
+<button class="flex-none flex flex-col items-center gap-2 w-20 group active:scale-95 transition-transform">
+<div class="w-14 h-14 rounded-xl bg-surface-container-lowest flex items-center justify-center shadow-[0_4px_16px_rgba(0,0,0,0.04)] group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-on-primary transition-colors" data-icon="insights">insights</span>
+</div>
+<span class="text-xs font-medium text-on-surface/70">查看数据</span>
+</button>
+</div>
+</section>
+<!-- Key Performance Metrics (Bento Style) -->
+<section class="grid grid-cols-2 gap-4">
+<div class="col-span-1 p-4 bg-primary rounded-xl text-on-primary shadow-lg shadow-primary/10">
+<span class="material-symbols-outlined text-on-primary/60 mb-2" data-icon="pending_actions">pending_actions</span>
+<div class="text-2xl font-extrabold tracking-tight">2</div>
+<div class="text-xs font-medium opacity-80">待处理需求</div>
+</div>
+<div class="col-span-1 p-4 bg-surface-container-lowest rounded-xl shadow-[0_4px_16px_rgba(0,0,0,0.04)]">
+<span class="material-symbols-outlined text-primary mb-2" data-icon="handshake">handshake</span>
+<div class="text-2xl font-extrabold tracking-tight text-on-surface">5</div>
+<div class="text-xs font-medium text-on-surface/60">已匹配需求</div>
+</div>
+<div class="col-span-1 p-4 bg-surface-container-lowest rounded-xl shadow-[0_4px_16px_rgba(0,0,0,0.04)]">
+<span class="material-symbols-outlined text-primary mb-2" data-icon="sync_alt">sync_alt</span>
+<div class="text-2xl font-extrabold tracking-tight text-on-surface">1</div>
+<div class="text-xs font-medium text-on-surface/60">进行中项目</div>
+</div>
+<div class="col-span-1 p-4 bg-surface-container-lowest rounded-xl shadow-[0_4px_16px_rgba(0,0,0,0.04)]">
+<span class="material-symbols-outlined text-primary mb-2" data-icon="task_alt">task_alt</span>
+<div class="text-2xl font-extrabold tracking-tight text-on-surface">12</div>
+<div class="text-xs font-medium text-on-surface/60">已完成项目</div>
+</div>
+</section>
+<!-- Recent Activity List -->
+<section class="space-y-4">
+<div class="flex justify-between items-end px-1">
+<h3 class="text-xs font-bold uppercase tracking-widest text-on-surface/40">Recent Activity</h3>
+<button class="text-xs font-bold text-primary">View All</button>
+</div>
+<div class="space-y-1 bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_32px_rgba(0,0,0,0.03)]">
+<div class="p-4 flex gap-4 items-start active:bg-surface-container-low transition-colors duration-200">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-none">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="notifications_active">notifications_active</span>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-sm font-semibold text-on-surface truncate">新需求匹配：电商CRM系统定制</p>
+<p class="text-xs text-on-surface/50 mt-0.5">2小时前</p>
+</div>
+<span class="material-symbols-outlined text-on-surface/20" data-icon="chevron_right">chevron_right</span>
+</div>
+<div class="h-[1px] bg-outline-variant/10 mx-4"></div>
+<div class="p-4 flex gap-4 items-start active:bg-surface-container-low transition-colors duration-200">
+<div class="w-10 h-10 rounded-full bg-tertiary/10 flex items-center justify-center flex-none">
+<span class="material-symbols-outlined text-tertiary text-xl" data-icon="person_search">person_search</span>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-sm font-semibold text-on-surface truncate">需求方查看了您的档案</p>
+<p class="text-xs text-on-surface/50 mt-0.5">5小时前</p>
+</div>
+<span class="material-symbols-outlined text-on-surface/20" data-icon="chevron_right">chevron_right</span>
+</div>
+<div class="h-[1px] bg-outline-variant/10 mx-4"></div>
+<div class="p-4 flex gap-4 items-start active:bg-surface-container-low transition-colors duration-200">
+<div class="w-10 h-10 rounded-full bg-secondary-container/30 flex items-center justify-center flex-none">
+<span class="material-symbols-outlined text-on-secondary-container text-xl" data-icon="chat_bubble">chat_bubble</span>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-sm font-semibold text-on-surface truncate">您收到了一条新的私信咨询</p>
+<p class="text-xs text-on-surface/50 mt-0.5">1天前</p>
+</div>
+<span class="material-symbols-outlined text-on-surface/20" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+</section>
+<!-- CTA / Promotional Card (Glassmorphism Concept) -->
+<section class="relative rounded-2xl overflow-hidden p-6 bg-gradient-to-br from-primary to-primary-container text-on-primary">
+<div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-10 -mt-10 blur-3xl"></div>
+<div class="relative z-10 space-y-4">
+<h4 class="text-lg font-bold">解锁高级专家权益</h4>
+<p class="text-sm opacity-90 leading-relaxed">升级您的专家会员级别，获取更高优先级的需求匹配与数据看板。</p>
+<button class="bg-surface-container-lowest text-primary font-bold py-2.5 px-6 rounded-lg text-sm active:scale-95 transition-transform shadow-lg">立即升级</button>
+</div>
+</section>
+</main>
+<!-- BottomNavBar Shell -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-6 pb-8 pt-4 bg-[#ffffff]/80 dark:bg-slate-900/80 backdrop-blur-xl border-t border-[#c1c7d3]/20 shadow-[0_-4px_32px_rgba(25,28,30,0.04)] rounded-t-xl">
+<a class="flex flex-col items-center justify-center text-[#191c1e]/40 dark:text-slate-500 hover:text-[#005da7] transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="dynamic_feed">dynamic_feed</span>
+<span class="font-['Inter'] text-[0.875rem] font-medium tracking-wide uppercase mt-1">Feed</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#005da7] dark:text-[#2976c7] font-bold" href="#">
+<span class="material-symbols-outlined" data-icon="verified_user" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<span class="font-['Inter'] text-[0.875rem] font-medium tracking-wide uppercase mt-1">Experts</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#191c1e]/40 dark:text-slate-500 hover:text-[#005da7] transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>
+<span class="font-['Inter'] text-[0.875rem] font-medium tracking-wide uppercase mt-1">Stories</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#191c1e]/40 dark:text-slate-500 hover:text-[#005da7] transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+<span class="font-['Inter'] text-[0.875rem] font-medium tracking-wide uppercase mt-1">Club</span>
+</a>
+</nav>
+</body></html>

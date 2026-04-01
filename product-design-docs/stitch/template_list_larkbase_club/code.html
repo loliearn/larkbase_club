@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LarkBase Club - Template Marketplace</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "tertiary-fixed-dim": "#ffb953",
+                        "on-surface": "#191c1e",
+                        "surface-dim": "#d8dadc",
+                        "on-secondary": "#ffffff",
+                        "surface-bright": "#f7f9fb",
+                        "background": "#f7f9fb",
+                        "primary": "#005da7",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed": "#ffddb4",
+                        "on-secondary-container": "#485e7e",
+                        "on-secondary-fixed": "#001c39",
+                        "primary-fixed-dim": "#a4c9ff",
+                        "secondary": "#496080",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-fixed-variant": "#633f00",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#f2f4f6",
+                        "on-background": "#191c1e",
+                        "on-primary-container": "#fdfcff",
+                        "on-primary-fixed-variant": "#004883",
+                        "on-primary-fixed": "#001c39",
+                        "outline": "#717783",
+                        "surface-tint": "#0060ac",
+                        "surface-variant": "#e0e3e5",
+                        "error-container": "#ffdad6",
+                        "inverse-surface": "#2d3133",
+                        "primary-fixed": "#d4e3ff",
+                        "outline-variant": "#c1c7d3",
+                        "surface-container-high": "#e6e8ea",
+                        "secondary-fixed-dim": "#b1c8ed",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed": "#d4e3ff",
+                        "on-primary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "tertiary": "#7f5300",
+                        "on-tertiary-container": "#fffbff",
+                        "on-tertiary-fixed": "#291800",
+                        "surface-container": "#eceef0",
+                        "on-secondary-fixed-variant": "#314867",
+                        "secondary-container": "#c1d9fe",
+                        "tertiary-container": "#a06900",
+                        "on-surface-variant": "#414751",
+                        "primary-container": "#2976c7",
+                        "inverse-on-surface": "#eff1f3",
+                        "surface": "#f7f9fb",
+                        "inverse-primary": "#a4c9ff"
+                    },
+                    fontFamily: {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; background-color: #f7f9fb; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="text-on-surface">
+<!-- TopNavBar -->
+<header class="bg-[#f7f9fb] dark:bg-slate-950 sticky top-0 z-50">
+<div class="flex justify-between items-center w-full px-10 py-4 max-w-[1280px] mx-auto">
+<div class="text-xl font-black tracking-tighter text-[#005da7] dark:text-[#2976c7]">LarkBase Club</div>
+<nav class="hidden md:flex items-center space-x-8 font-inter text-sm font-medium tracking-tight">
+<a class="text-slate-600 dark:text-slate-400 hover:text-[#005da7] transition-colors duration-200" href="#">Homepage</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-[#005da7] transition-colors duration-200" href="#">Experts</a>
+<a class="text-[#005da7] dark:text-[#2976c7] border-b-2 border-[#005da7] pb-1 font-bold transition-colors duration-200" href="#">Templates</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-[#005da7] transition-colors duration-200" href="#">Blog</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-[#005da7] transition-colors duration-200" href="#">About</a>
+</nav>
+<div class="flex items-center gap-4">
+<div class="hidden lg:flex items-center bg-[#f2f4f6] dark:bg-slate-900 rounded-full px-4 py-2">
+<span class="material-symbols-outlined text-slate-500 text-sm">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-xs w-32 placeholder:text-slate-500" placeholder="Search templates..." type="text"/>
+</div>
+<button class="px-4 py-2 text-[#005da7] font-medium text-sm hover:bg-slate-200/50 rounded-lg transition-all scale-95 active:scale-98">Login</button>
+<button class="px-5 py-2 bg-[#005da7] text-white rounded-lg text-sm font-bold shadow-sm hover:opacity-90 transition-all scale-95 active:scale-98">Register</button>
+</div>
+</div>
+</header>
+<main class="max-w-[1280px] mx-auto px-10 py-8">
+<!-- Breadcrumb -->
+<nav class="flex items-center gap-2 text-xs font-medium text-slate-500 mb-8 tracking-wide">
+<a class="hover:text-primary transition-colors" href="#">首页</a>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="text-on-surface">模板</span>
+</nav>
+<div class="flex gap-10">
+<!-- Sidebar Navigation -->
+<aside class="w-64 flex-shrink-0 hidden lg:block">
+<div class="bg-surface-container-low rounded-xl p-6 space-y-8">
+<div>
+<h3 class="text-[10px] uppercase font-bold tracking-widest text-slate-400 mb-6 px-3">Main Categories</h3>
+<nav class="flex flex-col gap-1">
+<a class="flex items-center justify-between px-3 py-2.5 rounded-lg bg-surface-container-lowest text-primary shadow-sm font-bold text-sm" href="#">
+<span class="flex items-center gap-3">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+                                    All
+                                </span>
+<span class="text-[10px] bg-primary/10 px-1.5 py-0.5 rounded">256</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-500 hover:bg-white/50 transition-all text-sm font-medium" href="#">
+<span class="material-symbols-outlined text-lg">payments</span> Sales
+                            </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-500 hover:bg-white/50 transition-all text-sm font-medium" href="#">
+<span class="material-symbols-outlined text-lg">groups</span> HR
+                            </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-500 hover:bg-white/50 transition-all text-sm font-medium" href="#">
+<span class="material-symbols-outlined text-lg">account_balance</span> Finance
+                            </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-500 hover:bg-white/50 transition-all text-sm font-medium" href="#">
+<span class="material-symbols-outlined text-lg">settings_suggest</span> Operations
+                            </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-500 hover:bg-white/50 transition-all text-sm font-medium" href="#">
+<span class="material-symbols-outlined text-lg">admin_panel_settings</span> Admin
+                            </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-500 hover:bg-white/50 transition-all text-sm font-medium" href="#">
+<span class="material-symbols-outlined text-lg">factory</span> Manufacturing
+                            </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-500 hover:bg-white/50 transition-all text-sm font-medium" href="#">
+<span class="material-symbols-outlined text-lg">school</span> Education
+                            </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-500 hover:bg-white/50 transition-all text-sm font-medium" href="#">
+<span class="material-symbols-outlined text-lg">more_horiz</span> Others
+                            </a>
+</nav>
+</div>
+<div class="pt-4 border-t border-outline-variant/20">
+<h3 class="text-[10px] uppercase font-bold tracking-widest text-slate-400 mb-4 px-3">Sub Categories</h3>
+<div class="flex flex-col gap-3 px-3">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 rounded border-outline-variant text-primary focus:ring-primary/20 transition-all" type="checkbox"/>
+<span class="text-xs text-slate-600 group-hover:text-on-surface transition-colors">Customer mgmt</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 rounded border-outline-variant text-primary focus:ring-primary/20 transition-all" type="checkbox"/>
+<span class="text-xs text-slate-600 group-hover:text-on-surface transition-colors">Sales follow-up</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 rounded border-outline-variant text-primary focus:ring-primary/20 transition-all" type="checkbox"/>
+<span class="text-xs text-slate-600 group-hover:text-on-surface transition-colors">Order processing</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 rounded border-outline-variant text-primary focus:ring-primary/20 transition-all" type="checkbox"/>
+<span class="text-xs text-slate-600 group-hover:text-on-surface transition-colors">After-sales service</span>
+</label>
+</div>
+</div>
+<div class="bg-gradient-to-br from-primary to-primary-container p-5 rounded-xl text-white">
+<p class="text-xs font-semibold mb-2 opacity-90">Are you an expert?</p>
+<p class="text-xs mb-4 opacity-80 leading-relaxed">Share your knowledge and earn from your templates.</p>
+<button class="w-full py-2.5 bg-white text-primary text-xs font-bold rounded-lg shadow-sm active:scale-95 transition-all">Publish Template</button>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<section class="flex-grow">
+<!-- Header & Controls -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+<div>
+<h1 class="text-[2.75rem] font-black tracking-tighter leading-none mb-2">找模板</h1>
+<p class="text-sm text-slate-500 font-medium">共 256 个精品模板满足您的业务需求</p>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center bg-surface-container-low rounded-lg p-1">
+<button class="px-4 py-1.5 bg-surface-container-lowest shadow-sm rounded-md text-xs font-bold text-primary">Latest</button>
+<button class="px-4 py-1.5 text-xs font-medium text-slate-500 hover:text-on-surface transition-colors">Popular</button>
+<button class="px-4 py-1.5 text-xs font-medium text-slate-500 hover:text-on-surface transition-colors">Cheapest</button>
+</div>
+<div class="h-8 w-px bg-outline-variant/30 mx-2"></div>
+<div class="flex items-center gap-2">
+<span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Filter</span>
+<select class="bg-transparent border-none text-sm font-semibold focus:ring-0 cursor-pointer text-on-surface pr-8">
+<option>All Prices</option>
+<option>Free Only</option>
+<option>Paid Only</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Template Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+<!-- Template Card 1 -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
+<div class="aspect-[16/10] overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Screenshot of a clean modern digital CRM dashboard with various charts and data tables on a white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_tqmucu2GEhQhzqzGYa0PGP0cRmo08nbKy8A7brqcTpLpYhNhbT09wau_Iofq_pUEA24YYrH2tAvdkZI1CxUKxu9L4C4tGQAhm2HN6HRxA8jtr_AG-7MMprYt8ktIey0Ny028xh6tLYyEpic5dFq0jmlaVk88rCGatCDeqQm4myIq8p04zuwrsP8vFhq2x-F00GlgXAWn9iJALCcAinpj-3hTXutDIWMGWcQGMc8ofcBPKMTD-VliGN7MLlxc5dDCe7Kna2m_9w"/>
+<div class="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-2 py-1 rounded text-[10px] font-bold text-primary uppercase tracking-wider">Top Rated</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex items-center gap-2 mb-3">
+<span class="bg-tertiary/10 text-tertiary px-2 py-0.5 rounded-full text-[10px] font-bold uppercase">Expert</span>
+<span class="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Sales</span>
+</div>
+<h3 class="text-lg font-bold mb-2 group-hover:text-primary transition-colors">电商CRM系统</h3>
+<p class="text-xs text-slate-500 line-clamp-2 leading-relaxed mb-6">全方位的客户关系管理，支持多渠道订单同步、自动化营销与精细化私域流量运营。</p>
+<div class="mt-auto pt-6 border-t border-outline-variant/10 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full overflow-hidden bg-slate-200">
+<img class="w-full h-full object-cover" data-alt="Portrait of a professional man in business casual attire smiling against a neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqhnaHUXXQN1t6ZWdqgx6nebcbFKQfA8e4yRzoZTqA_Wgw9gaYSiFJJJx_XulZf3LcVSVnAwhRfJhUzZ01lpq0O578oLvTeHdSooJGwMetFVVLc6CnXYnlMr60MYIdPC24W6TGCOL9rBBT-xW7xrQe_PTTA_7NJQ1lPSiWSsRBSRM_ycK7Zp39zuz0yc-b4jJw3JlqULUoHZpztnEvMTIZhnFybrRaYPa5fo8ROT_o1hCSO4nAcEYAEcvLMMXFVkQngHAu45dIXQ"/>
+</div>
+<div>
+<p class="text-xs font-bold leading-none">李明远</p>
+<p class="text-[10px] text-slate-400 mt-1">Lark资深专家</p>
+</div>
+</div>
+<div class="text-right">
+<span class="text-xs font-bold text-slate-400 line-through block">¥599</span>
+<span class="text-lg font-black text-primary">¥399</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Template Card 2 -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
+<div class="aspect-[16/10] overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Industrial manufacturing software interface showing machine status monitoring and real-time production statistics" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEdAKSrZUJ9CqwRjXMTS7B1iaFA1rAiCK9eZN2XIDmu2JdXuzeVyl8X7MMoKgd-Adva56qVktzR71xURYewb3P1-4A8vWOwtx6xsxcrwhaoEALzUK6XYE8ZEzFZzi05ZAv4Vj_ISEtqet3nau4htCbm-LkrWlbfoFlc3vUOTchSFck6-JkKQ2Bt_VyISzdLpeV8qwUhmV8Dnw1cIhTywwIAF74I2XAgGKLSzMozm2ygIhRcDM3QYBjzTQwSM9mBq8jc2oKktA8VA"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex items-center gap-2 mb-3">
+<span class="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Manufacturing</span>
+</div>
+<h3 class="text-lg font-bold mb-2 group-hover:text-primary transition-colors">制造业MES系统</h3>
+<p class="text-xs text-slate-500 line-clamp-2 leading-relaxed mb-6">覆盖生产计划、排产、物料管理、质量追溯全流程，实现数字化工厂协同。</p>
+<div class="mt-auto pt-6 border-t border-outline-variant/10 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full overflow-hidden bg-slate-200">
+<img class="w-full h-full object-cover" data-alt="Professional woman with glasses and a confident smile posing for a headshot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXzQhca12Rj6SUiThTV5tOcRF16E29098q5YL1Sp4I9syG0avocgJ1rC08BgazXbKAXvvECbyBAqoXV_pgIEBo5Ls-0S2DaeJFSIwgu78LS-XOUKnhVU40OzkRKIGygKl1v40zKsjVsLTH8OkICZtS4Ph83xH3yb4ehuQXOm9_4Q6x-9sZ24Ps1kw3i0XrfmIdUyaAuel0TC-YLG64aaTWPR_uWmIybMq7xz9mBdePYz_RLD_voPsgbMsRyZmT5zLIBHs8Uk_Rpw"/>
+</div>
+<div>
+<p class="text-xs font-bold leading-none">张华</p>
+<p class="text-[10px] text-slate-400 mt-1">数字化架构师</p>
+</div>
+</div>
+<div class="text-right">
+<span class="text-lg font-black text-on-surface">¥899</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Template Card 3 -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
+<div class="aspect-[16/10] overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Human resources platform UI with employee profiles, payroll data, and recruitment progress tracking" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuFIP4OjhO25jqm7hEvDuBfYLR73LHBvQmgfG2mocVtNngooEzFFgfUkoef5tNq71z0b5aFElUK3bUbYE-7gRjjvQ_AN-PQN-Vjxb4JZjU26dtc9cdwtY00sA_fT1w7KusXMjrGL97Qx5pzrgHlYABlRAmNIRfuYdUIzKGa5rGzdous8siWA2A6SRg2AiCpm3HnSPVdbSfxTtOk3naA9432bQbqUfT2BT8ZtcW-jpGBq_upFN7Xj3KGjWrrOJnX2MexYQporM-sA"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex items-center gap-2 mb-3">
+<span class="text-[10px] text-slate-400 font-bold uppercase tracking-widest">HR</span>
+</div>
+<h3 class="text-lg font-bold mb-2 group-hover:text-primary transition-colors">智能HR管理平台</h3>
+<p class="text-xs text-slate-500 line-clamp-2 leading-relaxed mb-6">集成招聘、入职、考勤、薪酬的一站式人力资源中心，助力HR高效办公。</p>
+<div class="mt-auto pt-6 border-t border-outline-variant/10 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full overflow-hidden bg-slate-200">
+<img class="w-full h-full object-cover" data-alt="Business executive man in a modern office setting, friendly facial expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBP0SHdCXlcRLBjkXmOt4jmEzC7nHfmfcXewpoZ983ejVnaiYrtUH8i2zN4p2T7dIPFc3dAvq41yHhqgq5HrPPPr0211LKkLIla3t84F9ZlKijuX8MscfVoNNxoFQt2CVDF8ltFvoY3VT6x-nUS6tF2oXOO1CAcwMN_VD3T0OzR1x5jOFgdomOey5faRvnMpOXc2AxZ3YwUaAokh0XgVTvltVyYN8x6-aEQwMCg7MgJEInJP74RjCRVD6ErwVSB4SL4PYmiDRtQzA"/>
+</div>
+<div>
+<p class="text-xs font-bold leading-none">陈建国</p>
+<p class="text-[10px] text-slate-400 mt-1">企业咨询顾问</p>
+</div>
+</div>
+<div class="text-right">
+<span class="text-lg font-black text-primary">Free</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Template Card 4 -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
+<div class="aspect-[16/10] overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Financial analytics dashboard with complex data visualization, charts showing trends, and revenue highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkI_lw6Dqxh_FrQu4CGOJF1yoZK0oy3WF3mKaKyOBOjdiBdoI40Yi7zNcLvFDzwEauUS_b-kghZPZIHAP_OdWIBhi7BWr7VK62KK4EBvXkNUjpLcCgT4bTYOjmfiLOItG7TaHjmj1LPjyWsLP0ZV4nkWmThqtudCEXAMWkv4wI3_4qqlkgh54nZf9zBPSqnR0J2D_WN5yYNwHh-DAorrGrdYqdwBVU3y6eZsMMDfRF9nm_Gt6xZg7vR6iG6UYWkZn7VCtzL0E6Pw"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex items-center gap-2 mb-3">
+<span class="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Finance</span>
+</div>
+<h3 class="text-lg font-bold mb-2 group-hover:text-primary transition-colors">财务报表自动化</h3>
+<p class="text-xs text-slate-500 line-clamp-2 leading-relaxed mb-6">多维财务分析看板，自动生成三大会计报表，实时掌控企业资金动向。</p>
+<div class="mt-auto pt-6 border-t border-outline-variant/10 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full overflow-hidden bg-slate-200">
+<img class="w-full h-full object-cover" data-alt="A focused female analyst looking at the camera, wearing professional business attire" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCq4KX83MQ1spsvY-Zo0587MOFnNjFTsvFIrwS4U_Bo86Flptk0iy1xIvgNvooV_Rv0ADpK4sjfanuWYg-LDN6XBLctaJkl_zBQfplreYlEhzYg-sU_3Gyx_e5y4FpcTn12OB7AbbeIvORq2l7y1HlxM63XAu6yofzTLrU4ui461SjO2Dz01qwyXUFC5esEgC4FOBGLbkKTzTSzFbigSRmxyJtpjdG8R1wdAEResci50NRYQT9eSQB6I1euDOFexGw_UfOiZ6XJgw"/>
+</div>
+<div>
+<p class="text-xs font-bold leading-none">王小娅</p>
+<p class="text-[10px] text-slate-400 mt-1">CPA持证专家</p>
+</div>
+</div>
+<div class="text-right">
+<span class="text-lg font-black text-on-surface">¥499</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Template Card 5 -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
+<div class="aspect-[16/10] overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Collaborative work management tool interface showing kanban boards, tasks, and project timelines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9h_n8HUXYJJBxM6um5pjgyVeU7dEiW5Gw6iNh6MVEJmv7vPD9MwUEGumk5hiuly11yYV18-jYg8rXOY7DL4gSbL_yuAchZQ3MP9fB2xIzZ7SuE0PPBHihC7ZhHG4abtYKQdQmzdSUcTaXG0ilbVBJUV2qgRqRSodUwh7OrwUAjtmscp_kT1G72-NKDS1F8-wlOw1dUq2egSzQbyBQt2Bv8AaVrazLqnSzcDttUKEG4Rk9Ct2j5_q2VHnWFqmgwbmuG3-8WealWw"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex items-center gap-2 mb-3">
+<span class="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Operations</span>
+</div>
+<h3 class="text-lg font-bold mb-2 group-hover:text-primary transition-colors">通用项目协同管理</h3>
+<p class="text-xs text-slate-500 line-clamp-2 leading-relaxed mb-6">灵活的看板、甘特图展示，支持自动化提醒，让跨团队协作更简单顺滑。</p>
+<div class="mt-auto pt-6 border-t border-outline-variant/10 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full overflow-hidden bg-slate-200">
+<img class="w-full h-full object-cover" data-alt="Middle-aged man in a suit with a professional, experienced demeanor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCowJRqpvYTlwKOHngFNiziYk0ulGVVpIEu7tA9HEDlRaiWmIrDI19BzpPpFph4n8VzetZLvxrtoW3zIAzOMarGO-btw0J2Ccdi6-SmUlMogTsIS26dgr6e9KpYrM6GcsYLvE-lNGisV__I_RA_VpDDiwrPVi_DEhtKZdhuZf4gATKj52jB6VRQhMQZ5Z-T9xmMdJq7xPkTBDQIBXQWE8fzjxKZn1bh7WL84GR9ggaCTybWamwLgmnaO34muvxSuFnEihfD0fkeeQ"/>
+</div>
+<div>
+<p class="text-xs font-bold leading-none">赵刚</p>
+<p class="text-[10px] text-slate-400 mt-1">PMP高级专家</p>
+</div>
+</div>
+<div class="text-right">
+<span class="text-lg font-black text-primary">Free</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Template Card 6 -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
+<div class="aspect-[16/10] overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Learning management system interface with course catalogs, student progress bars, and video content previews" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-W7ovo5Y-Ub-0QOCbaRSd39xAGo11Pe5r05mLtTe4BDHX_HeaekLSDV7QrjXtlgF0Wqgu-wGJ6fEvVAyPHF8XPn43klG8jKuf6FYk9vwm1lXB6TTgtwDpuOluVyY6KIqPhKBnaBrUaOlOkgvebMo-cz8h9d6qSnDHQeQ7u8vrlSbINmSUUX6ozf9ieD3ko2PS0kBZsQolCrr_-R5mkJCu_71xXfLsd_0dlQB6DRmbEaNV0mXCLyQf1uqyuSQJFM8_ee9AClNhVg"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex items-center gap-2 mb-3">
+<span class="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Education</span>
+</div>
+<h3 class="text-lg font-bold mb-2 group-hover:text-primary transition-colors">课外培训机构教务</h3>
+<p class="text-xs text-slate-500 line-clamp-2 leading-relaxed mb-6">排课消课、招生引流、家校互动一键搞定，全面提升机构数字化经营能力。</p>
+<div class="mt-auto pt-6 border-t border-outline-variant/10 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full overflow-hidden bg-slate-200">
+<img class="w-full h-full object-cover" data-alt="Professional woman with a warm, approachable look, suitable for an education expert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3XnLzlaSsu02ViC7zKdglE2qaDntitY8OfJdtYn-HJBDLRTSx-HVMuIumOAzplO3hqQpPKVvdNN0UwwlXAsfQ_eOlr_qVEnvt84CTYfEPnmk2Ka6swYu6bbK3B8tPLEEFoQAEILFzmgZGNASfG_vc7Iy4fZ0J6lmA7kAsF9AfFzZsz1KWRHLQde_R6rQCGu1s3eDV_BZ1deAOoHa3poBfmwgtyPD33sQwNJh3CNMwK6BSW--iuHrVnPFwK2bHBLp1PGQukBo1iw"/>
+</div>
+<div>
+<p class="text-xs font-bold leading-none">刘芳</p>
+<p class="text-[10px] text-slate-400 mt-1">教育科技顾问</p>
+</div>
+</div>
+<div class="text-right">
+<span class="text-lg font-black text-on-surface">¥1299</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-16 flex items-center justify-center gap-2">
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-outline-variant/30 text-slate-500 hover:bg-surface-container-low transition-all">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-primary text-white font-bold shadow-sm">1</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg text-slate-500 font-bold hover:bg-surface-container-low transition-all">2</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg text-slate-500 font-bold hover:bg-surface-container-low transition-all">3</button>
+<span class="text-slate-400 px-2">...</span>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg text-slate-500 font-bold hover:bg-surface-container-low transition-all">12</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-outline-variant/30 text-slate-500 hover:bg-surface-container-low transition-all">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-[#f7f9fb] dark:bg-slate-950 mt-20">
+<div class="w-full py-12 px-10 max-w-[1280px] mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col items-center md:items-start gap-4">
+<div class="text-lg font-black text-[#005da7]">LarkBase Club</div>
+<p class="font-inter text-xs text-slate-500 dark:text-slate-400 max-w-xs text-center md:text-left leading-relaxed">
+                    Elevating business operations with expertly crafted digital frameworks and elite template architectures.
+                </p>
+</div>
+<div class="flex items-center gap-10">
+<div class="flex gap-6">
+<a class="font-inter text-xs text-slate-500 hover:text-[#005da7] hover:underline transition-all" href="#">About</a>
+<a class="font-inter text-xs text-slate-500 hover:text-[#005da7] hover:underline transition-all" href="#">Experts Join</a>
+<a class="font-inter text-xs text-slate-500 hover:text-[#005da7] hover:underline transition-all" href="#">Publish Template</a>
+<a class="font-inter text-xs text-slate-500 hover:text-[#005da7] hover:underline transition-all" href="#">Support</a>
+</div>
+<div class="flex gap-4">
+<button class="w-8 h-8 flex items-center justify-center rounded-full bg-slate-200/50 hover:bg-primary hover:text-white transition-all text-slate-500">
+<span class="material-symbols-outlined text-sm">public</span>
+</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-full bg-slate-200/50 hover:bg-primary hover:text-white transition-all text-slate-500">
+<span class="material-symbols-outlined text-sm">alternate_email</span>
+</button>
+</div>
+</div>
+</div>
+<div class="w-full py-6 border-t border-outline-variant/10">
+<div class="max-w-[1280px] mx-auto px-10 flex justify-center md:justify-start">
+<p class="font-inter text-xs text-slate-400">© 2024 LarkBase Club. All rights reserved.</p>
+</div>
+</div>
+</footer>
+</body></html>

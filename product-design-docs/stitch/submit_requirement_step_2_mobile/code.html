@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Submit Requirement - LarkBase Nexus</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-error-container": "#93000a",
+              "tertiary": "#7f5300",
+              "surface-dim": "#d8dadc",
+              "primary-container": "#2976c7",
+              "tertiary-fixed": "#ffddb4",
+              "error-container": "#ffdad6",
+              "on-primary-fixed": "#001c39",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary-fixed": "#001c39",
+              "on-secondary": "#ffffff",
+              "on-secondary-container": "#485e7e",
+              "on-tertiary-fixed-variant": "#633f00",
+              "surface-variant": "#e0e3e5",
+              "outline": "#717783",
+              "inverse-on-surface": "#eff1f3",
+              "surface-container": "#eceef0",
+              "surface": "#f7f9fb",
+              "surface-container-low": "#f2f4f6",
+              "on-primary": "#ffffff",
+              "surface-container-high": "#e6e8ea",
+              "surface-bright": "#f7f9fb",
+              "on-secondary-fixed-variant": "#314867",
+              "surface-tint": "#0060ac",
+              "on-tertiary-container": "#fffbff",
+              "error": "#ba1a1a",
+              "secondary-fixed": "#d4e3ff",
+              "inverse-primary": "#a4c9ff",
+              "background": "#f7f9fb",
+              "on-background": "#191c1e",
+              "secondary-container": "#c1d9fe",
+              "on-surface-variant": "#414751",
+              "primary-fixed-dim": "#a4c9ff",
+              "on-tertiary-fixed": "#291800",
+              "primary": "#005da7",
+              "primary-fixed": "#d4e3ff",
+              "on-primary-fixed-variant": "#004883",
+              "surface-container-highest": "#e0e3e5",
+              "secondary": "#496080",
+              "on-error": "#ffffff",
+              "on-surface": "#191c1e",
+              "inverse-surface": "#2d3133",
+              "secondary-fixed-dim": "#b1c8ed",
+              "outline-variant": "#c1c7d3",
+              "on-primary-container": "#fdfcff",
+              "tertiary-fixed-dim": "#ffb953",
+              "on-tertiary": "#ffffff",
+              "tertiary-container": "#a06900"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            vertical-align: middle;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky z-50 bg-[#f7f9fb] dark:bg-slate-950">
+<div class="flex justify-between items-center px-[1.5rem] py-4 w-full">
+<div class="flex items-center gap-3">
+<button class="text-primary active:scale-95 transition-transform duration-200">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="text-xl font-bold tracking-tight text-[#005da7] dark:text-[#2976c7]">Submit Requirement</h1>
+</div>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary/20">
+<img alt="User Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBG4cIhwymj0GGV0Wp-iQv29oVVzRjA9GxuIaWX8CR6vDFxfufEw5U7T8Qz3cJHd0qX_gBaCjfWKz3FaC62rN1rA0Ag3MzVlaKC-AO3plrSCAS_3HWJEgyHBw1qax29oEX3vIIZ7gY11EK4HiQLRE3YR3DoRUzpOQdpwx6BI-3N4ImSOFfSf1uqjpvfch6HDDmB1ghsPY8gPYe0jEMXOc93awe4W-qp-bdHfh5x24Ag90D4S6EjAXp1rFwIJkPE_oosv4QbcAUBKg"/>
+</div>
+</div>
+</header>
+<main class="flex-grow px-[1.5rem] pb-32">
+<!-- Progress Indicator -->
+<section class="py-6">
+<div class="flex items-center justify-between relative">
+<!-- Connecting Line Background -->
+<div class="absolute top-1/2 left-0 w-full h-[2px] bg-outline-variant/30 -translate-y-1/2 z-0"></div>
+<!-- Active Progress Line -->
+<div class="absolute top-1/2 left-0 w-1/2 h-[2px] bg-primary -translate-y-1/2 z-0"></div>
+<!-- Step 1: Completed -->
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'wght' 700;">check</span>
+</div>
+<span class="text-[0.65rem] font-bold mt-2 uppercase tracking-wider text-primary">Overview</span>
+</div>
+<!-- Step 2: Active -->
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center ring-4 ring-primary-container/20 shadow-md">
+<span class="text-sm font-bold">2</span>
+</div>
+<span class="text-[0.65rem] font-bold mt-2 uppercase tracking-wider text-primary">Details</span>
+</div>
+<!-- Step 3: Inactive -->
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center">
+<span class="text-sm font-bold">3</span>
+</div>
+<span class="text-[0.65rem] font-bold mt-2 uppercase tracking-wider text-on-surface-variant">Review</span>
+</div>
+</div>
+</section>
+<!-- Form Canvas -->
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-[0px_4px_12px_rgba(0,0,0,0.03)] border border-outline-variant/10">
+<div class="space-y-8">
+<!-- Industry Field -->
+<div class="space-y-2">
+<label class="font-inter text-sm font-medium uppercase tracking-widest text-slate-500 block">Industry Focus</label>
+<div class="relative">
+<select class="w-full bg-transparent border-b-2 border-outline-variant/40 py-3 appearance-none focus:outline-none focus:border-primary transition-colors font-medium text-on-surface">
+<option value="">Select Industry</option>
+<option value="fintech">FinTech &amp; Banking</option>
+<option value="health">Healthcare IT</option>
+<option value="saas">Enterprise SaaS</option>
+<option value="energy">Renewable Energy</option>
+</select>
+<span class="material-symbols-outlined absolute right-0 top-1/2 -translate-y-1/2 text-outline pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Company Size Chips -->
+<div class="space-y-4">
+<label class="font-inter text-sm font-medium uppercase tracking-widest text-slate-500 block">Organization Size</label>
+<div class="flex flex-wrap gap-2">
+<button class="px-4 py-2 rounded-lg text-sm font-medium border border-outline-variant/30 hover:border-primary transition-all active:scale-95 bg-surface-container-low text-on-surface-variant">
+                            1-50
+                        </button>
+<button class="px-4 py-2 rounded-lg text-sm font-medium border-2 border-primary bg-primary/5 text-primary transition-all active:scale-95">
+                            50-200
+                        </button>
+<button class="px-4 py-2 rounded-lg text-sm font-medium border border-outline-variant/30 hover:border-primary transition-all active:scale-95 bg-surface-container-low text-on-surface-variant">
+                            200-500
+                        </button>
+<button class="px-4 py-2 rounded-lg text-sm font-medium border border-outline-variant/30 hover:border-primary transition-all active:scale-95 bg-surface-container-low text-on-surface-variant">
+                            500+
+                        </button>
+</div>
+</div>
+<!-- Requirement Description -->
+<div class="space-y-2">
+<label class="font-inter text-sm font-medium uppercase tracking-widest text-slate-500 block">Requirement Scope</label>
+<textarea class="w-full bg-surface-container-low border-0 border-b-2 border-outline-variant/40 rounded-t-lg p-4 focus:ring-0 focus:border-primary transition-colors min-h-[160px] text-on-surface placeholder:text-outline/60" placeholder="Detail the technical specifications and desired expertise required for this project..."></textarea>
+<p class="text-[0.7rem] text-outline text-right italic">Minimum 200 characters recommended</p>
+</div>
+</div>
+</div>
+<!-- Sticky Form Actions -->
+<div class="fixed bottom-[88px] left-0 w-full px-6 py-4 bg-surface/90 backdrop-blur-md flex gap-4">
+<button class="flex-1 py-4 px-6 border-2 border-outline-variant text-on-surface font-bold rounded-xl active:scale-[0.98] transition-all hover:bg-surface-container-high">
+                Previous Step
+            </button>
+<button class="flex-1 py-4 px-6 bg-primary text-on-primary font-bold rounded-xl shadow-lg shadow-primary/20 active:scale-[0.98] transition-all flex items-center justify-center gap-2">
+                Next Step
+                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around p-3 md:hidden bg-[#ffffff]/80 dark:bg-slate-900/80 backdrop-blur-md border-t border-slate-200/20 dark:border-slate-800/20 shadow-lg">
+<!-- Submissions active because flow is Submission Flow -->
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 hover:text-[#005da7]" href="#">
+<span class="material-symbols-outlined" data-icon="list_alt">list_alt</span>
+<span class="font-inter text-[0.875rem] font-medium mt-1">Requirements</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 hover:text-[#005da7]" href="#">
+<span class="material-symbols-outlined" data-icon="pending_actions">pending_actions</span>
+<span class="font-inter text-[0.875rem] font-medium mt-1">Progress</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#005da7]/10 text-[#005da7] dark:text-[#2976c7] rounded-xl px-4 py-1 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="contact_support" style="font-variation-settings: 'FILL' 1;">contact_support</span>
+<span class="font-inter text-[0.875rem] font-medium mt-1">Help</span>
+</a>
+</nav>
+</body></html>

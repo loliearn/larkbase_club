@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Edit Profile | LarkBase Club</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-dim": "#d8dadc",
+              "on-surface": "#191c1e",
+              "inverse-primary": "#a4c9ff",
+              "inverse-on-surface": "#eff1f3",
+              "on-primary": "#ffffff",
+              "surface-container-lowest": "#ffffff",
+              "primary-container": "#2976c7",
+              "on-primary-fixed": "#001c39",
+              "error-container": "#ffdad6",
+              "on-tertiary": "#ffffff",
+              "surface-container-high": "#e6e8ea",
+              "surface": "#f7f9fb",
+              "surface-tint": "#0060ac",
+              "surface-bright": "#f7f9fb",
+              "on-tertiary-fixed-variant": "#633f00",
+              "surface-container": "#eceef0",
+              "tertiary-fixed-dim": "#ffb953",
+              "on-primary-container": "#fdfcff",
+              "secondary-container": "#c1d9fe",
+              "on-tertiary-container": "#fffbff",
+              "on-background": "#191c1e",
+              "inverse-surface": "#2d3133",
+              "on-secondary": "#ffffff",
+              "tertiary-container": "#a06900",
+              "on-secondary-container": "#485e7e",
+              "on-error": "#ffffff",
+              "outline-variant": "#c1c7d3",
+              "on-error-container": "#93000a",
+              "background": "#f7f9fb",
+              "secondary-fixed-dim": "#b1c8ed",
+              "primary-fixed-dim": "#a4c9ff",
+              "primary-fixed": "#d4e3ff",
+              "on-surface-variant": "#414751",
+              "on-tertiary-fixed": "#291800",
+              "secondary": "#496080",
+              "outline": "#717783",
+              "tertiary": "#7f5300",
+              "surface-container-low": "#f2f4f6",
+              "error": "#ba1a1a",
+              "tertiary-fixed": "#ffddb4",
+              "surface-variant": "#e0e3e5",
+              "secondary-fixed": "#d4e3ff",
+              "primary": "#005da7",
+              "on-secondary-fixed": "#001c39",
+              "on-primary-fixed-variant": "#004883",
+              "on-secondary-fixed-variant": "#314867",
+              "surface-container-highest": "#e0e3e5"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        .glass-header {
+            backdrop-filter: blur(12px);
+            background: rgba(247, 249, 251, 0.8);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 bg-[#f7f9fb] dark:bg-slate-900 border-b border-[#f2f4f6] dark:border-slate-800">
+<div class="flex items-center justify-between px-6 py-4 w-full">
+<div class="flex items-center gap-4">
+<button class="active:scale-95 transition-transform duration-150 p-1 text-[#005da7]">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-['Inter'] text-2xl font-bold tracking-tight text-[#191c1e] dark:text-white">Edit Profile</h1>
+</div>
+<div class="w-10"></div> <!-- Spacer for balance -->
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-20 pb-32 px-6 max-w-lg mx-auto w-full space-y-10">
+<!-- Profile Picture Upload Area -->
+<section class="flex flex-col items-center">
+<div class="relative group">
+<div class="w-32 h-32 rounded-full overflow-hidden border-4 border-surface-container-lowest shadow-[0_4px_24px_rgba(0,93,167,0.1)]">
+<img alt="Profile picture" class="w-full h-full object-cover" data-alt="Professional portrait of a mature male executive with a confident expression, neutral background, soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgYyREBkoyAtfDJIEeQ7AnkRRXJfTwcMZ1IJJzEOHvHDE9wwuteV_qG9FamIWeWcXNc_xi0F1BtaSHueTg3XIeJVZw6ThTkmI5dkP8P8bpym_1muSjJ2eDtEenXlAdIYqTwdfRxzBscdHT8feoPJidKCporLFWXtdf-iQrphE1JAZPs7-ReZJbxQ1Ut6K-Ua7-xSjGug8RlIzdXOisvVbjF5Yol4YW8PzhU1hYQKd8Uvo36oFkucuA4C4R_weYguCuy_eda0ET5w"/>
+</div>
+<button class="absolute bottom-0 right-0 bg-primary text-on-primary p-2 rounded-full shadow-lg active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-sm" data-icon="edit">edit</span>
+</button>
+</div>
+<button class="mt-4 text-primary font-semibold text-sm hover:underline transition-all">Change Photo</button>
+</section>
+<!-- Form Fields -->
+<div class="space-y-8">
+<!-- Name Field -->
+<div class="space-y-1">
+<label class="font-label text-[10px] uppercase tracking-[0.1em] font-bold text-outline">Full Name</label>
+<input class="w-full bg-transparent border-b-2 border-outline-variant/40 focus:border-primary focus:ring-0 px-0 py-2 text-lg font-medium transition-all outline-none" placeholder="Enter your full name" type="text" value="Dr. Julian Vane"/>
+</div>
+<!-- Professional Title -->
+<div class="space-y-1">
+<label class="font-label text-[10px] uppercase tracking-[0.1em] font-bold text-outline">Professional Title</label>
+<input class="w-full bg-transparent border-b-2 border-outline-variant/40 focus:border-primary focus:ring-0 px-0 py-2 text-lg font-medium transition-all outline-none" placeholder="e.g. Lead Developer" type="text" value="Senior Strategic Analyst"/>
+</div>
+<!-- City Dropdown -->
+<div class="space-y-1">
+<label class="font-label text-[10px] uppercase tracking-[0.1em] font-bold text-outline">Location (City)</label>
+<div class="relative">
+<select class="w-full appearance-none bg-transparent border-b-2 border-outline-variant/40 focus:border-primary focus:ring-0 px-0 py-2 text-lg font-medium transition-all outline-none cursor-pointer">
+<option>New York City</option>
+<option>London</option>
+<option>Singapore</option>
+<option>San Francisco</option>
+<option>Berlin</option>
+</select>
+<span class="material-symbols-outlined absolute right-0 top-2 pointer-events-none text-outline" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+<!-- Bio -->
+<div class="space-y-1">
+<label class="font-label text-[10px] uppercase tracking-[0.1em] font-bold text-outline">Personal Bio</label>
+<textarea class="w-full bg-surface-container-low/50 border-none rounded-xl p-4 text-body-md leading-relaxed focus:ring-2 focus:ring-primary/20 transition-all outline-none resize-none" placeholder="Tell the club about your expertise..." rows="4">Julian is a veteran in market positioning with over 15 years of experience at top-tier firms. He specializes in bridging the gap between raw data and executive decision-making within the fintech sector.</textarea>
+</div>
+<!-- Skills Section -->
+<div class="space-y-3">
+<div class="flex justify-between items-center">
+<label class="font-label text-[10px] uppercase tracking-[0.1em] font-bold text-outline">Expert Skills (3/10)</label>
+<button class="text-xs text-primary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="add">add</span> Add Skill
+                    </button>
+</div>
+<div class="flex flex-wrap gap-2">
+<!-- Expert Chip -->
+<div class="flex items-center gap-2 bg-tertiary-container/10 border-[0.5px] border-tertiary/30 px-3 py-1.5 rounded-full">
+<span class="text-xs font-bold text-tertiary tracking-tight">Market Analysis</span>
+<span class="material-symbols-outlined text-xs text-tertiary/60 cursor-pointer" data-icon="close">close</span>
+</div>
+<div class="flex items-center gap-2 bg-tertiary-container/10 border-[0.5px] border-tertiary/30 px-3 py-1.5 rounded-full">
+<span class="text-xs font-bold text-tertiary tracking-tight">FinTech</span>
+<span class="material-symbols-outlined text-xs text-tertiary/60 cursor-pointer" data-icon="close">close</span>
+</div>
+<div class="flex items-center gap-2 bg-tertiary-container/10 border-[0.5px] border-tertiary/30 px-3 py-1.5 rounded-full">
+<span class="text-xs font-bold text-tertiary tracking-tight">Strategy</span>
+<span class="material-symbols-outlined text-xs text-tertiary/60 cursor-pointer" data-icon="close">close</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Transactional Actions Footer (Non-Sticky) -->
+<div class="flex gap-4 pt-4 pb-8">
+<button class="flex-1 py-4 text-on-surface font-bold text-sm bg-surface-container-high rounded-xl active:scale-95 transition-all">
+                Cancel
+            </button>
+<button class="flex-1 py-4 text-on-primary font-bold text-sm bg-primary rounded-xl shadow-lg shadow-primary/20 active:scale-95 transition-all">
+                Save Profile
+            </button>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-white/80 backdrop-blur-xl border-t border-[#c1c7d3]/20 z-50">
+<!-- Home -->
+<a class="flex flex-col items-center justify-center text-[#191c1e]/60 dark:text-slate-400 hover:text-[#005da7] transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-wider font-medium mt-1">Home</span>
+</a>
+<!-- Search -->
+<a class="flex flex-col items-center justify-center text-[#191c1e]/60 dark:text-slate-400 hover:text-[#005da7] transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-wider font-medium mt-1">Search</span>
+</a>
+<!-- Profile (Active) -->
+<a class="flex flex-col items-center justify-center bg-[#005da7]/10 text-[#005da7] rounded-xl px-4 py-1.5 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="person" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-wider font-bold mt-1">Profile</span>
+</a>
+<!-- Settings -->
+<a class="flex flex-col items-center justify-center text-[#191c1e]/60 dark:text-slate-400 hover:text-[#005da7] transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-wider font-medium mt-1">Settings</span>
+</a>
+</nav>
+</body></html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LarkBase Club | Expert Network</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-fixed": "#291800",
+              "on-secondary-container": "#485e7e",
+              "on-primary-fixed-variant": "#004883",
+              "on-error": "#ffffff",
+              "on-tertiary-container": "#fffbff",
+              "outline": "#717783",
+              "inverse-surface": "#2d3133",
+              "primary-fixed-dim": "#a4c9ff",
+              "on-secondary": "#ffffff",
+              "on-primary-fixed": "#001c39",
+              "secondary": "#496080",
+              "tertiary": "#7f5300",
+              "on-tertiary-fixed-variant": "#633f00",
+              "on-error-container": "#93000a",
+              "surface-tint": "#0060ac",
+              "surface-container-low": "#f2f4f6",
+              "background": "#f7f9fb",
+              "surface-container-high": "#e6e8ea",
+              "on-secondary-fixed-variant": "#314867",
+              "surface-container-lowest": "#ffffff",
+              "surface-container": "#eceef0",
+              "on-primary": "#ffffff",
+              "inverse-on-surface": "#eff1f3",
+              "on-surface-variant": "#414751",
+              "on-tertiary": "#ffffff",
+              "tertiary-container": "#a06900",
+              "error-container": "#ffdad6",
+              "tertiary-fixed-dim": "#ffb953",
+              "primary-fixed": "#d4e3ff",
+              "primary": "#005da7",
+              "outline-variant": "#c1c7d3",
+              "on-background": "#191c1e",
+              "secondary-fixed": "#d4e3ff",
+              "surface-dim": "#d8dadc",
+              "secondary-fixed-dim": "#b1c8ed",
+              "secondary-container": "#c1d9fe",
+              "error": "#ba1a1a",
+              "primary-container": "#2976c7",
+              "surface-variant": "#e0e3e5",
+              "on-primary-container": "#fdfcff",
+              "tertiary-fixed": "#ffddb4",
+              "surface": "#f7f9fb",
+              "surface-container-highest": "#e0e3e5",
+              "on-secondary-fixed": "#001c39",
+              "inverse-primary": "#a4c9ff",
+              "surface-bright": "#f7f9fb",
+              "on-surface": "#191c1e"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="bg-[#f7f9fb] dark:bg-slate-950 sticky top-0 z-50">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-[1280px] mx-auto">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container-high border-2 border-primary-container">
+<img alt="User Profile" class="w-full h-auto" data-alt="Close up professional portrait of a business executive with a friendly smile, studio lighting, neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0uzh-sfYk9Xp9hvTt6tx21_MRkWg1Jgwa76IIO9DSNKLKzHxWBeFM3_PJpnUpAR7vQSfqGLHdYHVWlc8XQpg4JPkPf4Y3lEGQfBxhkpVVabmjYBDmIAr07IRzBoyEDDcJq_zJZkqOC2H449KiJTodkeC6eTZWrK-v9eQDHJiqN_uo6ZcYawxLFp74tjE-vlwqvftx5K03UfJ_SmXB98ZvLoWNzU5gkikw-S1K2juT-1QFA7MbZ60g9sj_9hWSsNcIB-Njg4A-_w"/>
+</div>
+<h1 class="font-['Inter'] font-tight tracking-[-0.02em] text-xl font-bold text-[#005da7] dark:text-blue-400">LarkBase Club</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="hover:opacity-80 transition-opacity scale-95 active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined text-[#005da7] dark:text-blue-400">search</span>
+</button>
+</div>
+</div>
+</header>
+<main class="px-6 max-w-[1280px] mx-auto mt-6">
+<!-- Hero Section -->
+<section class="mb-8">
+<h2 class="text-[2.75rem] font-bold tracking-[-0.02em] leading-tight text-on-surface">Find Experts</h2>
+<p class="text-on-surface-variant font-medium mt-1">128 experts found</p>
+</section>
+<!-- Filter Bar -->
+<div class="flex items-center gap-3 mb-8 overflow-x-auto pb-2 no-scrollbar">
+<button class="flex items-center gap-2 px-4 py-2 bg-surface-container-lowest rounded-full shadow-sm whitespace-nowrap border border-outline-variant/20">
+<span class="material-symbols-outlined text-sm">tune</span>
+<span class="text-sm font-medium">Filters</span>
+</button>
+<button class="flex items-center gap-2 px-4 py-2 bg-surface-container-lowest rounded-full shadow-sm whitespace-nowrap border border-outline-variant/20">
+<span class="text-sm font-medium">Sort by Rating</span>
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+<button class="flex items-center gap-2 px-4 py-2 bg-surface-container-lowest rounded-full shadow-sm whitespace-nowrap border border-outline-variant/20">
+<span class="text-sm font-medium">Hourly Rate</span>
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+</div>
+<!-- Expert List -->
+<div class="space-y-6">
+<!-- Expert Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-5 transition-all duration-200 hover:bg-surface-container-low shadow-[0_4px_32px_rgba(25,28,30,0.04)]">
+<div class="flex gap-4">
+<div class="relative">
+<div class="w-16 h-16 rounded-xl overflow-hidden shadow-sm">
+<img alt="Zhang Ming" class="w-full h-full object-cover" data-alt="Portrait of a young professional male in a minimalist office setting, soft natural light, professional attire" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6c0Y3StabalMJdIuqBh3N9JGeqwwdldl-QKtfGP3JtSO6-Dj52mJtct0sW1r5MCHpWz51kDb8EFf9Atwexx3YGmGPpadSviZ7l9y16U4kCCS4sFJqKtzIqvumYCJSlvHI5o5RPe_8yToSjwE7EYsvzzs7zC8W1L2r_P6dfYAUVNi3lIlDQ0MCcbzb6VlQP9hr12QLM3PAINfF1GXO-tXRrgs1uqrOthryBt2pEb5j3SPPxlQOrr8k55sG37JrRD-5wzw5UJyoLw"/>
+</div>
+<div class="absolute -bottom-1 -right-1 bg-tertiary-container text-on-tertiary-container rounded-full p-0.5 border border-tertiary/30">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+</div>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-lg font-bold text-on-surface leading-none">Zhang Ming</h3>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-sm text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-sm font-bold text-on-surface">4.9</span>
+<span class="text-xs text-on-surface-variant ml-1">(42 reviews)</span>
+</div>
+</div>
+<div class="text-right">
+<p class="text-primary font-bold text-lg">¥450<span class="text-xs text-on-surface-variant font-normal">/h</span></p>
+</div>
+</div>
+<div class="mt-2 text-sm text-on-surface-variant flex items-center gap-2">
+<span>Beijing</span>
+<span class="w-1 h-1 bg-outline-variant rounded-full"></span>
+<span>8 years exp.</span>
+</div>
+</div>
+</div>
+<!-- Metadata & Tags -->
+<div class="mt-4 flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container rounded-lg text-xs font-semibold text-on-surface-variant tracking-wide">CRM</span>
+<span class="px-3 py-1 bg-surface-container rounded-lg text-xs font-semibold text-on-surface-variant tracking-wide">AUTOMATION</span>
+<span class="px-3 py-1 bg-surface-container rounded-lg text-xs font-semibold text-on-surface-variant tracking-wide">LARK SUITE</span>
+</div>
+<div class="mt-5 flex gap-3">
+<button class="flex-1 py-2.5 bg-primary text-on-primary rounded-lg text-sm font-bold transition-all hover:bg-primary-container scale-98 active:scale-95">
+                        View Details
+                    </button>
+<button class="px-3 py-2.5 bg-surface-container-low text-on-surface rounded-lg transition-all hover:bg-surface-container-high scale-98 active:scale-95">
+<span class="material-symbols-outlined">chat_bubble</span>
+</button>
+</div>
+</div>
+<!-- Expert Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-5 transition-all duration-200 hover:bg-surface-container-low shadow-[0_4px_32px_rgba(25,28,30,0.04)]">
+<div class="flex gap-4">
+<div class="relative">
+<div class="w-16 h-16 rounded-xl overflow-hidden shadow-sm">
+<img alt="Li Jing" class="w-full h-full object-cover" data-alt="Close-up of an expert professional female with sharp features, modern urban workspace background, cinematic soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwSXkb705cWLaN_pjDjZ6WUtKpy4APWNWJ31MJ9VW99Z-I0sM8WOb40sVKFnw90gfSEYs-Ef5Lk9eWLe4fIa3O7DNd4jhm6x2F0sRHvzsZaVgU56KHlr3WYJy59OIxDf9ANPYpMdVWaH7T55v6ncFM6b-tfwflYsezOfMBehGND3eqTrUWHMr4VS8y1TLa7_T5eUugCK7-ZNM6-MZ2ytiVj0i9Sqqn6jRdlVU52Q18RL_jJD03H9JJfP4yqtwTd7gDwZwqVLyVJQ"/>
+</div>
+<div class="absolute -bottom-1 -right-1 bg-primary-container text-on-primary-container rounded-full p-0.5 border border-primary/30">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-lg font-bold text-on-surface leading-none">Li Jing</h3>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-sm text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-sm font-bold text-on-surface">4.8</span>
+<span class="text-xs text-on-surface-variant ml-1">(28 reviews)</span>
+</div>
+</div>
+<div class="text-right">
+<p class="text-primary font-bold text-lg">¥300<span class="text-xs text-on-surface-variant font-normal">/h</span></p>
+</div>
+</div>
+<div class="mt-2 text-sm text-on-surface-variant flex items-center gap-2">
+<span>Shanghai</span>
+<span class="w-1 h-1 bg-outline-variant rounded-full"></span>
+<span>5 years exp.</span>
+</div>
+</div>
+</div>
+<div class="mt-4 flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container rounded-lg text-xs font-semibold text-on-surface-variant tracking-wide">DATA ANALYSIS</span>
+<span class="px-3 py-1 bg-surface-container rounded-lg text-xs font-semibold text-on-surface-variant tracking-wide">DASHBOARDS</span>
+</div>
+<div class="mt-5 flex gap-3">
+<button class="flex-1 py-2.5 bg-primary text-on-primary rounded-lg text-sm font-bold transition-all hover:bg-primary-container scale-98 active:scale-95">
+                        View Details
+                    </button>
+<button class="px-3 py-2.5 bg-surface-container-low text-on-surface rounded-lg transition-all hover:bg-surface-container-high scale-98 active:scale-95">
+<span class="material-symbols-outlined">chat_bubble</span>
+</button>
+</div>
+</div>
+<!-- Expert Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-5 transition-all duration-200 hover:bg-surface-container-low shadow-[0_4px_32px_rgba(25,28,30,0.04)]">
+<div class="flex gap-4">
+<div class="relative">
+<div class="w-16 h-16 rounded-xl overflow-hidden shadow-sm">
+<img alt="Wei Chen" class="w-full h-full object-cover" data-alt="Portrait of an experienced male technology consultant in a high-tech minimalist office, daylight, professional atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAia9HvP9ma7V1Iyz6zE20HnnXePe4mDBvcyqCqhJE0hqT6pLhfrcLbeK4M5GOcxAMLACaYdehxaIPI1MGcae5Dh1U1O_SeAwKhjO2oi0NfjGcEtYqpluJTsTUdZE186xJSYhPJMYdn0sCkHpomlZnAamDsHtBnTnXhRtLeviJtq4SR1IF3ufyoYFWqCIMvPNlBmxleLxyeFEZoqUJYIgWmJAVPijRFsZRS6ZG6O3oZFf9kgp_uLiHzOVPUXyRiVlvavTD8ZrSIjQ"/>
+</div>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-lg font-bold text-on-surface leading-none">Wei Chen</h3>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-sm text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-sm font-bold text-on-surface">5.0</span>
+<span class="text-xs text-on-surface-variant ml-1">(15 reviews)</span>
+</div>
+</div>
+<div class="text-right">
+<p class="text-primary font-bold text-lg">¥600<span class="text-xs text-on-surface-variant font-normal">/h</span></p>
+</div>
+</div>
+<div class="mt-2 text-sm text-on-surface-variant flex items-center gap-2">
+<span>Shenzhen</span>
+<span class="w-1 h-1 bg-outline-variant rounded-full"></span>
+<span>12 years exp.</span>
+</div>
+</div>
+</div>
+<div class="mt-4 flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container rounded-lg text-xs font-semibold text-on-surface-variant tracking-wide">IT INFRASTRUCTURE</span>
+<span class="px-3 py-1 bg-surface-container rounded-lg text-xs font-semibold text-on-surface-variant tracking-wide">CLOUD ARCHITECT</span>
+</div>
+<div class="mt-5 flex gap-3">
+<button class="flex-1 py-2.5 bg-primary text-on-primary rounded-lg text-sm font-bold transition-all hover:bg-primary-container scale-98 active:scale-95">
+                        View Details
+                    </button>
+<button class="px-3 py-2.5 bg-surface-container-low text-on-surface rounded-lg transition-all hover:bg-surface-container-high scale-98 active:scale-95">
+<span class="material-symbols-outlined">chat_bubble</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Load More Section -->
+<div class="mt-12 mb-12 flex flex-col items-center">
+<button class="px-8 py-3 bg-surface-container-low text-primary font-bold rounded-xl transition-all hover:bg-surface-container-high scale-98 active:scale-95">
+                Load More Experts
+            </button>
+<p class="mt-4 text-xs text-on-surface-variant uppercase tracking-[0.05em] font-medium">Showing 3 of 128</p>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-2 bg-[#ffffffcc] dark:bg-slate-900/80 backdrop-blur-[20px] shadow-[0_-4px_32px_rgba(25,28,30,0.04)] rounded-t-xl">
+<a class="flex flex-col items-center justify-center bg-[#005da71a] text-[#005da7] dark:text-blue-300 rounded-xl px-4 py-2 transition-all scale-98 active:scale-95" href="#">
+<span class="material-symbols-outlined">school</span>
+<span class="font-['Inter'] text-[0.7rem] font-medium tracking-wide uppercase mt-1">Experts</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 p-2 hover:bg-[#f2f4f6] dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="font-['Inter'] text-[0.7rem] font-medium tracking-wide uppercase mt-1">Insights</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 p-2 hover:bg-[#f2f4f6] dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined">workspace_premium</span>
+<span class="font-['Inter'] text-[0.7rem] font-medium tracking-wide uppercase mt-1">Club</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 p-2 hover:bg-[#f2f4f6] dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Inter'] text-[0.7rem] font-medium tracking-wide uppercase mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

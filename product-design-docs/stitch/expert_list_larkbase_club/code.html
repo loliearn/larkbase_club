@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed-dim": "#ffb953",
+              "on-surface": "#191c1e",
+              "surface-dim": "#d8dadc",
+              "on-secondary": "#ffffff",
+              "surface-bright": "#f7f9fb",
+              "background": "#f7f9fb",
+              "primary": "#005da7",
+              "surface-container-highest": "#e0e3e5",
+              "on-error": "#ffffff",
+              "tertiary-fixed": "#ffddb4",
+              "on-secondary-container": "#485e7e",
+              "on-secondary-fixed": "#001c39",
+              "primary-fixed-dim": "#a4c9ff",
+              "secondary": "#496080",
+              "on-error-container": "#93000a",
+              "on-tertiary-fixed-variant": "#633f00",
+              "error": "#ba1a1a",
+              "surface-container-low": "#f2f4f6",
+              "on-background": "#191c1e",
+              "on-primary-container": "#fdfcff",
+              "on-primary-fixed-variant": "#004883",
+              "on-primary-fixed": "#001c39",
+              "outline": "#717783",
+              "surface-tint": "#0060ac",
+              "surface-variant": "#e0e3e5",
+              "error-container": "#ffdad6",
+              "inverse-surface": "#2d3133",
+              "primary-fixed": "#d4e3ff",
+              "outline-variant": "#c1c7d3",
+              "surface-container-high": "#e6e8ea",
+              "secondary-fixed-dim": "#b1c8ed",
+              "surface-container-lowest": "#ffffff",
+              "secondary-fixed": "#d4e3ff",
+              "on-primary": "#ffffff",
+              "on-tertiary": "#ffffff",
+              "tertiary": "#7f5300",
+              "on-tertiary-container": "#fffbff",
+              "on-tertiary-fixed": "#291800",
+              "surface-container": "#eceef0",
+              "on-secondary-fixed-variant": "#314867",
+              "secondary-container": "#c1d9fe",
+              "tertiary-container": "#a06900",
+              "on-surface-variant": "#414751",
+              "primary-container": "#2976c7",
+              "inverse-on-surface": "#eff1f3",
+              "surface": "#f7f9fb",
+              "inverse-primary": "#a4c9ff"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- TopNavBar -->
+<header class="bg-[#f7f9fb] dark:bg-slate-950 sticky top-0 z-50">
+<div class="flex justify-between items-center w-full px-10 py-4 max-w-[1280px] mx-auto">
+<div class="text-xl font-black tracking-tighter text-[#005da7] dark:text-[#2976c7]">LarkBase Club</div>
+<nav class="hidden md:flex items-center space-x-8 font-inter text-sm font-medium tracking-tight">
+<a class="text-slate-600 dark:text-slate-400 hover:text-[#005da7] hover:bg-slate-200/50 dark:hover:bg-slate-800 transition-colors duration-200 px-2 py-1" href="#">Homepage</a>
+<a class="text-[#005da7] dark:text-[#2976c7] border-b-2 border-[#005da7] pb-1 font-bold" href="#">Experts</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-[#005da7] hover:bg-slate-200/50 dark:hover:bg-slate-800 transition-colors duration-200 px-2 py-1" href="#">Templates</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-[#005da7] hover:bg-slate-200/50 dark:hover:bg-slate-800 transition-colors duration-200 px-2 py-1" href="#">Blog</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-[#005da7] hover:bg-slate-200/50 dark:hover:bg-slate-800 transition-colors duration-200 px-2 py-1" href="#">About</a>
+</nav>
+<div class="flex items-center space-x-4">
+<button class="text-slate-600 dark:text-slate-400 text-sm font-medium">Login</button>
+<button class="bg-primary text-on-primary px-5 py-2 rounded font-medium scale-95 active:scale-98 transition-transform">Register</button>
+</div>
+</div>
+</header>
+<main class="max-w-[1280px] mx-auto px-10 pt-6 pb-20">
+<!-- Breadcrumb -->
+<nav class="flex items-center space-x-2 text-xs text-on-surface-variant mb-8 uppercase tracking-widest font-semibold">
+<a class="hover:text-primary transition-colors" href="#">首页</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-primary font-bold">行家</span>
+</nav>
+<div class="flex flex-col lg:flex-row gap-10">
+<!-- Sidebar Filters -->
+<aside class="w-full lg:w-64 flex-shrink-0 space-y-10">
+<div class="space-y-6">
+<h3 class="text-xs uppercase tracking-widest font-bold text-on-surface-variant border-b border-outline-variant/20 pb-2">Certification</h3>
+<div class="flex flex-col space-y-3">
+<label class="flex items-center space-x-3 cursor-pointer group">
+<input checked="" class="form-radio text-primary border-outline-variant/40 focus:ring-primary" name="cert" type="radio"/>
+<span class="text-sm font-medium group-hover:text-primary transition-colors">All</span>
+</label>
+<label class="flex items-center space-x-3 cursor-pointer group">
+<input class="form-radio text-primary border-outline-variant/40 focus:ring-primary" name="cert" type="radio"/>
+<span class="text-sm font-medium group-hover:text-primary transition-colors">Certified</span>
+</label>
+<label class="flex items-center space-x-3 cursor-pointer group">
+<input class="form-radio text-primary border-outline-variant/40 focus:ring-primary" name="cert" type="radio"/>
+<span class="text-sm font-medium group-hover:text-primary transition-colors">Gold</span>
+</label>
+<label class="flex items-center space-x-3 cursor-pointer group">
+<input class="form-radio text-primary border-outline-variant/40 focus:ring-primary" name="cert" type="radio"/>
+<span class="text-sm font-medium group-hover:text-primary transition-colors">Strategic</span>
+</label>
+</div>
+</div>
+<div class="space-y-6">
+<h3 class="text-xs uppercase tracking-widest font-bold text-on-surface-variant border-b border-outline-variant/20 pb-2">Skills</h3>
+<div class="flex flex-wrap gap-2">
+<button class="px-3 py-1.5 text-xs font-semibold bg-surface-container-low text-on-surface rounded-full hover:bg-secondary-container transition-colors">LarkBase</button>
+<button class="px-3 py-1.5 text-xs font-semibold bg-surface-container-low text-on-surface rounded-full hover:bg-secondary-container transition-colors">Automation</button>
+<button class="px-3 py-1.5 text-xs font-semibold bg-surface-container-low text-on-surface rounded-full hover:bg-secondary-container transition-colors">API</button>
+<button class="px-3 py-1.5 text-xs font-semibold bg-surface-container-low text-on-surface rounded-full hover:bg-secondary-container transition-colors">Dashboard</button>
+<button class="px-3 py-1.5 text-xs font-semibold bg-surface-container-low text-on-surface rounded-full hover:bg-secondary-container transition-colors">CRM</button>
+</div>
+</div>
+<div class="space-y-6">
+<h3 class="text-xs uppercase tracking-widest font-bold text-on-surface-variant border-b border-outline-variant/20 pb-2">Price range (￥)</h3>
+<div class="flex items-center space-x-2">
+<input class="w-full bg-transparent border-b border-outline-variant/40 focus:border-primary focus:ring-0 text-sm py-1 placeholder:text-on-surface-variant/40" placeholder="Min" type="number"/>
+<span class="text-on-surface-variant">-</span>
+<input class="w-full bg-transparent border-b border-outline-variant/40 focus:border-primary focus:ring-0 text-sm py-1 placeholder:text-on-surface-variant/40" placeholder="Max" type="number"/>
+</div>
+</div>
+<div class="space-y-6">
+<h3 class="text-xs uppercase tracking-widest font-bold text-on-surface-variant border-b border-outline-variant/20 pb-2">City</h3>
+<select class="w-full bg-transparent border-b border-outline-variant/40 focus:border-primary focus:ring-0 text-sm py-1 text-on-surface-variant font-medium">
+<option>All Cities</option>
+<option>Beijing</option>
+<option>Shanghai</option>
+<option>Shenzhen</option>
+<option>Hangzhou</option>
+</select>
+</div>
+</aside>
+<!-- Main Content Area -->
+<section class="flex-1">
+<div class="flex justify-between items-baseline mb-8">
+<h1 class="text-3xl font-black tracking-tighter text-on-surface">找行家 <span class="text-lg font-medium tracking-normal text-on-surface-variant ml-2">(共128位行家)</span></h1>
+<div class="flex items-center space-x-4">
+<span class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Sort by:</span>
+<button class="text-sm font-bold text-primary flex items-center space-x-1">
+<span>Rating</span>
+<span class="material-symbols-outlined text-[16px]">arrow_drop_down</span>
+</button>
+</div>
+</div>
+<!-- Expert Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Expert Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-6 transition-all duration-300 hover:bg-white hover:shadow-[0_20px_40px_-15px_rgba(0,93,167,0.08)] group">
+<div class="flex items-start justify-between mb-6">
+<div class="flex space-x-4">
+<img alt="Profile" class="w-16 h-16 rounded-lg object-cover" data-alt="Professional portrait of a male tech consultant in a minimalist studio setting with soft daylight and neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_eIp_XunDD8c1c264HGjsAx2GinkhiiDKKu5KFukpCo5llfwmS5UKTgV4N1tvwmktStuQXi1Qz_QGVtHXL_c0STlIJjDCBcUTOnCETz0FEoDMP0Xq7WKlOfFOI2fKFiVvX-DnwMc1HmJhDTUAfwCTR0Jh5hfHqU5Qi0JPFVcZMz9s1YulqhTRu5IW7vNXI2AdUJJYWtHKXuNNUjh_G-2rjB0uVFnSfwlESZatkfZh122GpW3mGQ_1BS0KITDz2_zqphw3Fw9sIw"/>
+<div>
+<h2 class="text-lg font-bold text-on-surface">Chen Wei</h2>
+<p class="text-sm text-on-surface-variant font-medium">Senior Solutions Architect</p>
+<div class="flex items-center mt-1 text-tertiary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-sm font-bold ml-1">4.9</span>
+<span class="mx-2 text-outline-variant">•</span>
+<span class="text-xs font-semibold">Shanghai</span>
+</div>
+</div>
+</div>
+<div class="bg-tertiary-container/10 border border-tertiary/30 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-tighter text-tertiary">Expert Status</div>
+</div>
+<div class="grid grid-cols-2 gap-4 mb-6">
+<div class="bg-surface-container-low p-3 rounded-lg">
+<span class="block text-[10px] uppercase tracking-widest font-bold text-on-surface-variant mb-1">Experience</span>
+<span class="text-sm font-black">8 Years</span>
+</div>
+<div class="bg-surface-container-low p-3 rounded-lg">
+<span class="block text-[10px] uppercase tracking-widest font-bold text-on-surface-variant mb-1">Projects</span>
+<span class="text-sm font-black">42 Completed</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="px-2 py-1 text-[10px] font-bold bg-primary/5 text-primary rounded">LarkBase</span>
+<span class="px-2 py-1 text-[10px] font-bold bg-primary/5 text-primary rounded">Workflow API</span>
+<span class="px-2 py-1 text-[10px] font-bold bg-primary/5 text-primary rounded">Data Viz</span>
+</div>
+<div class="flex items-center justify-between border-t border-outline-variant/10 pt-6">
+<div>
+<span class="text-[10px] block uppercase tracking-widest font-bold text-on-surface-variant">Starting from</span>
+<span class="text-xl font-black text-primary">￥499<span class="text-xs font-medium text-on-surface-variant">/hr</span></span>
+</div>
+<button class="bg-surface-container-high text-on-surface px-6 py-2.5 rounded-lg text-sm font-bold group-hover:bg-primary group-hover:text-on-primary transition-all duration-300">View Detail</button>
+</div>
+</div>
+<!-- Expert Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-6 transition-all duration-300 hover:bg-white hover:shadow-[0_20px_40px_-15px_rgba(0,93,167,0.08)] group">
+<div class="flex items-start justify-between mb-6">
+<div class="flex space-x-4">
+<img alt="Profile" class="w-16 h-16 rounded-lg object-cover" data-alt="Portrait of a young professional woman smiling in a bright modern office with warm wooden accents and natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCp5sIJkoaya9ioTou7jgD2uOqsZEnoV0R9VXVf3xx279uTMjZGC-nm5j3YvqQQu-AMPHoN4XEHwQsZTLbXJEps6oOzvaywzzgBDlQftgvXlO9JuB1ZIQm2heYzRHCkPg4Lwt88mCosWXIgCFmhh8Nbt1mUfzgNFdSiVNYpNX1Cl2hywiCF6VFUYnlJEGudV6EboayzKxaz__Jrewyw-QSMW8FVomzpggO4KSps8xdhNXD_i8cZj_JD15qyQbg-e3gAPvfYLQBrCw"/>
+<div>
+<h2 class="text-lg font-bold text-on-surface">Li Xiao</h2>
+<p class="text-sm text-on-surface-variant font-medium">Digital Transformation Specialist</p>
+<div class="flex items-center mt-1 text-tertiary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-sm font-bold ml-1">5.0</span>
+<span class="mx-2 text-outline-variant">•</span>
+<span class="text-xs font-semibold">Beijing</span>
+</div>
+</div>
+</div>
+<div class="bg-primary/10 border border-primary/20 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-tighter text-primary">Gold Partner</div>
+</div>
+<div class="grid grid-cols-2 gap-4 mb-6">
+<div class="bg-surface-container-low p-3 rounded-lg">
+<span class="block text-[10px] uppercase tracking-widest font-bold text-on-surface-variant mb-1">Experience</span>
+<span class="text-sm font-black">5 Years</span>
+</div>
+<div class="bg-surface-container-low p-3 rounded-lg">
+<span class="block text-[10px] uppercase tracking-widest font-bold text-on-surface-variant mb-1">Projects</span>
+<span class="text-sm font-black">28 Completed</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="px-2 py-1 text-[10px] font-bold bg-primary/5 text-primary rounded">CRM Customization</span>
+<span class="px-2 py-1 text-[10px] font-bold bg-primary/5 text-primary rounded">Automation</span>
+</div>
+<div class="flex items-center justify-between border-t border-outline-variant/10 pt-6">
+<div>
+<span class="text-[10px] block uppercase tracking-widest font-bold text-on-surface-variant">Starting from</span>
+<span class="text-xl font-black text-primary">￥350<span class="text-xs font-medium text-on-surface-variant">/hr</span></span>
+</div>
+<button class="bg-surface-container-high text-on-surface px-6 py-2.5 rounded-lg text-sm font-bold group-hover:bg-primary group-hover:text-on-primary transition-all duration-300">View Detail</button>
+</div>
+</div>
+<!-- Expert Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-6 transition-all duration-300 hover:bg-white hover:shadow-[0_20px_40px_-15px_rgba(0,93,167,0.08)] group">
+<div class="flex items-start justify-between mb-6">
+<div class="flex space-x-4">
+<img alt="Profile" class="w-16 h-16 rounded-lg object-cover" data-alt="Headshot of a middle-aged male executive with glasses in a professional architectural office background with clean lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBbPJYmokC9oaimS7br95e8wTOaGJGlPGSKOUL5s3fHEfsfvfbpV-Y_io4vcyiqFGH0q9Csjeko325m0_MGn2oxTHeCOmf1ZRZFq7EIOBbfC9G2XxxhasTVC5W6Bl9GHDg7uMD1ciXPTQewbOZ9oie8cEtp_IJfVWo2U1tXsaxYrmnEzSR3sxr0xwyLycFidxKfnrPPAVDr_3nL6VC7_eKrv7nlDkJAeCToXAX5rl6p9RZEpzHbE9rHL36jfFLbZ_67zv2ZcNtdA"/>
+<div>
+<h2 class="text-lg font-bold text-on-surface">Zhang Qiang</h2>
+<p class="text-sm text-on-surface-variant font-medium">Lark Enterprise Consultant</p>
+<div class="flex items-center mt-1 text-tertiary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-sm font-bold ml-1">4.8</span>
+<span class="mx-2 text-outline-variant">•</span>
+<span class="text-xs font-semibold">Shenzhen</span>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4 mb-6">
+<div class="bg-surface-container-low p-3 rounded-lg">
+<span class="block text-[10px] uppercase tracking-widest font-bold text-on-surface-variant mb-1">Experience</span>
+<span class="text-sm font-black">12 Years</span>
+</div>
+<div class="bg-surface-container-low p-3 rounded-lg">
+<span class="block text-[10px] uppercase tracking-widest font-bold text-on-surface-variant mb-1">Projects</span>
+<span class="text-sm font-black">65 Completed</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="px-2 py-1 text-[10px] font-bold bg-primary/5 text-primary rounded">Strategic Ops</span>
+<span class="px-2 py-1 text-[10px] font-bold bg-primary/5 text-primary rounded">LarkBase API</span>
+</div>
+<div class="flex items-center justify-between border-t border-outline-variant/10 pt-6">
+<div>
+<span class="text-[10px] block uppercase tracking-widest font-bold text-on-surface-variant">Starting from</span>
+<span class="text-xl font-black text-primary">￥600<span class="text-xs font-medium text-on-surface-variant">/hr</span></span>
+</div>
+<button class="bg-surface-container-high text-on-surface px-6 py-2.5 rounded-lg text-sm font-bold group-hover:bg-primary group-hover:text-on-primary transition-all duration-300">View Detail</button>
+</div>
+</div>
+<!-- Expert Card 4 -->
+<div class="bg-surface-container-lowest rounded-xl p-6 transition-all duration-300 hover:bg-white hover:shadow-[0_20px_40px_-15px_rgba(0,93,167,0.08)] group">
+<div class="flex items-start justify-between mb-6">
+<div class="flex space-x-4">
+<div class="w-16 h-16 rounded-lg bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-outline text-3xl">account_circle</span>
+</div>
+<div>
+<h2 class="text-lg font-bold text-on-surface">Wang Fang</h2>
+<p class="text-sm text-on-surface-variant font-medium">Base Database Engineer</p>
+<div class="flex items-center mt-1 text-tertiary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-sm font-bold ml-1">4.7</span>
+<span class="mx-2 text-outline-variant">•</span>
+<span class="text-xs font-semibold">Hangzhou</span>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4 mb-6">
+<div class="bg-surface-container-low p-3 rounded-lg">
+<span class="block text-[10px] uppercase tracking-widest font-bold text-on-surface-variant mb-1">Experience</span>
+<span class="text-sm font-black">3 Years</span>
+</div>
+<div class="bg-surface-container-low p-3 rounded-lg">
+<span class="block text-[10px] uppercase tracking-widest font-bold text-on-surface-variant mb-1">Projects</span>
+<span class="text-sm font-black">15 Completed</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="px-2 py-1 text-[10px] font-bold bg-primary/5 text-primary rounded">LarkBase</span>
+<span class="px-2 py-1 text-[10px] font-bold bg-primary/5 text-primary rounded">SQL Sync</span>
+</div>
+<div class="flex items-center justify-between border-t border-outline-variant/10 pt-6">
+<div>
+<span class="text-[10px] block uppercase tracking-widest font-bold text-on-surface-variant">Starting from</span>
+<span class="text-xl font-black text-primary">￥280<span class="text-xs font-medium text-on-surface-variant">/hr</span></span>
+</div>
+<button class="bg-surface-container-high text-on-surface px-6 py-2.5 rounded-lg text-sm font-bold group-hover:bg-primary group-hover:text-on-primary transition-all duration-300">View Detail</button>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-16 flex items-center justify-center space-x-2">
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-outline-variant/20 text-on-surface-variant hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-primary text-on-primary font-bold shadow-sm">1</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg text-on-surface hover:bg-surface-container transition-colors font-medium">2</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg text-on-surface hover:bg-surface-container transition-colors font-medium">3</button>
+<span class="px-2 text-on-surface-variant">...</span>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg text-on-surface hover:bg-surface-container transition-colors font-medium">12</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-outline-variant/20 text-on-surface-variant hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-[#f7f9fb] dark:bg-slate-950 border-t-0">
+<div class="w-full py-12 px-10 max-w-[1280px] mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col items-center md:items-start space-y-4">
+<div class="text-lg font-black text-[#005da7]">LarkBase Club</div>
+<p class="font-inter text-xs text-slate-500 dark:text-slate-400">© 2024 LarkBase Club. All rights reserved.</p>
+</div>
+<div class="flex space-x-10">
+<a class="font-inter text-xs text-slate-500 dark:text-slate-400 hover:text-[#005da7] hover:underline transition-all" href="#">About</a>
+<a class="font-inter text-xs text-slate-500 dark:text-slate-400 hover:text-[#005da7] hover:underline transition-all" href="#">Experts Join</a>
+<a class="font-inter text-xs text-slate-500 dark:text-slate-400 hover:text-[#005da7] hover:underline transition-all" href="#">Publish Template</a>
+<a class="font-inter text-xs text-slate-500 dark:text-slate-400 hover:text-[#005da7] hover:underline transition-all" href="#">Support</a>
+</div>
+</div>
+</footer>
+</body></html>

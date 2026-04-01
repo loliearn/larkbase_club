@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Submit Requirement - Step 3</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-error-container": "#93000a",
+              "tertiary": "#7f5300",
+              "surface-dim": "#d8dadc",
+              "primary-container": "#2976c7",
+              "tertiary-fixed": "#ffddb4",
+              "error-container": "#ffdad6",
+              "on-primary-fixed": "#001c39",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary-fixed": "#001c39",
+              "on-secondary": "#ffffff",
+              "on-secondary-container": "#485e7e",
+              "on-tertiary-fixed-variant": "#633f00",
+              "surface-variant": "#e0e3e5",
+              "outline": "#717783",
+              "inverse-on-surface": "#eff1f3",
+              "surface-container": "#eceef0",
+              "surface": "#f7f9fb",
+              "surface-container-low": "#f2f4f6",
+              "on-primary": "#ffffff",
+              "surface-container-high": "#e6e8ea",
+              "surface-bright": "#f7f9fb",
+              "on-secondary-fixed-variant": "#314867",
+              "surface-tint": "#0060ac",
+              "on-tertiary-container": "#fffbff",
+              "error": "#ba1a1a",
+              "secondary-fixed": "#d4e3ff",
+              "inverse-primary": "#a4c9ff",
+              "background": "#f7f9fb",
+              "on-background": "#191c1e",
+              "secondary-container": "#c1d9fe",
+              "on-surface-variant": "#414751",
+              "primary-fixed-dim": "#a4c9ff",
+              "on-tertiary-fixed": "#291800",
+              "primary": "#005da7",
+              "primary-fixed": "#d4e3ff",
+              "on-primary-fixed-variant": "#004883",
+              "surface-container-highest": "#e0e3e5",
+              "secondary": "#496080",
+              "on-error": "#ffffff",
+              "on-surface": "#191c1e",
+              "inverse-surface": "#2d3133",
+              "secondary-fixed-dim": "#b1c8ed",
+              "outline-variant": "#c1c7d3",
+              "on-primary-container": "#fdfcff",
+              "tertiary-fixed-dim": "#ffb953",
+              "on-tertiary": "#ffffff",
+              "tertiary-container": "#a06900"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .step-active { font-variation-settings: 'FILL' 1; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky z-30 bg-[#f7f9fb] dark:bg-slate-950 shadow-none">
+<div class="flex justify-between items-center px-[1.5rem] py-4 w-full">
+<div class="flex items-center gap-3">
+<button class="active:scale-95 transition-transform duration-200 text-[#005da7] dark:text-[#2976c7]">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="font-inter tracking-tight text-xl font-bold text-[#005da7] dark:text-[#2976c7]">Submit Requirement</h1>
+</div>
+<div class="h-8 w-8 rounded-full bg-primary-container flex items-center justify-center overflow-hidden">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="professional headshot of a corporate executive in a crisp blue suit against a clean studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmt0H7WYqO4Ivtl6wZ_HBSf66-tLhu0PqWD7cu3gOr7BQ3kcVXLGou5ZKrKxbV6bIc-0elcRV_5OnE_y-4rN3YaO9dzOe6NKNNp470mTJjLhRVdQyy--YLpYAdlYz1R_2QG2le3m5aBX81n-wdX-R-gOrE1gokfczNzxF6fmgnfbMW_WvdVcdDFAG0TC5uTkSfJPDC--kiZ5tH_dZJWz07LH6b5LdtgPPhcF5a0Gbpz6BZzrNeDR6tPiVQJN9LcWTZ-7VaofvaEA"/>
+</div>
+</div>
+</header>
+<main class="px-6 py-4 max-w-md mx-auto">
+<!-- Progress Indicator -->
+<section class="mb-10">
+<div class="flex items-center justify-between relative">
+<div class="absolute top-1/2 left-0 w-full h-[2px] bg-surface-container-highest -translate-y-1/2 z-0"></div>
+<div class="absolute top-1/2 left-0 w-2/3 h-[2px] bg-primary -translate-y-1/2 z-0"></div>
+<!-- Step 1 Done -->
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center text-sm font-bold shadow-sm">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<span class="mt-2 font-inter text-[0.65rem] font-medium uppercase tracking-wider text-primary">Details</span>
+</div>
+<!-- Step 2 Done -->
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center text-sm font-bold shadow-sm">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<span class="mt-2 font-inter text-[0.65rem] font-medium uppercase tracking-wider text-primary">Uploads</span>
+</div>
+<!-- Step 3 Active -->
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-white border-2 border-primary text-primary flex items-center justify-center text-sm font-bold shadow-md ring-4 ring-surface">
+                        3
+                    </div>
+<span class="mt-2 font-inter text-[0.65rem] font-bold uppercase tracking-widest text-primary">Contact</span>
+</div>
+</div>
+</section>
+<!-- Form Section -->
+<section class="bg-surface-container-lowest rounded-xl p-6 shadow-[0_4px_20px_rgba(0,0,0,0.02)] border border-white/50">
+<div class="mb-8">
+<h2 class="text-xl font-bold tracking-tight text-on-surface">Contact Information</h2>
+<p class="text-sm text-on-surface-variant mt-1">Please provide details for the primary project lead.</p>
+</div>
+<form class="space-y-6">
+<div class="group">
+<label class="block font-inter text-xs font-medium uppercase tracking-widest text-on-surface-variant mb-2">Contact Name</label>
+<input class="w-full bg-transparent border-b border-outline-variant/40 py-2 focus:outline-none focus:border-primary transition-colors text-on-surface placeholder:text-outline/40" placeholder="e.g. Alexander Sterling" type="text"/>
+</div>
+<div class="group">
+<label class="block font-inter text-xs font-medium uppercase tracking-widest text-on-surface-variant mb-2">Company Name</label>
+<input class="w-full bg-transparent border-b border-outline-variant/40 py-2 focus:outline-none focus:border-primary transition-colors text-on-surface placeholder:text-outline/40" placeholder="LarkBase Nexus" type="text"/>
+</div>
+<div class="group">
+<label class="block font-inter text-xs font-medium uppercase tracking-widest text-on-surface-variant mb-2">Phone Number</label>
+<input class="w-full bg-transparent border-b border-outline-variant/40 py-2 focus:outline-none focus:border-primary transition-colors text-on-surface placeholder:text-outline/40" placeholder="+1 (555) 000-0000" type="tel"/>
+</div>
+<div class="group">
+<label class="block font-inter text-xs font-medium uppercase tracking-widest text-on-surface-variant mb-2">Email Address</label>
+<input class="w-full bg-transparent border-b border-outline-variant/40 py-2 focus:outline-none focus:border-primary transition-colors text-on-surface placeholder:text-outline/40" placeholder="a.sterling@larkbase.com" type="email"/>
+</div>
+<!-- Expert Status Indicator -->
+<div class="mt-4 p-4 rounded-lg bg-tertiary/5 border border-tertiary/10 flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary text-lg" style="font-variation-settings: 'FILL' 1;">stars</span>
+<div>
+<p class="text-[0.75rem] font-bold text-tertiary uppercase tracking-wider">Expert Verification</p>
+<p class="text-[0.7rem] text-on-surface-variant mt-0.5 leading-relaxed">Verified members receive priority processing on submissions.</p>
+</div>
+</div>
+</form>
+</section>
+<!-- Action Buttons -->
+<div class="mt-10 flex flex-col gap-4">
+<button class="w-full py-4 bg-primary text-on-primary font-bold rounded-xl shadow-lg shadow-primary/20 flex items-center justify-center gap-2 active:scale-[0.98] transition-transform">
+                Submit Requirement
+                <span class="material-symbols-outlined text-lg">send</span>
+</button>
+<button class="w-full py-4 border border-outline-variant text-on-surface font-semibold rounded-xl flex items-center justify-center gap-2 active:scale-[0.98] transition-transform">
+                Previous Step
+            </button>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around p-3 md:hidden bg-[#ffffff]/80 dark:bg-slate-900/80 backdrop-blur-md border-t border-slate-200/20 dark:border-slate-800/20 shadow-lg rounded-t-xl">
+<div class="flex flex-col items-center justify-center bg-[#005da7]/10 text-[#005da7] dark:text-[#2976c7] rounded-xl px-4 py-1 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="list_alt">list_alt</span>
+<span class="font-inter text-[0.875rem] font-medium">Requirements</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 hover:text-[#005da7] dark:hover:text-[#2976c7] active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="pending_actions">pending_actions</span>
+<span class="font-inter text-[0.875rem] font-medium">Progress</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 hover:text-[#005da7] dark:hover:text-[#2976c7] active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="contact_support">contact_support</span>
+<span class="font-inter text-[0.875rem] font-medium">Help</span>
+</div>
+</nav>
+</body></html>

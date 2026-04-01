@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>飞书多维表格入门指南 | LarkBase Club</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-tertiary-container": "#fffbff",
+                        "secondary": "#496080",
+                        "on-surface-variant": "#414751",
+                        "on-secondary-container": "#485e7e",
+                        "error-container": "#ffdad6",
+                        "primary-fixed": "#d4e3ff",
+                        "on-primary": "#ffffff",
+                        "primary-fixed-dim": "#a4c9ff",
+                        "surface-container-low": "#f2f4f6",
+                        "surface-bright": "#f7f9fb",
+                        "secondary-fixed": "#d4e3ff",
+                        "on-error": "#ffffff",
+                        "secondary-fixed-dim": "#b1c8ed",
+                        "on-secondary": "#ffffff",
+                        "tertiary": "#7f5300",
+                        "on-primary-fixed": "#001c39",
+                        "inverse-primary": "#a4c9ff",
+                        "surface-container-high": "#e6e8ea",
+                        "inverse-surface": "#2d3133",
+                        "primary-container": "#2976c7",
+                        "on-surface": "#191c1e",
+                        "on-primary-container": "#fdfcff",
+                        "primary": "#005da7",
+                        "on-secondary-fixed": "#001c39",
+                        "error": "#ba1a1a",
+                        "surface": "#f7f9fb",
+                        "on-tertiary-fixed": "#291800",
+                        "on-tertiary-fixed-variant": "#633f00",
+                        "on-primary-fixed-variant": "#004883",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#314867",
+                        "secondary-container": "#c1d9fe",
+                        "inverse-on-surface": "#eff1f3",
+                        "tertiary-container": "#a06900",
+                        "outline": "#717783",
+                        "background": "#f7f9fb",
+                        "surface-container-highest": "#e0e3e5",
+                        "surface-tint": "#0060ac",
+                        "on-background": "#191c1e",
+                        "tertiary-fixed": "#ffddb4",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "outline-variant": "#c1c7d3",
+                        "surface-dim": "#d8dadc",
+                        "surface-container": "#eceef0",
+                        "surface-variant": "#e0e3e5",
+                        "tertiary-fixed-dim": "#ffb953"
+                    },
+                    fontFamily: {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .tonal-shift-no-border {
+            border: none !important;
+        }
+        .glass-sidebar {
+            background: rgba(247, 249, 251, 0.8);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Top Navigation Bar -->
+<header class="bg-[#f7f9fb]/80 dark:bg-slate-950/80 backdrop-blur-md docked full-width top-0 sticky z-50 shadow-[0_32px_64px_-15px_rgba(25,28,30,0.04)] tonal-shift-no-border">
+<div class="max-w-[1280px] mx-auto px-10 flex justify-between items-center h-16">
+<div class="flex items-center gap-8">
+<span class="text-xl font-black text-[#005da7] dark:text-[#2976c7] tracking-tighter">LarkBase Club</span>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-[#191c1e] dark:text-slate-300 font-medium hover:text-[#005da7] transition-colors duration-200 body-md:text-[0.875rem]" href="#">Insights</a>
+<a class="text-[#005da7] dark:text-[#2976c7] font-bold border-b-2 border-[#005da7] pb-1 body-md:text-[0.875rem]" href="#">Library</a>
+<a class="text-[#191c1e] dark:text-slate-300 font-medium hover:text-[#005da7] transition-colors duration-200 body-md:text-[0.875rem]" href="#">Network</a>
+<a class="text-[#191c1e] dark:text-slate-300 font-medium hover:text-[#005da7] transition-colors duration-200 body-md:text-[0.875rem]" href="#">Membership</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors">search</button>
+<button class="bg-primary text-on-primary px-5 py-2 rounded font-bold active:scale-[0.98] transition-transform duration-200 body-md:text-[0.875rem]">Join the Club</button>
+</div>
+</div>
+</header>
+<main class="max-w-[1280px] mx-auto px-10 py-10">
+<!-- Breadcrumb -->
+<nav class="flex items-center gap-2 mb-8 text-on-surface-variant/60 text-sm font-medium">
+<a class="hover:text-primary transition-colors" href="#">首页</a>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">博客</a>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">入门教程</a>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="text-on-surface">飞书多维表格入门指南</span>
+</nav>
+<!-- Header Section -->
+<div class="mb-12">
+<h1 class="font-headline font-extrabold text-[2.75rem] leading-tight tracking-tight text-on-surface mb-6">
+                飞书多维表格入门指南：<br/>从零开始搭建你的第一个多维表格
+            </h1>
+<div class="flex flex-wrap items-center gap-6 text-on-surface-variant text-[0.875rem]">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">calendar_today</span>
+<span>2026-03-28</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">folder</span>
+<span class="bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded text-xs font-bold">教程</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">visibility</span>
+<span>1280 阅读</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="professional male portrait with minimalist office background soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEogOmlKyQNXKN5ZqWJRsCqTBJNFr8XtLOZJ6R8i8ol9nfL7wTDaekKF9PHm4PewRf5cmotAbWecg-qUOWwyumoLfoa8evUpz5dPvpvwBk8EJeeYtEIG1wSlQGB0SzKSmwq68z6zxHgAMNk3ilPC1aY3OrnotErKpXej3-6P9d-unYCzedCy7KxJF8BatT_S3XYOnFO2sIGspWZrHwxZAwN29talxQSj86WdteBGB8vm5CdARZySJoLyIps9C7z5Zi3Uj0g4wSFQ"/>
+</div>
+<span class="font-bold">张明</span>
+</div>
+</div>
+</div>
+<!-- Content Layout: Asymmetric 8:4 -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-10">
+<!-- Main Content (Left ~70%) -->
+<article class="md:col-span-8 space-y-12">
+<!-- Hero Image -->
+<div class="rounded-xl overflow-hidden aspect-video bg-surface-container-low shadow-sm">
+<img class="w-full h-full object-cover" data-alt="high-end modern software dashboard on a computer screen with vibrant blue color palette and clean UI elements" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6Jx3E5yqnDU0WrxqmBnsy10cFa933lo3eGrpdYyI6eXOE-EyLmCdXxeYsKtHCnLOiM-rFgjLzwvqGH9v9oasU7CK4YUMxgeNkoJcq69uVKnju4xuL1l2T7xvpnO5fBw-HRc0DsnUGu6Uc205NpcAQk8spphhWLTv9r0VFeTuPXlsOp3C7Cp-otH65L-QXP177Zay6_m_54hGUlejTa77SJ_wzYgeh5M21QCExY4x3_Fc1rLq6gj6X03djM1ckF8zIVQOx04PYoQ"/>
+</div>
+<!-- Intro Section -->
+<section class="prose prose-slate max-w-none">
+<p class="text-lg leading-relaxed text-on-surface-variant font-medium italic border-l-4 border-primary pl-6 py-2">
+                        在数字协作的新时代，LarkBase（飞书多维表格）已经不再仅仅是一个简单的表格工具。它是一个集数据库、仪表盘和自动化流程于一体的强大引擎，能够帮助您和您的团队从繁杂的数据中解放出来。
+                    </p>
+</section>
+<!-- Section 1: 什么是飞书多维表格? -->
+<section class="space-y-4" id="section-1">
+<h2 class="text-2xl font-bold text-on-surface tracking-tight">什么是飞书多维表格?</h2>
+<p class="text-on-surface-variant leading-relaxed">
+                        飞书多维表格是一种新型的协同数据库工具。不同于传统电子表格（如 Excel）以单元格为核心，多维表格以“结构化数据”为核心。它允许用户用一套数据，切换多种视图（表格、看板、甘特图、表单等），满足从任务管理、项目追踪到 CRM 客户管理的多种业务场景。
+                    </p>
+<div class="bg-surface-container-low p-6 rounded-lg flex items-start gap-4">
+<span class="material-symbols-outlined text-tertiary-container scale-125">lightbulb</span>
+<p class="text-sm text-on-surface-variant font-medium">
+<strong class="text-tertiary">专家视角：</strong> 多维表格的本质是将复杂的逻辑通过可视化的界面进行封装，让非开发人员也能搭建出专业级的业务系统。
+                        </p>
+</div>
+</section>
+<!-- Section 2: 如何创建多维表格? -->
+<section class="space-y-6" id="section-2">
+<h2 class="text-2xl font-bold text-on-surface tracking-tight">如何创建多维表格?</h2>
+<div class="space-y-8 relative">
+<div class="absolute left-4 top-0 bottom-0 w-0.5 bg-outline-variant/30"></div>
+<div class="relative pl-12">
+<div class="absolute left-0 top-1 w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-sm">1</div>
+<h3 class="font-bold text-lg mb-2">进入飞书多维表格</h3>
+<p class="text-on-surface-variant">登录飞书桌面端或网页端，在左侧侧边栏找到“多维表格”图标并点击进入。</p>
+</div>
+<div class="relative pl-12">
+<div class="absolute left-0 top-1 w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-sm">2</div>
+<h3 class="font-bold text-lg mb-2">新建表格文件</h3>
+<p class="text-on-surface-variant">点击右上角的“新建”按钮。你可以选择“空白多维表格”从零开始，或者从“模板库”中选择一个已经预设好的业务模板。</p>
+</div>
+<div class="relative pl-12">
+<div class="absolute left-0 top-1 w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-sm">3</div>
+<h3 class="font-bold text-lg mb-2">定义数据字段</h3>
+<p class="text-on-surface-variant">为你的每一列设置正确的“字段类型”。例如：负责人使用“人员”字段，截止日期使用“日期”字段，项目状态使用“单选”字段。</p>
+</div>
+</div>
+</section>
+<!-- Section 3: 基础操作入门 -->
+<section class="space-y-4" id="section-3">
+<h2 class="text-2xl font-bold text-on-surface tracking-tight">基础操作入门</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-sm border border-outline-variant/10">
+<div class="flex items-center gap-3 mb-3">
+<span class="material-symbols-outlined text-primary">filter_alt</span>
+<h4 class="font-bold">数据筛选</h4>
+</div>
+<p class="text-sm text-on-surface-variant">通过设置条件，在海量数据中快速找到你关心的那一部分。</p>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-sm border border-outline-variant/10">
+<div class="flex items-center gap-3 mb-3">
+<span class="material-symbols-outlined text-primary">group_work</span>
+<h4 class="font-bold">数据分组</h4>
+</div>
+<p class="text-sm text-on-surface-variant">按状态、负责人或日期对数据进行纵向聚合，清晰展现数据层级。</p>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-sm border border-outline-variant/10">
+<div class="flex items-center gap-3 mb-3">
+<span class="material-symbols-outlined text-primary">visibility</span>
+<h4 class="font-bold">多维视图</h4>
+</div>
+<p class="text-sm text-on-surface-variant">一键切换看板视图进行流程管理，或切换甘特图追踪进度。</p>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-sm border border-outline-variant/10">
+<div class="flex items-center gap-3 mb-3">
+<span class="material-symbols-outlined text-primary">bolt</span>
+<h4 class="font-bold">自动化流程</h4>
+</div>
+<p class="text-sm text-on-surface-variant">设定触发条件，当数据变更时自动发送飞书消息或更新其他字段。</p>
+</div>
+</div>
+</section>
+<!-- Tag Cloud -->
+<div class="flex flex-wrap gap-2 pt-8 border-t border-outline-variant/20">
+<span class="text-xs font-bold uppercase tracking-widest text-on-surface-variant/40 mb-2 w-full">Tags</span>
+<a class="px-3 py-1 bg-surface-container-high text-on-surface-variant text-xs rounded hover:bg-primary hover:text-on-primary transition-all" href="#">LarkBase</a>
+<a class="px-3 py-1 bg-surface-container-high text-on-surface-variant text-xs rounded hover:bg-primary hover:text-on-primary transition-all" href="#">飞书</a>
+<a class="px-3 py-1 bg-surface-container-high text-on-surface-variant text-xs rounded hover:bg-primary hover:text-on-primary transition-all" href="#">多维表格</a>
+<a class="px-3 py-1 bg-surface-container-high text-on-surface-variant text-xs rounded hover:bg-primary hover:text-on-primary transition-all" href="#">入门教程</a>
+</div>
+</article>
+<!-- Sidebar (Right ~30%) -->
+<aside class="md:col-span-4 space-y-10">
+<!-- Author Info Card -->
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-[0_32px_64px_-15px_rgba(25,28,30,0.04)] border border-outline-variant/10">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-16 h-16 rounded-full bg-surface-container-high overflow-hidden border-2 border-primary-fixed">
+<img class="w-full h-full object-cover" data-alt="professional male portrait with minimalist office background soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBC0gj-iIJqQRkQRyCNzwg2vD72zyVjpLQGxiEebmBkHTMldWQ2U6LZQSn2Iwuz8dWvudc4asIXceHKZXxIeo9i5aIjYWktnCOXam3CUgu3xaeGVW3jsLz-voAZ1IJQBS4Grxl-feumAmAoiDOVfB9uRYRTT6W_93kbJZJIcJdi6pfACOXFraO5ILk7OLFcstRpHcz6f2inyeE0Fax4dGXI4sdHALW6rYP0b_hF64-3FekDL2KcPFz03ThKVYvUd60N0RhIaaExgg"/>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h3 class="font-bold text-lg">张明</h3>
+<span class="bg-tertiary-container/10 text-tertiary text-[10px] font-bold px-1.5 py-0.5 rounded border border-tertiary/30">认证行家</span>
+</div>
+<div class="flex items-center text-primary text-sm font-medium">
+<span class="material-symbols-outlined text-sm mr-1" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.8</span>
+<span class="mx-2 text-outline-variant">|</span>
+<span class="text-on-surface-variant/60">12 个项目</span>
+</div>
+</div>
+</div>
+<p class="text-sm text-on-surface-variant mb-6 leading-relaxed">
+                        资深企业数字化顾问，飞书开放平台深度用户。擅长通过多维表格构建自动化办公闭环。
+                    </p>
+<button class="w-full py-2.5 rounded-lg border border-outline-variant/40 text-on-surface font-bold hover:bg-surface-container-low transition-colors active:scale-[0.98] text-sm">
+                        View Profile
+                    </button>
+</div>
+<!-- Table of Contents -->
+<div class="bg-surface-container-low/50 rounded-xl p-6">
+<h3 class="font-bold text-xs uppercase tracking-widest text-on-surface-variant mb-4">目录索引</h3>
+<ul class="space-y-4">
+<li>
+<a class="flex items-center gap-3 text-on-surface-variant hover:text-primary transition-colors group" href="#section-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary/20 group-hover:bg-primary"></span>
+<span class="text-sm font-medium">什么是飞书多维表格?</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 text-on-surface-variant hover:text-primary transition-colors group" href="#section-2">
+<span class="w-1.5 h-1.5 rounded-full bg-primary/20 group-hover:bg-primary"></span>
+<span class="text-sm font-medium">如何创建多维表格?</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 text-on-surface-variant hover:text-primary transition-colors group" href="#section-3">
+<span class="w-1.5 h-1.5 rounded-full bg-primary/20 group-hover:bg-primary"></span>
+<span class="text-sm font-medium">基础操作入门</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 text-on-surface-variant hover:text-primary transition-colors group" href="#">
+<span class="w-1.5 h-1.5 rounded-full bg-primary/20 group-hover:bg-primary"></span>
+<span class="text-sm font-medium">进阶案例分享</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 text-on-surface-variant hover:text-primary transition-colors group" href="#">
+<span class="w-1.5 h-1.5 rounded-full bg-primary/20 group-hover:bg-primary"></span>
+<span class="text-sm font-medium">结语与后续学习</span>
+</a>
+</li>
+</ul>
+</div>
+<!-- Related Articles -->
+<div class="space-y-4">
+<h3 class="font-bold text-xs uppercase tracking-widest text-on-surface-variant mb-6">推荐阅读</h3>
+<a class="group block" href="#">
+<div class="flex gap-4">
+<div class="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container-high">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="aerial view of workspace with laptop and coffee cup minimal corporate aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIC2FxGCLym28LCeZdd_ZQeZfvYTMMP0nPkAx_-tmoe5azCxp5F7RgMLREkP0LG2zcHvmY14k1A7rL2kS4ofNerRFCFkV_QAhDVRpWY-mpO8I95HB9INlikvAYuLkgIvUc-L8yV4nyuAaae4rYrUAOnD9uVWDlAGLSpUZSx9ZSgXbynKLUuh30UvwW0J3e6NnBEciac5n5Bv-rOTcWyRRGWp3ehQ0CuhoyavZghalTu3JsO_VvHVHBI2OkdvVdCfVjLAVVxW6Xow"/>
+</div>
+<div class="flex-grow">
+<h4 class="text-sm font-bold text-on-surface group-hover:text-primary transition-colors line-clamp-2 leading-snug">
+                                    如何利用多维表格实现团队周报自动化？
+                                </h4>
+<span class="text-[10px] text-on-surface-variant/60 font-medium uppercase mt-2 block">Case Study</span>
+</div>
+</div>
+</a>
+<a class="group block" href="#">
+<div class="flex gap-4">
+<div class="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container-high">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="digital data visualization charts and graphs on dark background high-tech design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCEWMhfsYuDkmigwxO3GCeyEeuv-aaT0dDmg7KfYj8mp6q4fy0yD0sYTmL_Vnk10w-roOkqnjJkE39qxtK3WpFtYgwrcLatiaVk54Z_y8c8bD8JpIKvNW5aCXO_-e-TBj6R9ehPOrDhLuTNtq5A1w6c9hXJQFDS5RIKhAKd2Tv5kpv9Mck3yRPh0yWRbiU16WLsU5OJzNdtzn-mroo0fV-1OyIYBynvcxBx5yYVuy-gQUBo4XHCruiRfqTMg-OwpPtZ80PL6jQCg"/>
+</div>
+<div class="flex-grow">
+<h4 class="text-sm font-bold text-on-surface group-hover:text-primary transition-colors line-clamp-2 leading-snug">
+                                    5个提升多维表格工作效率的高级公式
+                                </h4>
+<span class="text-[10px] text-on-surface-variant/60 font-medium uppercase mt-2 block">Advanced Tool</span>
+</div>
+</div>
+</a>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-[#f7f9fb] dark:bg-slate-950 full-width border-t border-[#c1c7d3]/20 mt-20">
+<div class="max-w-[1280px] mx-auto px-10 py-12 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+<div class="space-y-4">
+<span class="font-bold text-[#005da7] text-lg">LarkBase Club</span>
+<p class="text-[#191c1e]/60 dark:text-slate-400 font-['Inter'] text-[0.875rem] leading-relaxed max-w-xs">
+                    © 2024 LarkBase Club. For the Structured Intellectual.
+                </p>
+</div>
+<nav class="flex flex-wrap gap-8">
+<a class="text-[#191c1e]/60 dark:text-slate-400 hover:text-[#005da7] transition-all font-['Inter'] text-[0.875rem]" href="#">Editorial Policy</a>
+<a class="text-[#191c1e]/60 dark:text-slate-400 hover:text-[#005da7] transition-all font-['Inter'] text-[0.875rem]" href="#">Privacy</a>
+<a class="text-[#191c1e]/60 dark:text-slate-400 hover:text-[#005da7] transition-all font-['Inter'] text-[0.875rem]" href="#">Terms</a>
+<a class="text-[#191c1e]/60 dark:text-slate-400 hover:text-[#005da7] transition-all font-['Inter'] text-[0.875rem]" href="#">Contact</a>
+</nav>
+</div>
+</footer>
+</body></html>

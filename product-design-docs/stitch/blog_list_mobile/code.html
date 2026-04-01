@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-container": "#2976c7",
+                        "on-primary": "#ffffff",
+                        "surface-dim": "#d8dadc",
+                        "on-secondary-container": "#485e7e",
+                        "on-tertiary-fixed": "#291800",
+                        "on-primary-fixed": "#001c39",
+                        "on-background": "#191c1e",
+                        "tertiary-fixed-dim": "#ffb953",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "secondary-container": "#c1d9fe",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-container": "#fffbff",
+                        "primary-fixed": "#d4e3ff",
+                        "tertiary-fixed": "#ffddb4",
+                        "surface-container": "#eceef0",
+                        "on-secondary-fixed-variant": "#314867",
+                        "on-tertiary-fixed-variant": "#633f00",
+                        "surface-container-highest": "#e0e3e5",
+                        "outline-variant": "#c1c7d3",
+                        "primary-fixed-dim": "#a4c9ff",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#f2f4f6",
+                        "surface-bright": "#f7f9fb",
+                        "primary": "#005da7",
+                        "on-primary-fixed-variant": "#004883",
+                        "tertiary": "#7f5300",
+                        "on-surface": "#191c1e",
+                        "surface-container-high": "#e6e8ea",
+                        "secondary": "#496080",
+                        "inverse-surface": "#2d3133",
+                        "background": "#f7f9fb",
+                        "inverse-on-surface": "#eff1f3",
+                        "secondary-fixed-dim": "#b1c8ed",
+                        "on-surface-variant": "#414751",
+                        "on-primary-container": "#fdfcff",
+                        "on-secondary-fixed": "#001c39",
+                        "on-error": "#ffffff",
+                        "tertiary-container": "#a06900",
+                        "surface-variant": "#e0e3e5",
+                        "surface-tint": "#0060ac",
+                        "secondary-fixed": "#d4e3ff",
+                        "on-error-container": "#93000a",
+                        "error-container": "#ffdad6",
+                        "surface": "#f7f9fb",
+                        "outline": "#717783",
+                        "inverse-primary": "#a4c9ff"
+                    },
+                    fontFamily: {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface selection:bg-primary/20">
+<!-- TopAppBar -->
+<header class="bg-[#f7f9fb] dark:bg-slate-950 flex justify-between items-center w-full px-6 py-4 fixed top-0 z-50">
+<div class="flex items-center gap-3">
+<button class="active:scale-[0.98] transition-transform duration-200 text-[#005da7] dark:text-blue-400">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="font-['Inter'] font-black tracking-tighter text-2xl text-[#005da7] dark:text-blue-400">LarkBase Club</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="active:scale-[0.98] transition-transform duration-200 text-[#005da7] dark:text-blue-400">
+<span class="material-symbols-outlined">search</span>
+</button>
+</div>
+</header>
+<main class="pt-20 pb-24 max-w-[1280px] mx-auto px-6">
+<!-- Header & Search Context -->
+<section class="mb-10">
+<div class="inline-block bg-tertiary-container text-on-tertiary-container text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4 border-[0.5px] border-tertiary/30">
+                Expert Insights
+            </div>
+<h2 class="text-display-md text-4xl font-headline font-black tracking-tighter text-on-surface mb-6">The Intellectual Digest</h2>
+<!-- Minimalist Search Input -->
+<div class="relative group">
+<input class="w-full bg-transparent border-b border-outline-variant/40 py-3 pl-0 pr-10 focus:outline-none focus:border-primary transition-all duration-300 text-body-md placeholder:text-on-surface-variant/50" placeholder="Search intellectual archives..." type="text"/>
+<span class="material-symbols-outlined absolute right-0 top-3 text-on-surface-variant/40 group-focus-within:text-primary transition-colors">search</span>
+</div>
+</section>
+<!-- Featured Categories (Horizontal Scroll) -->
+<section class="mb-12 -mx-6 px-6">
+<div class="flex items-baseline justify-between mb-4">
+<h3 class="text-label-md uppercase tracking-widest font-bold text-on-surface-variant/70 text-xs">Categories</h3>
+</div>
+<div class="flex gap-3 overflow-x-auto hide-scrollbar pb-2">
+<button class="flex-shrink-0 px-6 py-2 rounded-xl bg-primary text-on-primary text-sm font-medium transition-all active:scale-95">All Feed</button>
+<button class="flex-shrink-0 px-6 py-2 rounded-xl bg-surface-container-low text-on-surface-variant text-sm font-medium hover:bg-surface-container-high transition-all active:scale-95">Tutorials</button>
+<button class="flex-shrink-0 px-6 py-2 rounded-xl bg-surface-container-low text-on-surface-variant text-sm font-medium hover:bg-surface-container-high transition-all active:scale-95">Industry Insights</button>
+<button class="flex-shrink-0 px-6 py-2 rounded-xl bg-surface-container-low text-on-surface-variant text-sm font-medium hover:bg-surface-container-high transition-all active:scale-95">Case Studies</button>
+</div>
+</section>
+<!-- Latest Articles List -->
+<section class="space-y-10">
+<h3 class="text-label-md uppercase tracking-widest font-bold text-on-surface-variant/70 text-xs">Latest Articles</h3>
+<!-- Article Card 1: Large Featured -->
+<article class="group">
+<div class="relative mb-6 rounded-xl overflow-hidden aspect-[16/10]">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="professional workspace with minimalist laptop and notebook on a wooden desk with soft cinematic morning lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWgmnBEASWdDnM9v50Lh-al-QAX15z9_OerT7WTNuccRm1SD0syMyzhxvfqq5z4UeLjtClXJ9B6z9UvAk_6lp-E7PNQ781fVPdPwT08vkEgPZG3Twcd6zGPCf8slYMw1VbClUbnuLEs5tBpYvWXxuPS6C3mHz63k07ySogQWsOKQcrlF6jZQ7ve4zYSENn-6utyKLlnokznKPYYq6_i9wafFwBDXYJXNdm4n_UpClceBK_BpldqjqByWTtO1yDuL8qTsvOWe2FQg"/>
+<div class="absolute top-4 left-4">
+<span class="bg-surface-container-lowest/90 backdrop-blur-md text-primary text-[10px] font-black uppercase tracking-widest px-3 py-1.5 rounded-lg shadow-sm">Case Studies</span>
+</div>
+</div>
+<div class="space-y-3">
+<h4 class="text-2xl font-headline font-bold leading-tight tracking-tight text-on-surface group-hover:text-primary transition-colors">Decoding Multidimensional Data Structures in Modern UX</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed line-clamp-2">How we utilized LarkBase’s proprietary engine to redefine data visualization for executive-level decision making.</p>
+<div class="pt-4 flex items-center gap-3">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="portrait of a professional male analyst in a suit with a confident expression and neutral studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSSlHMPy5I2IET-rGS2uwM36TBuKchEGrhRj3baPajlJ_FNERL8WFANeDM0GxXlQ8n7ivRJWXdsJTzITj2u-EbDX3VUPxnoHq6StiDE4Q7OupVkcyNzzGTdBWW7m6g0bncOaL34tdPvePhjlXwpXsvei3X1vp8-dsdBI4kED8ggx3NmxCa-dTZUaBvBoZwSlIPpQIH0p6yVHmwaoBufqefVaftCsKkmcsa8SdjsxD-it2IrjeqO6I70IYyLIi9CXEoiaxebp-2xQ"/>
+<div>
+<p class="text-xs font-bold text-on-surface">Dr. Alistair Thorne</p>
+<p class="text-[10px] uppercase tracking-tighter text-on-surface-variant/60">Senior Data Architect</p>
+</div>
+</div>
+</div>
+</article>
+<!-- Article Card 2 -->
+<article class="flex gap-4 items-start group">
+<div class="flex-1 space-y-2">
+<span class="text-tertiary text-[9px] font-black uppercase tracking-widest">Tutorials</span>
+<h4 class="text-lg font-headline font-bold leading-snug tracking-tight text-on-surface group-hover:text-primary transition-colors">The Art of Tonal Architecture: Lighting your UI</h4>
+<div class="flex items-center gap-2 pt-2">
+<span class="text-[10px] font-medium text-on-surface-variant">May 12 • 8 min read</span>
+</div>
+</div>
+<div class="w-24 h-24 rounded-xl overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="abstract architectural close-up of glass and concrete building with interesting shadows and light patterns" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9ZlZSCF5781HY7U0kcrLpr5CxQ7AOyfVqRemM8Gy2oi7ydF0j7E4W98JPZuUq_7w0dmJiTs8mnvE9DCjgmmuave1Bnk_mB1hqht_qeq2CYk5g9NF9_mPHoP5K3h59OruXDOwRErB0KNgYHpFLtNxeqXT1X705xIwrgS23mJCo_k2TrJnAFwoIPz6q0nwENSHTumVaaWgrFfkD1iBi5p4mIUtUeC90GOo_0oowPvabHkW5EQdmoKb0S_mHLKr71aZ8gT-cKIP3ag"/>
+</div>
+</article>
+<!-- Article Card 3 -->
+<article class="flex gap-4 items-start group">
+<div class="flex-1 space-y-2">
+<span class="text-primary text-[9px] font-black uppercase tracking-widest">Insights</span>
+<h4 class="text-lg font-headline font-bold leading-snug tracking-tight text-on-surface group-hover:text-primary transition-colors">Predicting 2025: The Shift Towards Human-Centric AI</h4>
+<div class="flex items-center gap-2 pt-2">
+<span class="text-[10px] font-medium text-on-surface-variant">May 10 • 12 min read</span>
+</div>
+</div>
+<div class="w-24 h-24 rounded-xl overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="soft blue and violet light refracting through a crystal prism onto a dark surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMm__3x2AV45YVr4W1jourNuedY44oAHyIP1gvtvfID1dr77_13lgva3wfRbgCqVDJB37mLu3EKIwZ6NUnOc1AvGP27FSEfYlxzYkWiDPQQ4YgsT85ks6lLVrxyhpCVUkXIoKMOGYMAk6bE1H2tUQhIIeNyzgzx_FESjmLWDkH6JCGRTOb52KBB6zYiSWPcRuLCfj7ZueYzfIKct3G3jHft1VEJnRnhZbXdKv2XgnLNGzRjlCOZjlBK11y0t46WDQFJWa_tO5w9g"/>
+</div>
+</article>
+<!-- Article Card 4 -->
+<article class="group">
+<div class="relative mb-6 rounded-xl overflow-hidden aspect-[16/10] bg-surface-container-high">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="modern minimalist library with rows of white books and subtle warm accent lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnKLKWuAJcnP8JjbpxQ9F7qImyXVmpc-oQiGzUMTaSoxxWJkf085cj_a0joDJiem1Tsgh18M0Qn-D4YpmhD6qjnizR6JRrYkWFuJUHzus8Q5UWYBEqd9W9TsgPkpI2majIwzzkb7Q-Xzh39asCh7lXz9Mn6Eywvq5uFF_msvX2Kn1YZ5LjHr28JETuAdWL6TeMbzvF3TKSt965u4NCKvUGD9RKBfJ3z9Rw6pSl2zwsXggAgdR248gZliPurrWejga-kkAsEnfypQ"/>
+<div class="absolute top-4 left-4">
+<span class="bg-surface-container-lowest/90 backdrop-blur-md text-tertiary text-[10px] font-black uppercase tracking-widest px-3 py-1.5 rounded-lg shadow-sm">The Club Special</span>
+</div>
+</div>
+<div class="space-y-3">
+<h4 class="text-2xl font-headline font-bold leading-tight tracking-tight text-on-surface group-hover:text-primary transition-colors">Exclusive: The LarkBase Annual Report on Global Digital Trends</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">An exhaustive 50-page breakdown of how intellectual tools are reshaping the corporate landscape.</p>
+<div class="pt-4 flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary font-black text-xs">LB</div>
+<div>
+<p class="text-xs font-bold text-on-surface">LarkBase Editorial Team</p>
+<p class="text-[10px] uppercase tracking-tighter text-on-surface-variant/60">Verified Authority</p>
+</div>
+</div>
+</div>
+</article>
+</section>
+<!-- Newsletter CTA: Structured Intellectual Style -->
+<section class="mt-20 p-8 rounded-2xl bg-surface-container-low relative overflow-hidden border border-outline-variant/10">
+<div class="relative z-10">
+<h3 class="text-2xl font-headline font-black tracking-tight text-on-surface mb-2">Curated Intelligence</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6">Join 15,000+ experts receiving our weekly editorial deep-dives.</p>
+<div class="space-y-4">
+<input class="w-full bg-surface-container-lowest px-4 py-3 rounded-lg text-sm border-none focus:ring-2 focus:ring-primary/20 transition-all" placeholder="Your executive email" type="email"/>
+<button class="w-full bg-primary text-on-primary font-bold py-3 rounded-lg active:scale-[0.98] transition-transform">Subscribe to Feed</button>
+</div>
+</div>
+<!-- Decorative Gradient Anchor -->
+<div class="absolute -right-10 -bottom-10 w-40 h-40 bg-gradient-to-br from-primary/5 to-transparent rounded-full blur-3xl"></div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 py-3 pb-safe bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-t border-[#c1c7d3]/20 dark:border-slate-800 shadow-[0_-4px_24px_rgba(25,28,30,0.04)] z-50 rounded-t-xl">
+<a class="flex flex-col items-center justify-center bg-[#005da7]/10 text-[#005da7] dark:bg-blue-900/30 dark:text-blue-300 rounded-xl px-3 py-1 active:scale-[0.95] transition-all duration-150" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">article</span>
+<span class="font-['Inter'] text-[11px] font-medium uppercase tracking-widest mt-1">Feed</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-500 hover:text-[#005da7] dark:hover:text-blue-400 active:scale-[0.95] transition-all duration-150" href="#">
+<span class="material-symbols-outlined">explore</span>
+<span class="font-['Inter'] text-[11px] font-medium uppercase tracking-widest mt-1">Explore</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-500 hover:text-[#005da7] dark:hover:text-blue-400 active:scale-[0.95] transition-all duration-150" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="font-['Inter'] text-[11px] font-medium uppercase tracking-widest mt-1">Clubs</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-500 hover:text-[#005da7] dark:hover:text-blue-400 active:scale-[0.95] transition-all duration-150" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Inter'] text-[11px] font-medium uppercase tracking-widest mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

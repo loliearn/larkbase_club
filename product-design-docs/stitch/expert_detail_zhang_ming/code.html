@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed-dim": "#ffb953",
+              "on-surface": "#191c1e",
+              "surface-dim": "#d8dadc",
+              "on-secondary": "#ffffff",
+              "surface-bright": "#f7f9fb",
+              "background": "#f7f9fb",
+              "primary": "#005da7",
+              "surface-container-highest": "#e0e3e5",
+              "on-error": "#ffffff",
+              "tertiary-fixed": "#ffddb4",
+              "on-secondary-container": "#485e7e",
+              "on-secondary-fixed": "#001c39",
+              "primary-fixed-dim": "#a4c9ff",
+              "secondary": "#496080",
+              "on-error-container": "#93000a",
+              "on-tertiary-fixed-variant": "#633f00",
+              "error": "#ba1a1a",
+              "surface-container-low": "#f2f4f6",
+              "on-background": "#191c1e",
+              "on-primary-container": "#fdfcff",
+              "on-primary-fixed-variant": "#004883",
+              "on-primary-fixed": "#001c39",
+              "outline": "#717783",
+              "surface-tint": "#0060ac",
+              "surface-variant": "#e0e3e5",
+              "error-container": "#ffdad6",
+              "inverse-surface": "#2d3133",
+              "primary-fixed": "#d4e3ff",
+              "outline-variant": "#c1c7d3",
+              "surface-container-high": "#e6e8ea",
+              "secondary-fixed-dim": "#b1c8ed",
+              "surface-container-lowest": "#ffffff",
+              "secondary-fixed": "#d4e3ff",
+              "on-primary": "#ffffff",
+              "on-tertiary": "#ffffff",
+              "tertiary": "#7f5300",
+              "on-tertiary-container": "#fffbff",
+              "on-tertiary-fixed": "#291800",
+              "surface-container": "#eceef0",
+              "on-secondary-fixed-variant": "#314867",
+              "secondary-container": "#c1d9fe",
+              "tertiary-container": "#a06900",
+              "on-surface-variant": "#414751",
+              "primary-container": "#2976c7",
+              "inverse-on-surface": "#eff1f3",
+              "surface": "#f7f9fb",
+              "inverse-primary": "#a4c9ff"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.8px", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-effect {
+        background: rgba(242, 244, 246, 0.8);
+        backdrop-filter: blur(20px);
+      }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<!-- TopNavBar -->
+<header class="bg-[#f7f9fb] dark:bg-slate-950 sticky top-0 z-50">
+<nav class="flex justify-between items-center w-full px-10 py-4 max-w-[1280px] mx-auto">
+<div class="text-xl font-black tracking-tighter text-[#005da7] dark:text-[#2976c7]">LarkBase Club</div>
+<div class="hidden md:flex items-center space-x-8 font-inter text-sm font-medium tracking-tight">
+<a class="text-slate-600 dark:text-slate-400 hover:text-[#005da7] transition-colors duration-200" href="#">Homepage</a>
+<a class="text-[#005da7] dark:text-[#2976c7] border-b-2 border-[#005da7] pb-1 font-bold" href="#">Experts</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-[#005da7] transition-colors duration-200" href="#">Templates</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-[#005da7] transition-colors duration-200" href="#">Blog</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-[#005da7] transition-colors duration-200" href="#">About</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="px-4 py-2 text-sm font-semibold text-[#005da7] hover:bg-slate-200/50 transition-colors duration-200">Login</button>
+<button class="bg-[#005da7] text-white px-5 py-2 rounded-lg text-sm font-bold scale-95 active:scale-98 transition-transform">Register</button>
+</div>
+</nav>
+</header>
+<main class="max-w-[1280px] mx-auto px-10 py-10">
+<!-- Breadcrumb -->
+<nav class="mb-10 text-sm flex gap-2 text-on-surface-variant font-medium">
+<a class="hover:text-primary" href="#">首页</a>
+<span class="text-outline-variant">/</span>
+<a class="hover:text-primary" href="#">行家</a>
+<span class="text-outline-variant">/</span>
+<span class="text-on-surface">张明</span>
+</nav>
+<!-- Profile Header Section -->
+<div class="grid grid-cols-12 gap-10 mb-16">
+<div class="col-span-12 lg:col-span-8 flex flex-col md:flex-row gap-8 items-start">
+<div class="relative w-48 h-48 flex-shrink-0 rounded-xl overflow-hidden bg-surface-container-low">
+<img alt="Zhang Ming" class="w-full h-full object-cover" data-alt="Professional portrait of a middle-aged Chinese male business expert wearing a smart casual blazer, smiling confidently against a minimalist office background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6saE11E3jGaYNT6R93kiOrolXpyqx6x0W7Rc9_AJVSCFqYBXl4LmQDfDBK7zDT-xmwrNDc-TpurcZHJXgFDiwp_rihpv0G2rw1OotRL8xB5f77F6XeSiQTUPrZdxma0boEvf_fPiGJus4ytSZtDG5GC2fvc9N9O9snCKXiMs9DyCcpCAwomFMcnE3gJkC9Afps-V5z3mr7Wa5DawKczjcNPZcaoy-uQPAFs_Yt28PmpGpLKHhpni0hkjgegsA_i_cR8MwVmc4Jg"/>
+</div>
+<div class="flex-1 space-y-4">
+<div class="flex items-center gap-3">
+<h1 class="text-4xl font-black tracking-tight font-headline">张明</h1>
+<span class="bg-tertiary-container text-on-tertiary-container px-3 py-1 rounded-full text-xs font-bold border border-tertiary/30">🏅 认证行家</span>
+</div>
+<div class="space-y-1">
+<p class="text-lg font-semibold text-primary">飞书多维表格专家 · 北京 · 5年经验</p>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-yellow-500" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold text-on-surface">4.8</span>
+<span class="text-sm">(45条评价)</span>
+</div>
+</div>
+<p class="text-on-surface-variant leading-relaxed max-w-2xl">
+                        专注飞书多维表格解决方案，帮助20+企业完成数字化转型。擅长从业务逻辑出发，构建高效、可自动化的多维表格管理系统，提升团队协作效率 30% 以上。
+                    </p>
+<div class="flex gap-4 pt-4">
+<button class="bg-primary text-on-primary px-8 py-3 rounded-lg font-bold flex items-center gap-2 scale-95 active:scale-98 transition-all shadow-sm">
+<span class="material-symbols-outlined text-sm">chat_bubble</span>
+                            发起咨询
+                        </button>
+<button class="border border-outline-variant text-on-surface px-8 py-3 rounded-lg font-bold flex items-center gap-2 hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-sm">edit_note</span>
+                            提交需求
+                        </button>
+</div>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-4 space-y-6">
+<div class="bg-surface-container-low p-6 rounded-xl space-y-6">
+<h3 class="font-inter text-xs tracking-wide uppercase font-semibold text-on-surface-variant">擅长技能</h3>
+<div class="flex flex-wrap gap-2">
+<span class="bg-surface-container-lowest px-3 py-1.5 rounded-lg text-sm font-medium border border-outline-variant/20">CRM系统</span>
+<span class="bg-surface-container-lowest px-3 py-1.5 rounded-lg text-sm font-medium border border-outline-variant/20">自动化工作流</span>
+<span class="bg-surface-container-lowest px-3 py-1.5 rounded-lg text-sm font-medium border border-outline-variant/20">进销存管理</span>
+<span class="bg-surface-container-lowest px-3 py-1.5 rounded-lg text-sm font-medium border border-outline-variant/20">数据看板</span>
+<span class="bg-surface-container-lowest px-3 py-1.5 rounded-lg text-sm font-medium border border-outline-variant/20">API集成</span>
+</div>
+<div class="pt-6 border-t border-outline-variant/20 space-y-4">
+<h3 class="font-inter text-xs tracking-wide uppercase font-semibold text-on-surface-variant">联系方式</h3>
+<div class="space-y-3">
+<div class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-primary">id_card</span>
+<span class="text-on-surface-variant">微信:</span>
+<span class="font-mono font-semibold">lark_expert_zm</span>
+</div>
+<div class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-primary">mail</span>
+<span class="text-on-surface-variant">邮箱:</span>
+<span class="font-mono font-semibold">zhangming@larkbase.com</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bento Grid: Services & Success Stories -->
+<div class="grid grid-cols-12 gap-8 mb-20">
+<!-- Services Section (Left 4 columns) -->
+<div class="col-span-12 lg:col-span-4 space-y-6">
+<h2 class="text-2xl font-black tracking-tight border-l-4 border-primary pl-4">服务项目</h2>
+<div class="space-y-4">
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/10 shadow-sm hover:border-primary/30 transition-colors">
+<div class="flex justify-between items-start mb-2">
+<h4 class="font-bold text-lg">模板定制服务</h4>
+<span class="text-primary font-black">¥500+</span>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">针对特定业务场景提供快速模板搭建，含基础公式配置。</p>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/10 shadow-sm hover:border-primary/30 transition-colors">
+<div class="flex justify-between items-start mb-2">
+<h4 class="font-bold text-lg">深度系统开发</h4>
+<span class="text-primary font-black">¥300<span class="text-xs font-medium">/hr</span></span>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">复杂逻辑开发，包括脚本编写、多维表格联动与第三方对接。</p>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/10 shadow-sm hover:border-primary/30 transition-colors">
+<div class="flex justify-between items-start mb-2">
+<h4 class="font-bold text-lg">咨询与诊断</h4>
+<span class="text-primary font-black">¥200<span class="text-xs font-medium">/hr</span></span>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">1对1业务诊断，优化现有表格架构，解决性能瓶颈。</p>
+</div>
+</div>
+</div>
+<!-- Success Stories Gallery (Right 8 columns) -->
+<div class="col-span-12 lg:col-span-8 space-y-6">
+<div class="flex justify-between items-end">
+<h2 class="text-2xl font-black tracking-tight border-l-4 border-primary pl-4">成功案例 (12)</h2>
+<a class="text-primary font-bold text-sm hover:underline" href="#">查看全部</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="group cursor-pointer">
+<div class="aspect-video rounded-xl overflow-hidden mb-3 bg-surface-container-low">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Modern dashboard interface on a computer screen showing sales CRM analytics with colorful charts and graphs in a minimalist design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjO74NdqWEHn5gn0c4lHRHcmUATvekl6hG05ZvKYuPaqyqSIQc_lBD9ZEoBBlInGm2Tlj_oyPp51MsrPJ0OgdY_gDaeSA6EzIVEJZbHeYnDqJJYTUn2soZMLVDlduz1qdR0iEAlGHxstbAxufmrt7HMpLkpSnuqrbbvh4CgdT0wKuJtfVMe-bXH77Z9IQkGcABpgD8lFWuynw7Pp4qAEqU1kdfK-JZxQmDTlBCcZBSyuKzIa3AvixQssJQVW8D98zoIUwyxP7akQ"/>
+</div>
+<h4 class="font-bold">电商CRM全链路管理系统</h4>
+<p class="text-xs text-on-surface-variant mt-1">某头部零食品牌 · 效率提升40%</p>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-video rounded-xl overflow-hidden mb-3 bg-surface-container-low">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Digital project management tool visualization with organized task cards and collaborative workflow interface in clean white and blue colors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiyhheQQnIJH0tH_Gze7d46orfmMz3vTFDoxytILlo8c651duqn-IOJJn-vAg-v0vp2Lh4hAjZmjeSWaWlRHpimFd4CqM7ECpfzKRki89ZBIafxI6n7Yfc-Pd9shGJMOFRA_VHgNdhK2W0Mjs8Soi9sctBhzRl_CCjh_moojx1FEkmMt6-Vb-TReDIwvU2QE2dpvJwpn_iYdCsLy9CDg-K3tcEkqX-3Rbet43g-EQBSCYiB17Kjf9pFf3bXW2pyPazHUm8IbCXdg"/>
+</div>
+<h4 class="font-bold">研发项目自动化跟踪系统</h4>
+<p class="text-xs text-on-surface-variant mt-1">互联网SaaS企业 · 自动化节点50+</p>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-video rounded-xl overflow-hidden mb-3 bg-surface-container-low">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Accounting spreadsheet with colorful data visualization and financial report elements on a high-resolution display" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQbSqvvmKcst7jU_rjbFrc8ZxE6IN0j4PxXXInabjFOxGq5glFR2nYMiTMEihx7FWL06b4RYo9WtDtuovye744nkGYQ9Hfvcirkpu1_fAZu6eItZRdoES7sMPRAyIKQJDorbBDFak6qSAbwD3EB9cRuf0f2bTDJEsfi8t8cLburhaQlCAGlKNDJJzkoCUpGK99vLJFAkgHb9tYzYAuna7w8DVYUfuJ0dM8dTkr-NMmI0Yy6b_g9gyfyeESb7mwPeDl6A-mqL6QmQ"/>
+</div>
+<h4 class="font-bold">多门店财务进销存系统</h4>
+<p class="text-xs text-on-surface-variant mt-1">餐饮连锁机构 · 实时库存预警</p>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-video rounded-xl overflow-hidden mb-3 bg-surface-container-low">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Corporate office team collaborating around a digital display showing project management software and team progress indicators" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDs07guZlIa3QAn0AAWlQRuDbtfs2qWSXiixGLswqxx4yiFDl21nrgmW6UF1wACGZRpkRtii2Gz5hq-Na-whT6u1l97w5ZFcvW8J_0_KlOXNKgQ_Eyz2IInplGobWXuDqYU5D1stMOcafw4ED7TOwF2nP2qpA2K3qgk_OVmasTvhW9Y3H6leqnar5-gBh7p_UNPUj3asWEjKAbrpqOxT9t6L14wcR5KdyfrU3tC97HncxCctmA0wgzrtaBDyIBOvH5p4-xrKQBlSQ"/>
+</div>
+<h4 class="font-bold">人力资源全生命周期管理</h4>
+<p class="text-xs text-on-surface-variant mt-1">制造业企业 · 入职转正自动化</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Reviews Section -->
+<section class="max-w-4xl space-y-10">
+<div class="flex items-center gap-6">
+<h2 class="text-2xl font-black tracking-tight border-l-4 border-primary pl-4">用户评价</h2>
+<div class="flex items-center gap-2">
+<span class="text-3xl font-black text-on-surface">4.8</span>
+<div class="flex flex-col">
+<div class="flex text-yellow-500 text-sm">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star_half</span>
+</div>
+<span class="text-xs font-semibold text-on-surface-variant">共 45 条真实评价</span>
+</div>
+</div>
+</div>
+<div class="space-y-8">
+<!-- Review 1 -->
+<div class="flex gap-4 items-start border-b border-outline-variant/10 pb-8">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex-shrink-0 flex items-center justify-center font-bold text-primary">L</div>
+<div class="space-y-2">
+<div class="flex items-center gap-3">
+<span class="font-bold">李云龙</span>
+<span class="text-xs text-on-surface-variant">2024-03-15</span>
+</div>
+<div class="flex text-yellow-500 scale-75 origin-left">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface-variant leading-relaxed">张老师非常专业，不仅帮我们解决了多维表格的逻辑难题，还主动帮我们优化了现有的工作流。建议做复杂系统的找张老师准没错！</p>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="flex gap-4 items-start border-b border-outline-variant/10 pb-8">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex-shrink-0 flex items-center justify-center font-bold text-primary">W</div>
+<div class="space-y-2">
+<div class="flex items-center gap-3">
+<span class="font-bold">王明华</span>
+<span class="text-xs text-on-surface-variant">2024-02-28</span>
+</div>
+<div class="flex text-yellow-500 scale-75 origin-left">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface-variant leading-relaxed">服务响应速度极快，系统开发非常规范，文档齐全，后续交接很顺畅。</p>
+</div>
+</div>
+<!-- Review 3 -->
+<div class="flex gap-4 items-start border-b border-outline-variant/10 pb-8">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex-shrink-0 flex items-center justify-center font-bold text-primary">陈</div>
+<div class="space-y-2">
+<div class="flex items-center gap-3">
+<span class="font-bold">陈女士</span>
+<span class="text-xs text-on-surface-variant">2024-02-10</span>
+</div>
+<div class="flex text-yellow-500 scale-75 origin-left">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined">star</span>
+</div>
+<p class="text-on-surface-variant leading-relaxed">很好的咨询体验，老师对飞书生态理解非常透彻。</p>
+</div>
+</div>
+</div>
+<button class="w-full py-4 text-sm font-bold text-primary hover:bg-surface-container-low rounded-xl transition-colors">
+                加载更多评论 (42)
+            </button>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#f7f9fb] dark:bg-slate-950 mt-20">
+<div class="w-full py-12 px-10 max-w-[1280px] mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col gap-2">
+<div class="text-lg font-black text-[#005da7]">LarkBase Club</div>
+<p class="font-inter text-xs text-slate-500 dark:text-slate-400">© 2024 LarkBase Club. All rights reserved.</p>
+</div>
+<div class="flex gap-10">
+<a class="font-inter text-xs text-slate-500 hover:text-[#005da7] transition-all" href="#">About</a>
+<a class="font-inter text-xs text-slate-500 hover:text-[#005da7] transition-all" href="#">Experts Join</a>
+<a class="font-inter text-xs text-slate-500 hover:text-[#005da7] transition-all" href="#">Publish Template</a>
+<a class="font-inter text-xs text-slate-500 hover:text-[#005da7] transition-all" href="#">Support</a>
+</div>
+</div>
+</footer>
+</body></html>

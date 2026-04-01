@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LarkBase Club - Hall of Fame</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-container": "#fffbff",
+              "on-surface": "#191c1e",
+              "tertiary-container": "#a06900",
+              "on-tertiary-fixed": "#291800",
+              "on-secondary-fixed": "#001c39",
+              "secondary": "#496080",
+              "on-error-container": "#93000a",
+              "surface-dim": "#d8dadc",
+              "primary-fixed-dim": "#a4c9ff",
+              "inverse-on-surface": "#eff1f3",
+              "outline": "#717783",
+              "error": "#ba1a1a",
+              "surface": "#f7f9fb",
+              "on-primary-fixed": "#001c39",
+              "inverse-surface": "#2d3133",
+              "tertiary-fixed-dim": "#ffb953",
+              "surface-container-highest": "#e0e3e5",
+              "secondary-fixed": "#d4e3ff",
+              "on-tertiary-fixed-variant": "#633f00",
+              "on-background": "#191c1e",
+              "secondary-container": "#c1d9fe",
+              "on-tertiary": "#ffffff",
+              "tertiary-fixed": "#ffddb4",
+              "surface-bright": "#f7f9fb",
+              "surface-container-lowest": "#ffffff",
+              "secondary-fixed-dim": "#b1c8ed",
+              "surface-container-high": "#e6e8ea",
+              "surface-container": "#eceef0",
+              "inverse-primary": "#a4c9ff",
+              "primary": "#005da7",
+              "tertiary": "#7f5300",
+              "on-primary": "#ffffff",
+              "on-secondary-container": "#485e7e",
+              "on-error": "#ffffff",
+              "on-secondary": "#ffffff",
+              "background": "#f7f9fb",
+              "surface-container-low": "#f2f4f6",
+              "on-primary-container": "#fdfcff",
+              "outline-variant": "#c1c7d3",
+              "surface-tint": "#0060ac",
+              "primary-fixed": "#d4e3ff",
+              "primary-container": "#2976c7",
+              "surface-variant": "#e0e3e5",
+              "on-surface-variant": "#414751",
+              "on-primary-fixed-variant": "#004883",
+              "on-secondary-fixed-variant": "#314867",
+              "error-container": "#ffdad6"
+            },
+            fontFamily: {
+              "headline": ["Inter", "sans-serif"],
+              "body": ["Inter", "sans-serif"],
+              "label": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      body { font-family: 'Inter', sans-serif; }
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky z-50 bg-[#f7f9fb] dark:bg-slate-950">
+<div class="flex items-center justify-between px-6 py-4 w-full mx-auto">
+<div class="flex items-center gap-3">
+<img alt="Member Profile" class="w-10 h-10 rounded-full object-cover border-2 border-primary-container" data-alt="Professional headshot of a senior executive male with a kind smile, wearing a navy blue suit and glasses, high-end corporate style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvy6Yc4CFJY9ab1_1XT5mP4jixX2GLbf_9i8krAu-sfAX2G9I-23xxtQ_oPcwFMnfnvw-LS-1PVV-2H7mgf9prn-s7dle_MIYVeUbeg2fNmrzxD-q6IhsH1sUQIyZhKsd4SHyMp2N1BMaVmwiLj1Q0mXB20pVfwMiFkYm5ygOPD6aiIRXHnUfv_PmXttl1a1C_gVsBD7cJ1yI0Gv7j9IECmdOq0PtEtDcikV3gX_CxR8FvVYioehfUqcdORvxEXc7B55pWNNsCpg"/>
+<div class="flex flex-col">
+<span class="text-xs font-label uppercase tracking-widest text-on-surface-variant opacity-70">LarkBase Club</span>
+<span class="font-bold tracking-tight text-[#005da7] dark:text-[#2976c7]">Member Directory</span>
+</div>
+</div>
+<button class="active:scale-95 transition-transform hover:opacity-80">
+<span class="material-symbols-outlined text-[#005da7] dark:text-[#2976c7]">stars</span>
+</button>
+</div>
+</header>
+<main class="px-6 py-4 space-y-8 max-w-md mx-auto">
+<!-- Title Section -->
+<section class="space-y-2">
+<div class="flex items-center gap-2 text-tertiary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">military_tech</span>
+<span class="font-label uppercase tracking-[0.1em] text-xs font-bold">Prestigious Recognition</span>
+</div>
+<h1 class="font-headline tracking-tight text-[2.75rem] font-bold text-on-surface leading-tight">
+                Hall of Fame
+            </h1>
+<p class="text-on-surface-variant text-sm leading-relaxed max-w-[85%]">Celebrating the exceptional benchmarks and transformational journeys of our most distinguished members.</p>
+</section>
+<!-- Featured Success Story: Zhang Ming -->
+<section>
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest shadow-[0_4px_32px_rgba(25,28,30,0.04)]">
+<div class="aspect-[4/5] relative">
+<img alt="Zhang Ming" class="absolute inset-0 w-full h-full object-cover" data-alt="Distinguished Asian executive Zhang Ming in a modern glass office, soft natural morning light, wearing a tailored charcoal suit" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHmhF2jLV0ssEl2eyJxWwwc74KwXHs5RmyQNdEptoHBxAlldS9ucWZDhbaIAIzffqPDZ1cG4T1q6wxgjh-GXcMHEXFtMGLqZb044z0VmiwrA4NZ6TQ6VcDzrJRP5V2I2DhZVvyP7gRo9NHkXUfpFYAxa6ERWIX8_hVGrlV2kYyXzbNoy7K56pWDNS7cbUSGlPwasDfYy7tNTOZMJmnULMLlheAAHKxNUFNOhubSRlOXCzpd5eDzWi38pQ7Zem0bm1nM5tZEoSh8w"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-6 space-y-3">
+<div class="inline-flex items-center px-2 py-1 rounded bg-tertiary-container text-on-tertiary-container text-[10px] font-bold tracking-widest uppercase">
+                            Expert Tier Honoree
+                        </div>
+<h2 class="text-white text-2xl font-bold font-headline">Zhang Ming</h2>
+<blockquote class="text-white/90 italic text-sm font-medium leading-relaxed border-l-2 border-white/30 pl-4">
+                            "The LarkBase Club provided the structural clarity I needed to pivot my global logistics firm into the digital era."
+                        </blockquote>
+</div>
+</div>
+</div>
+</section>
+<!-- All-time Greats Grid -->
+<section class="space-y-6">
+<div class="flex items-center justify-between">
+<h3 class="font-label text-sm font-bold uppercase tracking-widest text-on-surface">All-time Greats</h3>
+<span class="text-xs text-primary font-semibold">View All</span>
+</div>
+<div class="grid grid-cols-1 gap-4">
+<!-- Li Jing -->
+<div class="bg-surface-container-low p-5 rounded-xl space-y-4">
+<div class="flex items-center gap-4">
+<img alt="Li Jing" class="w-14 h-14 rounded-full object-cover border-2 border-white" data-alt="Confident professional woman Li Jing, executive portrait with a soft grey background, elegant minimalist attire" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNjp8-Q2AcQrgBv9SHEHS_C2uTT9FGFdxZa8Pd2Aw5Jyo3AaexQhdFmu2ICQ00bHSejbN_2EOh84-T9rYvh-05ArM_Ux3AieVKFGc2NI4VxkIC6cubjO3UUOOz2gZpFd0qKHfKac8_X-jQAmkv7u2ANz4oQWPc6l_LJzHY0d1hWGJqb_x77bMxtO2AcU8OruuAy2ueHyAOm-0VQWxxV_mAqs62fYaBLtN_bCfKVZ1ZVSkn84-PqTNzdQ5WeWRoY6xirOG1gTx_FQ"/>
+<div>
+<h4 class="font-bold text-on-surface">Li Jing</h4>
+<p class="text-[10px] text-tertiary font-bold tracking-widest uppercase">Global Benchmark Lead</p>
+</div>
+</div>
+<p class="text-on-surface-variant text-sm italic leading-snug">"Authentic leadership starts with data-driven self-awareness. This community is my North Star."</p>
+</div>
+<!-- Wang Qiang -->
+<div class="bg-surface-container-low p-5 rounded-xl space-y-4">
+<div class="flex items-center gap-4">
+<img alt="Wang Qiang" class="w-14 h-14 rounded-full object-cover border-2 border-white" data-alt="Professional male executive Wang Qiang in a bright creative studio, wearing a white shirt, casual but sharp appearance" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArMMudhYOv1rQbnDtHd86b7mAvcfGxYrdnq9Ow7rJR0-Fimp3AwoC85ttBBtxJ9jXMOZYh8_qKO0Z818NPXIVSylzrJJWdfBLqaVIJ3eQv0mbvoUd_f29B28VXgP-qpzs0lQqGIO8hldXFTXB4YhsieK3BRlmoy1fhIR3dQkQ41C1SCN7fLx0R2KfLETLQ-PfaButGOlHv2qYO2pIxrtFABLFooW99UHLXveh7Pc36wGaVnasMf8VyDAS7qPSATw7r4OwaPAAzQQ"/>
+<div>
+<h4 class="font-bold text-on-surface">Wang Qiang</h4>
+<p class="text-[10px] text-tertiary font-bold tracking-widest uppercase">Success Vault Contributor</p>
+</div>
+</div>
+<p class="text-on-surface-variant text-sm italic leading-snug">"Scaling is a science, but culture is an art. At LarkBase, we master both disciplines simultaneously."</p>
+</div>
+<!-- Zhao Li -->
+<div class="bg-surface-container-low p-5 rounded-xl space-y-4">
+<div class="flex items-center gap-4">
+<img alt="Zhao Li" class="w-14 h-14 rounded-full object-cover border-2 border-white" data-alt="Experienced female leader Zhao Li, sophisticated smile, corporate headshot with soft bokeh architectural background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCxXp2UEOQ6cL4IW4InUPq4othbESiBQMWN6PTZshsTaRP29kVY28ufK5VUQOpQ_AwZWpiNt39obzo_F2L2mc1jEKnuskDrwIGe362JIz2NR5hJEBEC2xe1nu59Mv6tOxMSEQHTu7ddO6tuzBn4doMzk98ZQ5LT1Zf31LFSLq-QI9TlaRV9-lbwY-pqVg5I_QMPB6K8C6-AaId7wGwJ-HlvC7Gkez6NBYl0eK9uIkUiS6K2f23xxzXQ2wcwaijorZzOT07h6rZCA"/>
+<div>
+<h4 class="font-bold text-on-surface">Zhao Li</h4>
+<p class="text-[10px] text-tertiary font-bold tracking-widest uppercase">Strategic Insight Advisor</p>
+</div>
+</div>
+<p class="text-on-surface-variant text-sm italic leading-snug">"Excellence is not a destination, but a curated standard we uphold daily within this elite circle."</p>
+</div>
+</div>
+</section>
+<!-- Previous Honorees List -->
+<section class="space-y-4 pb-12">
+<h3 class="font-label text-sm font-bold uppercase tracking-widest text-on-surface">Previous Honorees</h3>
+<div class="divide-y divide-outline-variant/20">
+<div class="flex items-center justify-between py-4">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded bg-surface-container-highest flex items-center justify-center font-bold text-primary">CH</div>
+<div>
+<p class="text-sm font-bold text-on-surface">Chen Hao</p>
+<p class="text-xs text-on-surface-variant">Class of 2022 • Operations</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant text-lg">chevron_right</span>
+</div>
+<div class="flex items-center justify-between py-4">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded bg-surface-container-highest flex items-center justify-center font-bold text-primary">SX</div>
+<div>
+<p class="text-sm font-bold text-on-surface">Sun Xiao</p>
+<p class="text-xs text-on-surface-variant">Class of 2022 • Innovation</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant text-lg">chevron_right</span>
+</div>
+<div class="flex items-center justify-between py-4">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded bg-surface-container-highest flex items-center justify-center font-bold text-primary">LY</div>
+<div>
+<p class="text-sm font-bold text-on-surface">Liu Yang</p>
+<p class="text-xs text-on-surface-variant">Class of 2021 • Finance</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant text-lg">chevron_right</span>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-2 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-t border-[#c1c7d3]/20 shadow-[0_-4px_32px_rgba(25,28,30,0.04)]">
+<a class="flex flex-col items-center justify-center text-[#191c1e]/60 dark:text-slate-500 active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">dynamic_feed</span>
+<span class="font-inter text-[0.65rem] uppercase tracking-wider mt-1">Feed</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#191c1e]/60 dark:text-slate-500 active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">workspace_premium</span>
+<span class="font-inter text-[0.65rem] uppercase tracking-wider mt-1">Experts</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#191c1e]/60 dark:text-slate-500 active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">auto_stories</span>
+<span class="font-inter text-[0.65rem] uppercase tracking-wider mt-1">Stories</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#005da7] dark:text-[#2976c7] font-bold active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">groups</span>
+<span class="font-inter text-[0.65rem] uppercase tracking-wider mt-1">Club</span>
+</a>
+</nav>
+</body></html>

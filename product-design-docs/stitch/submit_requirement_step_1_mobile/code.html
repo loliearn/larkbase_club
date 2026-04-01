@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Submit Requirement - LarkBase Nexus</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-error-container": "#93000a",
+                        "tertiary": "#7f5300",
+                        "surface-dim": "#d8dadc",
+                        "primary-container": "#2976c7",
+                        "tertiary-fixed": "#ffddb4",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed": "#001c39",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed": "#001c39",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-container": "#485e7e",
+                        "on-tertiary-fixed-variant": "#633f00",
+                        "surface-variant": "#e0e3e5",
+                        "outline": "#717783",
+                        "inverse-on-surface": "#eff1f3",
+                        "surface-container": "#eceef0",
+                        "surface": "#f7f9fb",
+                        "surface-container-low": "#f2f4f6",
+                        "on-primary": "#ffffff",
+                        "surface-container-high": "#e6e8ea",
+                        "surface-bright": "#f7f9fb",
+                        "on-secondary-fixed-variant": "#314867",
+                        "surface-tint": "#0060ac",
+                        "on-tertiary-container": "#fffbff",
+                        "error": "#ba1a1a",
+                        "secondary-fixed": "#d4e3ff",
+                        "inverse-primary": "#a4c9ff",
+                        "background": "#f7f9fb",
+                        "on-background": "#191c1e",
+                        "secondary-container": "#c1d9fe",
+                        "on-surface-variant": "#414751",
+                        "primary-fixed-dim": "#a4c9ff",
+                        "on-tertiary-fixed": "#291800",
+                        "primary": "#005da7",
+                        "primary-fixed": "#d4e3ff",
+                        "on-primary-fixed-variant": "#004883",
+                        "surface-container-highest": "#e0e3e5",
+                        "secondary": "#496080",
+                        "on-error": "#ffffff",
+                        "on-surface": "#191c1e",
+                        "inverse-surface": "#2d3133",
+                        "secondary-fixed-dim": "#b1c8ed",
+                        "outline-variant": "#c1c7d3",
+                        "on-primary-container": "#fdfcff",
+                        "tertiary-fixed-dim": "#ffb953",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-container": "#a06900"
+                    },
+                    fontFamily: {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky z-30 bg-[#f7f9fb] dark:bg-slate-950 shadow-none">
+<div class="flex justify-between items-center px-[1.5rem] py-4 w-full">
+<div class="flex items-center gap-3">
+<button class="text-slate-600 active:scale-95 transition-transform duration-200">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="font-inter tracking-tight text-[1.25rem] font-bold text-[#005da7] dark:text-[#2976c7]">Submit Requirement</h1>
+</div>
+<div class="w-8 h-8 rounded-full bg-slate-200 overflow-hidden">
+<img alt="User Profile" data-alt="Professional headshot of a business executive in a modern office setting with soft natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiwYo6vcPF95LyPiRbGGC66XG4iG1P5uBOqU1q66synQ8bg6mWprVT6j5yvIeTNMhVS_gzuUyPksz3nH9oKk1kJs84l_EDADz8RCRqowo-HuwBf6uTc_VEx-EGcyo_Tx7MqD5dVRiTPaOWdmDqtdV8N5uPbrv6IxI1asMr1xs2DqinEXS4umU-9TWuca8xE2Q8xyxDsApHv1FX5tk88s_p4X3SvUr_NvZ4x4jimrzZS6iy1PuVQ-h_Liq4KomCmy64XDnayeRH1g"/>
+</div>
+</div>
+</header>
+<main class="px-6 py-4 max-w-md mx-auto">
+<!-- Progress Indicator -->
+<div class="mb-10">
+<div class="flex items-center justify-between relative mb-2">
+<!-- Progress Line Background -->
+<div class="absolute top-1/2 left-0 w-full h-[2px] bg-surface-container-high -translate-y-1/2 z-0"></div>
+<!-- Progress Line Active -->
+<div class="absolute top-1/2 left-0 w-1/3 h-[2px] bg-primary -translate-y-1/2 z-0"></div>
+<!-- Steps -->
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-sm">1</div>
+<span class="text-[10px] font-bold uppercase tracking-wider mt-2 text-primary">Basic Info</span>
+</div>
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest text-on-surface-variant flex items-center justify-center font-bold text-sm">2</div>
+<span class="text-[10px] font-bold uppercase tracking-wider mt-2 text-on-surface-variant opacity-50">Details</span>
+</div>
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest text-on-surface-variant flex items-center justify-center font-bold text-sm">3</div>
+<span class="text-[10px] font-bold uppercase tracking-wider mt-2 text-on-surface-variant opacity-50">Review</span>
+</div>
+</div>
+</div>
+<!-- Form Section -->
+<div class="space-y-8">
+<!-- Project Name -->
+<div class="flex flex-col gap-2">
+<label class="font-inter text-sm font-medium uppercase tracking-widest text-slate-500">Project Name</label>
+<input class="w-full bg-transparent border-b border-outline-variant/40 py-3 text-lg focus:outline-none focus:border-primary focus:ring-0 transition-colors placeholder:text-slate-400" placeholder="Enter a descriptive title" type="text"/>
+</div>
+<!-- Project Type Selection Chips -->
+<div class="flex flex-col gap-4">
+<label class="font-inter text-sm font-medium uppercase tracking-widest text-slate-500">Project Type</label>
+<div class="flex flex-wrap gap-2">
+<button class="px-4 py-2 rounded-lg bg-primary-container text-on-primary-container text-xs font-semibold border-2 border-transparent active:scale-95 transition-all">Template Customization</button>
+<button class="px-4 py-2 rounded-lg bg-surface-container-lowest text-on-surface-variant text-xs font-medium border-2 border-outline-variant/20 hover:border-primary/30 active:scale-95 transition-all">System Development</button>
+<button class="px-4 py-2 rounded-lg bg-surface-container-lowest text-on-surface-variant text-xs font-medium border-2 border-outline-variant/20 hover:border-primary/30 active:scale-95 transition-all">Tech Consulting</button>
+<button class="px-4 py-2 rounded-lg bg-surface-container-lowest text-on-surface-variant text-xs font-medium border-2 border-outline-variant/20 hover:border-primary/30 active:scale-95 transition-all">Training</button>
+</div>
+</div>
+<!-- Budget Range -->
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<label class="font-inter text-sm font-medium uppercase tracking-widest text-slate-500">Budget Range</label>
+<div class="bg-tertiary-fixed px-2 py-0.5 rounded text-[10px] font-bold text-on-tertiary-fixed border-[0.5px] border-tertiary/30">EXPERT BUDGET</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex flex-col gap-1">
+<span class="text-[10px] text-slate-400 font-medium">MINIMUM (USD)</span>
+<div class="flex items-center border-b border-outline-variant/40 py-2">
+<span class="text-slate-400 mr-2">$</span>
+<input class="w-full bg-transparent border-none p-0 text-md font-semibold focus:ring-0" type="number" value="5000"/>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<span class="text-[10px] text-slate-400 font-medium">MAXIMUM (USD)</span>
+<div class="flex items-center border-b border-outline-variant/40 py-2">
+<span class="text-slate-400 mr-2">$</span>
+<input class="w-full bg-transparent border-none p-0 text-md font-semibold focus:ring-0" placeholder="25000" type="number"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Visual Context Card -->
+<div class="relative w-full aspect-video rounded-xl overflow-hidden mt-4 group">
+<img alt="Project Visualization" class="w-full h-full object-cover grayscale opacity-40 group-hover:grayscale-0 transition-all duration-700" data-alt="Modern minimalist workspace with abstract data visualizations on a screen, professional and clean aesthetic with blue highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVOrndYXlmVKoq2bRkofThnHrUhfTfam8SAUDW01zBseo7UoTmOHO6xJy8MHclmjLA1iVuCR4qb-6XEeLGdqIB7l_Jjf3_e19pOUI0REIDFQ2Jifml83prB7g5zNJ2RrWQ-rvv7qXgCwj3fnKHTfHRyzIw3ZBhqwEHciVwqzm0vULBdokPDukG1USIDnYn74hEBl8Tv6Nk1C9aUrM5vov5CiAEZVNRmdGxmLNvzAlAJU4ta_PZFZck4WBxhqXnlDHSvoH535yAbg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4">
+<p class="text-[10px] text-primary font-bold uppercase tracking-widest">Step 1 of 3</p>
+<p class="text-sm text-on-background font-medium">Defining the foundation of your expert submission.</p>
+</div>
+</div>
+<!-- Next Step Action -->
+<div class="pt-6">
+<button class="w-full bg-primary hover:bg-primary-container text-on-primary py-4 rounded-xl font-bold tracking-wide flex items-center justify-center gap-2 shadow-lg shadow-primary/20 active:scale-[0.98] transition-all">
+                    Next Step
+                    <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around p-3 bg-[#ffffff]/80 dark:bg-slate-900/80 backdrop-blur-md border-t border-slate-200/20 dark:border-slate-800/20 shadow-lg md:hidden">
+<button class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 hover:text-[#005da7] active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="list_alt">list_alt</span>
+<span class="font-inter text-[0.7rem] font-medium mt-1">Requirements</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 hover:text-[#005da7] active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="pending_actions">pending_actions</span>
+<span class="font-inter text-[0.7rem] font-medium mt-1">Progress</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-[#005da7]/10 text-[#005da7] dark:text-[#2976c7] rounded-xl px-4 py-1 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="contact_support" style="font-variation-settings: 'FILL' 1;">contact_support</span>
+<span class="font-inter text-[0.7rem] font-bold mt-1">Submissions</span>
+</button>
+</nav>
+</body></html>

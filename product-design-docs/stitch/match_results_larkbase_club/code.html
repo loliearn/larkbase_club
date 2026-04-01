@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "tertiary-fixed-dim": "#ffb953",
+                        "on-surface": "#191c1e",
+                        "surface-dim": "#d8dadc",
+                        "on-secondary": "#ffffff",
+                        "surface-bright": "#f7f9fb",
+                        "background": "#f7f9fb",
+                        "primary": "#005da7",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed": "#ffddb4",
+                        "on-secondary-container": "#485e7e",
+                        "on-secondary-fixed": "#001c39",
+                        "primary-fixed-dim": "#a4c9ff",
+                        "secondary": "#496080",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-fixed-variant": "#633f00",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#f2f4f6",
+                        "on-background": "#191c1e",
+                        "on-primary-container": "#fdfcff",
+                        "on-primary-fixed-variant": "#004883",
+                        "on-primary-fixed": "#001c39",
+                        "outline": "#717783",
+                        "surface-tint": "#0060ac",
+                        "surface-variant": "#e0e3e5",
+                        "error-container": "#ffdad6",
+                        "inverse-surface": "#2d3133",
+                        "primary-fixed": "#d4e3ff",
+                        "outline-variant": "#c1c7d3",
+                        "surface-container-high": "#e6e8ea",
+                        "secondary-fixed-dim": "#b1c8ed",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed": "#d4e3ff",
+                        "on-primary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "tertiary": "#7f5300",
+                        "on-tertiary-container": "#fffbff",
+                        "on-tertiary-fixed": "#291800",
+                        "surface-container": "#eceef0",
+                        "on-secondary-fixed-variant": "#314867",
+                        "secondary-container": "#c1d9fe",
+                        "tertiary-container": "#a06900",
+                        "on-surface-variant": "#414751",
+                        "primary-container": "#2976c7",
+                        "inverse-on-surface": "#eff1f3",
+                        "surface": "#f7f9fb",
+                        "inverse-primary": "#a4c9ff"
+                    },
+                    fontFamily: {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .expert-card-shadow {
+            box-shadow: 0 32px 64px -12px rgba(25, 28, 30, 0.04);
+        }
+        .glass-header {
+            backdrop-filter: blur(20px);
+            background-color: rgba(242, 244, 246, 0.8);
+        }
+    </style>
+</head>
+<body class="bg-background font-body text-on-surface antialiased">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 bg-[#f7f9fb] dark:bg-slate-950">
+<nav class="flex justify-between items-center w-full px-10 py-4 max-w-[1280px] mx-auto font-inter text-sm font-medium tracking-tight">
+<div class="text-xl font-black tracking-tighter text-[#005da7] dark:text-[#2976c7]">
+                LarkBase Club
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-slate-600 dark:text-slate-400 hover:text-[#005da7] transition-colors duration-200" href="#">Homepage</a>
+<a class="text-[#005da7] dark:text-[#2976c7] border-b-2 border-[#005da7] pb-1 font-bold" href="#">Experts</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-[#005da7] transition-colors duration-200" href="#">Templates</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-[#005da7] transition-colors duration-200" href="#">Blog</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-[#005da7] transition-colors duration-200" href="#">About</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="px-4 py-2 text-slate-600 hover:bg-slate-200/50 rounded-lg transition-all">Login</button>
+<button class="px-4 py-2 bg-primary text-on-primary rounded-lg font-semibold hover:bg-primary-container transition-all active:scale-95">Register</button>
+</div>
+</nav>
+</header>
+<main class="max-w-[1280px] mx-auto px-10 py-12">
+<!-- Success Hero Section -->
+<section class="mb-16 text-center space-y-6">
+<div class="inline-flex items-center justify-center w-20 h-20 bg-primary/10 rounded-full mb-4">
+<span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<h1 class="text-[2.75rem] font-extrabold tracking-tight text-on-surface leading-tight">
+                需求提交成功! ✓
+            </h1>
+<p class="text-lg text-on-surface-variant max-w-2xl mx-auto">
+                我们的智能引擎已为您完成深度分析。根据您的业务目标与技术栈，<span class="text-primary font-bold">我们已为您匹配到5位合适的行家</span>。
+            </p>
+</section>
+<!-- Match Stats / Filters - Subtle Tonal Shift -->
+<div class="mb-10 p-6 bg-surface-container-low rounded-xl flex flex-wrap items-center justify-between gap-4">
+<div class="flex items-center gap-6">
+<div class="flex flex-col">
+<span class="text-[0.625rem] uppercase tracking-widest text-on-surface-variant font-bold">Match Accuracy</span>
+<span class="text-xl font-bold text-primary">98.4%</span>
+</div>
+<div class="w-px h-10 bg-outline-variant/30"></div>
+<div class="flex flex-col">
+<span class="text-[0.625rem] uppercase tracking-widest text-on-surface-variant font-bold">Experts Found</span>
+<span class="text-xl font-bold text-on-surface">05 Individuals</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-sm text-on-surface-variant mr-2">Sorted by Match Score</span>
+<span class="material-symbols-outlined text-on-surface-variant">filter_list</span>
+</div>
+</div>
+<!-- Expert Grid - Asymmetric Editorial Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
+<!-- Main Expert Card (Highlight) -->
+<div class="lg:col-span-8 group">
+<div class="bg-surface-container-lowest expert-card-shadow rounded-xl overflow-hidden h-full flex flex-col md:flex-row transition-all duration-300 hover:-translate-y-1">
+<div class="md:w-2/5 relative h-64 md:h-auto">
+<img class="w-full h-full object-cover" data-alt="portrait of a professional male tech expert in a modern bright office setting, soft natural lighting, confident expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXtyblloLFOGJZ0QlcTB7hzVOzneNtrrIndLXDKAzVu7IDiEdM7b9Lzvf9URWux9VFu10y1kHIpQvMeEbdGcv0kmJiVYPm3c9pwYJdsUP51cE-hWpwDtb0XY7GmtEDcO6-QSGpaIzr7AOtoR-6pSn380YYj6PjaP1Z6HLczvIEea-nhye9sHE4kG8HqPW1SsDJeNeaWEWoHPQjTwXicNm1sd2UVJtQTYO3qD72_8ZrdvcXeNbS7tzjGk6xZHat8Qhh05VHAOEydg"/>
+<div class="absolute top-4 left-4 bg-primary text-on-primary px-3 py-1 rounded-full text-xs font-bold tracking-wider">
+                            BEST MATCH
+                        </div>
+</div>
+<div class="p-8 flex flex-col justify-between flex-1">
+<div>
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="text-2xl font-bold text-on-surface">张明 (Ming Zhang)</h3>
+<p class="text-on-surface-variant text-sm">Senior Data Architect @ CloudStream</p>
+</div>
+<div class="text-right">
+<div class="text-3xl font-black text-primary leading-none">95%</div>
+<div class="text-[0.625rem] font-bold uppercase tracking-widest text-on-surface-variant">Match Rate</div>
+</div>
+</div>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="px-3 py-1 bg-surface-container text-on-surface-variant rounded-full text-xs font-medium">PostgreSQL</span>
+<span class="px-3 py-1 bg-surface-container text-on-surface-variant rounded-full text-xs font-medium">Infrastructure</span>
+<span class="px-3 py-1 bg-surface-container text-on-surface-variant rounded-full text-xs font-medium">Big Data</span>
+</div>
+<div class="space-y-4 mb-8">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">psychology</span>
+<div>
+<p class="text-xs font-bold uppercase tracking-wider text-on-surface-variant mb-1">Reason for match</p>
+<p class="text-sm text-on-surface">Skills perfectly align with your architecture scaling needs &amp; budget-friendly hourly rate.</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">stars</span>
+<div>
+<p class="text-xs font-bold uppercase tracking-wider text-on-surface-variant mb-1">Expert Status</p>
+<p class="text-sm text-on-surface">Top 1% Mentor in the LarkBase community with 200+ successful matches.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex gap-4">
+<button class="flex-1 px-6 py-3 bg-primary text-on-primary rounded-lg font-bold hover:bg-primary-container transition-all active:scale-95 shadow-lg shadow-primary/20">Get Contact Info</button>
+<button class="px-6 py-3 border border-outline-variant/30 text-on-surface rounded-lg font-bold hover:bg-surface-container transition-all active:scale-95">View Details</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Side Expert 1 -->
+<div class="lg:col-span-4 flex flex-col gap-8">
+<div class="bg-surface-container-lowest expert-card-shadow rounded-xl p-6 flex flex-col transition-all duration-300 hover:bg-surface-container-low border border-transparent hover:border-outline-variant/20">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-16 h-16 rounded-full overflow-hidden shrink-0 border-2 border-surface-container">
+<img class="w-full h-full object-cover" data-alt="headshot of a female software expert, professional attire, minimalist studio background, high-end corporate style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGxje6CJVQ_SwqL5Uyd7o5LpHCSbUShZoS3_lPwBKhkd1mqduc5iImnltkujgHCqPwqvd2FOAM0kke1yDiY33J-JcGjrFfUu2D65lCNkMefUTDGjFs6_Tlv1k4kND2Xhk5h1ALp4IyuhuQOuIIcmJGxeYPXoCcz3XzyVcpipvvCn1oIHKGnCvuHGmnBwwDQGWjm1NWtDM6AyOGr4NL3wlEKEDekxCpYe8dqPNJUDS96SFhFTzzYqkpgKT9bgmhOcl3yuWe974xGQ"/>
+</div>
+<div>
+<h4 class="font-bold text-on-surface">李薇 (Wei Li)</h4>
+<p class="text-xs text-on-surface-variant">Full-stack Consultant</p>
+</div>
+<div class="ml-auto text-right">
+<div class="text-xl font-black text-primary">92%</div>
+</div>
+</div>
+<p class="text-xs font-bold uppercase tracking-wider text-on-surface-variant mb-2">Match Logic</p>
+<p class="text-sm text-on-surface-variant mb-6">Experience with similar FinTech projects and immediate availability.</p>
+<div class="flex gap-2">
+<button class="flex-1 text-xs py-2 bg-surface-container text-primary font-bold rounded-lg hover:bg-primary/5 transition-all">Details</button>
+<button class="flex-1 text-xs py-2 border border-outline-variant/20 text-on-surface-variant font-bold rounded-lg hover:bg-surface transition-all">Contact</button>
+</div>
+</div>
+<!-- Side Expert 2 -->
+<div class="bg-surface-container-lowest expert-card-shadow rounded-xl p-6 flex flex-col transition-all duration-300 hover:bg-surface-container-low border border-transparent hover:border-outline-variant/20">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-16 h-16 rounded-full overflow-hidden shrink-0 border-2 border-surface-container">
+<img class="w-full h-full object-cover" data-alt="professional portrait of a male technical specialist, calm environment, sophisticated color palette" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmJy9ZHccknPC4MTMHVUWthEqLyGvMTTBQ7aneAmswXG8qjw9t8gILkumz3PdRv_vCMA9fzrPjpt0ZyDIBmbxaPUM7OA-7fMMb6aZWwEXBsUhtE8OIdwWCYglT-6gVk0Vx0sbAKLAT_lYSh4XRwlDUyqFSaLOdz9c-1xy--cweWyWl4CV2_amBGPG5UUIokH8C3IV7bCXMZig1lpLOqba2sjTOk-iORjJsLC2MWzyhjFdpilYDTa1kT4Lf8tcd9HLoDksdyFAkEg"/>
+</div>
+<div>
+<h4 class="font-bold text-on-surface">陈伟 (Wei Chen)</h4>
+<p class="text-xs text-on-surface-variant">DevOps Specialist</p>
+</div>
+<div class="ml-auto text-right">
+<div class="text-xl font-black text-primary">89%</div>
+</div>
+</div>
+<p class="text-xs font-bold uppercase tracking-wider text-on-surface-variant mb-2">Match Logic</p>
+<p class="text-sm text-on-surface-variant mb-6">Specializes in the specific Kubernetes stack you mentioned in the brief.</p>
+<div class="flex gap-2">
+<button class="flex-1 text-xs py-2 bg-surface-container text-primary font-bold rounded-lg hover:bg-primary/5 transition-all">Details</button>
+<button class="flex-1 text-xs py-2 border border-outline-variant/20 text-on-surface-variant font-bold rounded-lg hover:bg-surface transition-all">Contact</button>
+</div>
+</div>
+</div>
+</div>
+<!-- View More Button -->
+<div class="flex flex-col items-center gap-6 mt-12">
+<button class="group flex items-center gap-3 px-10 py-5 bg-surface-container-lowest border border-outline-variant/30 text-primary font-bold rounded-full expert-card-shadow hover:bg-primary hover:text-on-primary transition-all duration-300 active:scale-95">
+<span>View More Matches</span>
+<span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+<p class="text-sm text-on-surface-variant italic">Not seeing exactly what you need? <a class="text-primary font-semibold underline decoration-primary/30 underline-offset-4" href="#">Refine your search parameters</a></p>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-[#f7f9fb] dark:bg-slate-950 mt-20">
+<div class="w-full py-12 px-10 max-w-[1280px] mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="text-lg font-black text-[#005da7]">LarkBase Club</div>
+<div class="flex gap-8 font-inter text-xs text-slate-500 dark:text-slate-400">
+<a class="hover:underline hover:text-[#005da7] transition-all" href="#">About</a>
+<a class="hover:underline hover:text-[#005da7] transition-all" href="#">Experts Join</a>
+<a class="hover:underline hover:text-[#005da7] transition-all" href="#">Publish Template</a>
+<a class="hover:underline hover:text-[#005da7] transition-all" href="#">Support</a>
+</div>
+<p class="font-inter text-xs text-slate-500 dark:text-slate-400">© 2024 LarkBase Club. All rights reserved.</p>
+</div>
+</footer>
+</body></html>

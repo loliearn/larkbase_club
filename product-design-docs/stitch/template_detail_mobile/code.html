@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "inverse-primary": "#a4c9ff",
+            "secondary-container": "#c1d9fe",
+            "surface-dim": "#d8dadc",
+            "error-container": "#ffdad6",
+            "primary-container": "#2976c7",
+            "error": "#ba1a1a",
+            "tertiary-fixed-dim": "#ffb953",
+            "on-secondary": "#ffffff",
+            "surface-container": "#eceef0",
+            "inverse-on-surface": "#eff1f3",
+            "on-surface": "#191c1e",
+            "on-primary-fixed-variant": "#004883",
+            "surface-container-low": "#f2f4f6",
+            "on-secondary-fixed": "#001c39",
+            "on-tertiary": "#ffffff",
+            "secondary-fixed": "#d4e3ff",
+            "inverse-surface": "#2d3133",
+            "on-tertiary-fixed": "#291800",
+            "surface-container-highest": "#e0e3e5",
+            "on-tertiary-fixed-variant": "#633f00",
+            "secondary": "#496080",
+            "background": "#f7f9fb",
+            "on-primary-container": "#fdfcff",
+            "surface-variant": "#e0e3e5",
+            "surface-container-lowest": "#ffffff",
+            "on-surface-variant": "#414751",
+            "on-primary": "#ffffff",
+            "on-primary-fixed": "#001c39",
+            "surface-container-high": "#e6e8ea",
+            "on-error": "#ffffff",
+            "on-secondary-container": "#485e7e",
+            "tertiary-fixed": "#ffddb4",
+            "secondary-fixed-dim": "#b1c8ed",
+            "primary-fixed-dim": "#a4c9ff",
+            "outline-variant": "#c1c7d3",
+            "tertiary-container": "#a06900",
+            "surface-tint": "#0060ac",
+            "on-secondary-fixed-variant": "#314867",
+            "primary": "#005da7",
+            "on-background": "#191c1e",
+            "surface-bright": "#f7f9fb",
+            "outline": "#717783",
+            "on-tertiary-container": "#fffbff",
+            "primary-fixed": "#d4e3ff",
+            "tertiary": "#7f5300",
+            "surface": "#f7f9fb",
+            "on-error-container": "#93000a"
+          },
+          fontFamily: {
+            "headline": ["Inter"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          },
+          borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    body { font-family: 'Inter', sans-serif; }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface mb-20">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#f7f9fb] flex items-center justify-between px-6 h-16 w-full">
+<button class="active:scale-[0.98] transition-transform duration-200 text-[#005da7] hover:bg-slate-200/50 rounded-full p-2">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-['Inter'] font-bold text-[1.125rem] tracking-tight text-[#191c1e]">Expert Profile</h1>
+<button class="active:scale-[0.98] transition-transform duration-200 text-[#005da7] hover:bg-slate-200/50 rounded-full p-2">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+</button>
+</header>
+<main class="mt-16">
+<!-- Carousel Preview -->
+<section class="relative w-full aspect-video bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Modern clean dashboard UI with financial charts and customer data tables in a professional blue color palette" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFANlq-N_E9e9P2VWbWqgKsOXJOArURz9XHPqDLirVpLuX2lhkqbxjYGIK0CEB1JwA9OEgz42q8_P1uOtTPg5N8van2oTlPrtILFKQAeNY917AbhHkj67apOs11xnoqx3kFXgnOP7dNsD6GdqEohqMPdYFvC4SaiNX7_wXhwGw1TcZ6mWjcGIU9aSHR3HCfqMPNdJHiz_j2tAT4HQDSXxNvRq5CFDh4-uoCWULGrXwPL_T2YyQGclRwGLBmyvsR_64WlCVkk7gow"/>
+<div class="absolute bottom-4 left-0 right-0 flex justify-center gap-1.5">
+<div class="w-6 h-1 rounded-full bg-primary"></div>
+<div class="w-1.5 h-1 rounded-full bg-outline-variant/40"></div>
+<div class="w-1.5 h-1 rounded-full bg-outline-variant/40"></div>
+</div>
+</section>
+<!-- Header Content -->
+<div class="px-6 py-6 space-y-4">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-0.5 bg-secondary-container text-on-secondary-fixed-variant text-[10px] font-bold uppercase tracking-wider rounded">Retail/E-commerce</span>
+</div>
+<h2 class="text-2xl font-bold tracking-tight text-on-surface">E-commerce CRM System</h2>
+<div class="flex items-center gap-4 text-sm text-on-surface-variant font-medium">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-tertiary text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.6</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-lg">bookmark</span>
+<span>28 saves</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Pricing & Action Card -->
+<section class="px-6 py-2">
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-[0_4px_24px_rgba(0,0,0,0.04)] border border-outline-variant/10">
+<div class="flex items-baseline gap-1 mb-6">
+<span class="text-xl font-bold text-primary">¥</span>
+<span class="text-4xl font-extrabold tracking-tighter text-on-surface">299</span>
+</div>
+<div class="flex flex-col gap-3">
+<button class="w-full bg-primary text-on-primary py-4 rounded-xl font-bold text-lg active:scale-[0.98] transition-transform shadow-lg shadow-primary/10">
+            Get Now
+          </button>
+<div class="grid grid-cols-3 gap-2 mt-2">
+<button class="flex flex-col items-center justify-center py-3 rounded-lg bg-surface-container-low text-on-surface-variant active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined mb-1">chat</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Contact</span>
+</button>
+<button class="flex flex-col items-center justify-center py-3 rounded-lg bg-surface-container-low text-on-surface-variant active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined mb-1">favorite</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Save</span>
+</button>
+<button class="flex flex-col items-center justify-center py-3 rounded-lg bg-surface-container-low text-on-surface-variant active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined mb-1">ios_share</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Share</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Features Section -->
+<section class="px-6 py-8 space-y-4">
+<h3 class="text-xs font-bold uppercase tracking-widest text-outline">Key Features</h3>
+<div class="grid grid-cols-1 gap-4">
+<div class="flex items-start gap-4 p-4 bg-surface-container-low rounded-xl">
+<div class="w-10 h-10 flex items-center justify-center rounded-lg bg-primary-container text-on-primary-container">
+<span class="material-symbols-outlined">group</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">Customer Management</p>
+<p class="text-xs text-on-surface-variant leading-relaxed">Centralized database for all retail client interactions.</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4 bg-surface-container-low rounded-xl">
+<div class="w-10 h-10 flex items-center justify-center rounded-lg bg-primary-container text-on-primary-container">
+<span class="material-symbols-outlined">history_edu</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">Follow-up Records</p>
+<p class="text-xs text-on-surface-variant leading-relaxed">Automated logging of every touchpoint and note.</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4 bg-surface-container-low rounded-xl">
+<div class="w-10 h-10 flex items-center justify-center rounded-lg bg-primary-container text-on-primary-container">
+<span class="material-symbols-outlined">filter_alt</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">Opportunity Funnel</p>
+<p class="text-xs text-on-surface-variant leading-relaxed">Visualized sales pipeline for conversion tracking.</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4 bg-surface-container-low rounded-xl">
+<div class="w-10 h-10 flex items-center justify-center rounded-lg bg-primary-container text-on-primary-container">
+<span class="material-symbols-outlined">notifications_active</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">Auto Reminders</p>
+<p class="text-xs text-on-surface-variant leading-relaxed">Smart alerts for critical tasks and follow-ups.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Author Section -->
+<section class="px-6 py-6 bg-surface-container-low">
+<div class="flex items-center gap-4 mb-4">
+<div class="relative">
+<img class="w-16 h-16 rounded-full object-cover border-2 border-white" data-alt="Professional portrait of a male business expert in a tailored blue suit with a friendly confident expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGSOFzttgaF_13soshhh1Qk2s_Hy6rSQsKxsGMdyJAj7Xyp55SxZVmMB-9h4L9jUOCppzTn62tajNF3ST5DSovSQ4MCucoC4z40b_Z7RhMKvU4WzHmx0ucsZK9cwoi5kgkPxM8S8rw5FvaRrWBpkWSvigw1FO0xTlu5K7G--KF3I_bk0_gGY3_lYZ0JrozEHoIwwIFA2ciQM7Hyh_YJfOCU_8BjTTnwvNotRkqQ04Lhpb7ZRE9B_jUobY6w3z2X3f7mmqyAmY6dg"/>
+<div class="absolute -bottom-1 -right-1 bg-tertiary-fixed-dim text-on-tertiary-fixed p-1 rounded-full border border-surface">
+<span class="material-symbols-outlined text-[12px] block" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-2">
+<h4 class="font-bold text-on-surface">Li Si</h4>
+<span class="px-2 py-0.5 bg-tertiary-container/10 text-tertiary text-[10px] font-bold rounded flex items-center gap-1 border border-tertiary/20">
+              Expert
+            </span>
+</div>
+<div class="flex items-center gap-3 text-xs text-on-surface-variant mt-1">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span> 4.8</span>
+<span class="w-1 h-1 bg-outline-variant rounded-full"></span>
+<span>45 projects</span>
+</div>
+</div>
+</div>
+<button class="w-full py-3 border border-outline-variant text-on-surface-variant font-bold text-sm rounded-xl hover:bg-surface transition-colors active:scale-[0.98]">
+        View Profile
+      </button>
+</section>
+<!-- Related Templates -->
+<section class="py-8 space-y-4">
+<div class="px-6 flex justify-between items-end">
+<h3 class="text-xs font-bold uppercase tracking-widest text-outline">Related Solutions</h3>
+<button class="text-xs font-bold text-primary">View All</button>
+</div>
+<div class="flex overflow-x-auto gap-4 px-6 no-scrollbar snap-x">
+<!-- Template 1 -->
+<div class="snap-start flex-shrink-0 w-44 space-y-2">
+<div class="aspect-[4/3] rounded-xl overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="Data visualization dashboard showing multi-colored sales funnel stages and conversion analytics" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYXpewA4Kip-7ouBFwJq_FO45kG05iERKGWjedNDmAKESN4eaxKu4-loz054WQOt8v2su2su9axNcHx7siz-bzQLGLpTkJomaf0ueUM5WT4uXx8jkj5tvWzjbOjFLTfZ6_qNVobULq_CmHWfktPbDwQFK12jgPpB8e7Uw7lFrU9grM95UMEUwOoS-OB8-GhmRj3KtcG1FMna-yT4LqV3yNDLyzt98IE3Opdk90silAz8njIqSxR5jmx1suFzpNIQGYWWRgKh4RDg"/>
+</div>
+<p class="text-sm font-bold text-on-surface truncate">Sales Funnel</p>
+<p class="text-xs text-primary font-bold">¥199</p>
+</div>
+<!-- Template 2 -->
+<div class="snap-start flex-shrink-0 w-44 space-y-2">
+<div class="aspect-[4/3] rounded-xl overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="Team of professionals collaborating around a large screen displaying complex customer network data" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-wn4ERlwEAq8FA2mIlNiraGF5Ox3bgVI98AFawpPA-jITpYgu4e2K3Ztnv37ZXrxmBkmwXr9RXT6-lIw1EpBp6_ow5RElQtYuH06Lbve8F3nj0WD39gACJLlqjrVRyOAhUiheG0xfvMJfDltvnvtiiT-9khMMs5uEsIEsB4Q_1WITmm7Nrswyfnq5MtNV89YNIL35FoZ56X36K__VNo5h_jR7YDaGVTBcv23irXJj513Y7lmSmz9pHrgAQ7X-Ox9Mf4P4PuDbng"/>
+</div>
+<p class="text-sm font-bold text-on-surface truncate">Customer Pool</p>
+<p class="text-xs text-primary font-bold">¥249</p>
+</div>
+<!-- Template 3 -->
+<div class="snap-start flex-shrink-0 w-44 space-y-2">
+<div class="aspect-[4/3] rounded-xl overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="Minimalist management dashboard with clear follow-up tracking indicators and status progress bars" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnuXBPGCaF8aqW1EX2L0ntWj06w6JO1Wc7SObJERmN5Ue-bjxIkogc0T2x8vT4-pRhd4lyRlofl-qfwjuUiFYBWz_aMpNBnM0iTkP-iU4S5QOZ0JaRIaF9PrBXJodVz4YM1Qn4QY2QzDB0R7cQnq4Ywh4j-QnvBcgux3AtMY6KxfQ9Ejvz6tdlai1V2A30y_oPhFNUgF-sSUS2hr4BE2YGxHZDNAi5cyyLeGY7GOu2wYrFPFQB8Y-5jhY3aw6FUEQAQwy4sTSAHg"/>
+</div>
+<p class="text-sm font-bold text-on-surface truncate">Follow-up Dashboard</p>
+<p class="text-xs text-primary font-bold">¥159</p>
+</div>
+<!-- Template 4 -->
+<div class="snap-start flex-shrink-0 w-44 space-y-2">
+<div class="aspect-[4/3] rounded-xl overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="Modern sales report graphic with clean layout and high-contrast professional blue branding" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA22YRgZHrHp-30XvyQTumRQUZAImCMh495WVxQtj2PltVapmp_m1Nh7miiRZysCF54kKR7K5lNX7YQUEofJRg4fChnlQpU34bXhcr_3U9mIScdRvTUCoWH8HuNK9vZf7vYweyU7gdYycOQbvVK7ZojUGiKHbnwjEfsxqu9ssDRAa0ohvshizA70of5obkco5NT0nL8Vkf3SJAyO9DIbAycel9FJuR5Ao-11XEgr7ZxfQ2sYfvlFWtAMgrQ5RPz9VADWBl54IQ1Ng"/>
+</div>
+<p class="text-sm font-bold text-on-surface truncate">Sales Report</p>
+<p class="text-xs text-primary font-bold">¥129</p>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 py-3 pb-safe bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl z-50 rounded-t-2xl shadow-[0_-4px_32px_rgba(25,28,30,0.04)] border-t border-[#c1c7d3]/20">
+<div class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-3 py-1 active:scale-[0.95] transition-all duration-200">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+<span class="font-['Inter'] text-[0.75rem] font-medium uppercase tracking-widest mt-1">Explore</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-3 py-1 active:scale-[0.95] transition-all duration-200">
+<span class="material-symbols-outlined" data-icon="event_available">event_available</span>
+<span class="font-['Inter'] text-[0.75rem] font-medium uppercase tracking-widest mt-1">Bookings</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-3 py-1 active:scale-[0.95] transition-all duration-200">
+<span class="material-symbols-outlined" data-icon="chat_bubble">chat_bubble</span>
+<span class="font-['Inter'] text-[0.75rem] font-medium uppercase tracking-widest mt-1">Messages</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-3 py-1 active:scale-[0.95] transition-all duration-200">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+<span class="font-['Inter'] text-[0.75rem] font-medium uppercase tracking-widest mt-1">Profile</span>
+</div>
+</nav>
+</body></html>
